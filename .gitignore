@@ -1,0 +1,36 @@
+﻿# 대용량 EPA 원본
+ChemExpo_bulk_composition*
+chemexpo_bulk_composition*
+
+# 외부 HANNA 모델
+HANNA/
+
+# Python 환경 및 캐시
+.venv/
+venv/
+env/
+__pycache__/
+.ipynb_checkpoints/
+
+# 모델 가중치
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.joblib
+
+# 압축파일 및 원문 PDF
+*.zip
+*.pdf
+
+# 민감정보
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# 임시파일
+*.tmp
+*.log
