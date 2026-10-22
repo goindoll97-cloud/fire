@@ -77,6 +77,26 @@ class DomesticTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             m.screen_composition([('108-88-3',60),('67-64-1',40)],self.props,self.oel,[0,1])
 
+    def test_empty_domestic_template_produces_empty_outputs(self):
+        inputs=self.base/'empty.csv'
+        with inputs.open('w',newline='',encoding='utf-8') as f:
+            csv.writer(f).writerow(m.COLUMNS)
+        ref=self.base/'reference.csv'
+        with ref.open('w',newline='',encoding='utf-8') as f:
+            writer=csv.DictWriter(f,fieldnames=['CAS','chemical','MW_g_mol','VP_25C_kPa','SMILES','OEL_NIOSH_ppm'])
+            writer.writeheader()
+            for k,v in self.props.items():
+                writer.writerow(dict(CAS=k,**v,OEL_NIOSH_ppm='99999'))
+        fake=types.ModuleType('compare_thinner_raoult_unifac_hanna')
+        class Stub:
+            def __init__(self,*_): pass
+        fake.GammaModels=Stub
+        with patch.dict(sys.modules,{'compare_thinner_raoult_unifac_hanna':fake}):
+            result=m.run(inputs,self.base/'empty_out',['hanna'],self.base,self.oel_path,ref)
+        self.assertEqual(result['total'],0)
+        self.assertEqual(result['candidates'],0)
+        self.assertTrue((self.base/'empty_out'/'06_run_metadata.json').exists())
+
     def test_run_no_automatic_substitution_without_hanna(self):
         rows=[self.a,self.b]
         for x in (self.a,self.b):
