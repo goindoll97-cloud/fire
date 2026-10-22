@@ -178,7 +178,10 @@ def screen_composition(comps, props, oel, gammas):
 def run(input_csv, output_dir, model, hanna_repo, oel_path, physchem_path):
     from compare_thinner_raoult_unifac_hanna import GammaModels
     records = read_csv(input_csv)
-    missing = set(COLUMNS)-set(records[0].keys()) if records else set(COLUMNS)
+    # An empty validated template is allowed; do not pretend products were analyzed.
+    with Path(input_csv).open('r', encoding='utf-8-sig', newline='') as f:
+        input_fields = set(csv.DictReader(f).fieldnames or [])
+    missing = set(COLUMNS) - input_fields
     if missing:
         raise ValueError('제품 입력 컬럼 누락: '+', '.join(sorted(missing)))
     oel, legal_meta = parse_korean_twa(oel_path)
