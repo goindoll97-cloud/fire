@@ -1,0 +1,4 @@
+CAS,chemical_label,screening_cutoff_wt_pct,screening_cutoff_basis,legal_review_status,interpretation_warning
+71-43-2,Benzene,0.1,"Korean MOEL Notice 2026-26 Art.11(9) / Table 6: carcinogenicity 0.1% - hazard-specific screen only",PRELIMINARY_HAZARD_ONLY,"Other legal obligations and hazard categories require an independent review; do not infer lawful omission."
+67-56-1,Methanol,,,UNREVIEWED,"No disclosure limit assigned until Korean GHS classification and relevant legal provisions are verified."
+67-64-1,Acetone,,,UNREVIEWED,"No disclosure limit assigned until Korean GHS classification and relevant legal provisions are verified."

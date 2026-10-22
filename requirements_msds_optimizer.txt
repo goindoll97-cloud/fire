@@ -1,0 +1,6 @@
+numpy
+pandas
+scipy
+# Optional (needed for UNIFAC cross-validation):
+# thermo
+# HANNA requires its official source, trained weights and its own dependencies.
