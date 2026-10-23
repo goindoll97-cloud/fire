@@ -26,6 +26,8 @@ __pycache__/
 # 민감정보
 .env
 .env.*
+!.env.example
+!**/.env.example
 *.pem
 *.key
 credentials.json
