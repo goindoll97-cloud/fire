@@ -27,6 +27,11 @@ jobs:
         run: python -m pip install 'pymupdf>=1.24,<2'
       - name: Model-free test suite (no HANNA checkpoints in CI)
         run: python -m unittest discover -s research/korean_thinners_271/src -p 'test_*.py' -v
+      - name: Full 270-source reproducibility pipeline (offline, no approved data)
+        run: python research/korean_thinners_271/src/run_full_pipeline.py --offline
+      - name: Validate no unapproved same-use rankings
+        run: |
+          python -c "import csv,pathlib; p=pathlib.Path('research/korean_thinners_271/output/full270/07_same_use/같은용도_낮은잠재지표_후보.csv'); assert list(csv.DictReader(p.open(encoding='utf-8-sig'))) == []"
       - name: Generate blank, unapproved comparison templates
         run: python research/korean_thinners_271/src/screen_same_use_271.py --write-templates --output-dir /tmp/thinner_research
       - name: Generate unverified optimization template (do not run optimizer)
