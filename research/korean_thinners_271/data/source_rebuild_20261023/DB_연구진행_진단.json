@@ -1,0 +1,44 @@
+{
+  "source_docs": 270,
+  "source_component_records": 1454,
+  "distinct_cas": 54,
+  "documents_with_named_mixture_uvcb": 216,
+  "only_pure_candidates_and_feasible_intervals": 46,
+  "pilot7_numeric_scenario_candidates_unverified": 6,
+  "name_duplicate_review_rows": 63,
+  "source_composition_constraints": "MSDS interval only; missing disclosed composition possible",
+  "future_unlock_single_CAS": [
+    {
+      "CAS": "78-93-3",
+      "potential_additional_documents": 7
+    },
+    {
+      "CAS": "763-69-9",
+      "potential_additional_documents": 1
+    },
+    {
+      "CAS": "108-65-6",
+      "potential_additional_documents": 1
+    },
+    {
+      "CAS": "71-36-3",
+      "potential_additional_documents": 1
+    },
+    {
+      "CAS": "108-83-8",
+      "potential_additional_documents": 1
+    },
+    {
+      "CAS": "67-63-0",
+      "potential_additional_documents": 1
+    }
+  ],
+  "not_done": [
+    "Independent chemistry property verification",
+    "Current Korean OEL verification",
+    "VLE measurement validation",
+    "Use/compatibility verification",
+    "Physically feasible optimized blend validation"
+  ],
+  "risk_note": "No safety ranking, measured emission, exposure estimate or approved substitution claim"
+}
