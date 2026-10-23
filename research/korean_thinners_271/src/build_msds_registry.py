@@ -34,6 +34,8 @@ DATE_RE = re.compile(r'(?<!\d)(?:19|20)\d{2}[-./]\d{1,2}[-./]\d{1,2}(?!\d)')
 # Chemical identity groups: never silently represent petroleum/UVCB/isomer mixtures
 # as a single structure; all other CAS are only *candidates* pending human identity QA.
 MIXTURE_CAS = {
+    '8052-41-3': 'Stoddard solvent; UVCB petroleum mixture (ATSDR)',
+    '26588-80-7': 'acrylic copolymer; no single molecule (NITE J-CHECK)',
     '1330-20-7': 'xylene mixed isomers',
     '25551-13-7': 'trimethylbenzene isomer mixture',
     '31394-54-4': 'isoheptane isomer mixture',
