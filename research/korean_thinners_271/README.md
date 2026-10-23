@@ -105,3 +105,7 @@ python research/korean_thinners_271/src/validate_external_vle_271.py --write-tem
 - **[54종 CAS 검증 상태](data/source_rebuild_20261023/CAS_54종_출처상태.csv)**: 기존 7종 물성은 파일럿 참고값일 뿐 새로운 물성의 공식 검증이나 OEL 승인은 아직 아니다.
 - **[자료 커버리지와 확보 우선순위](data/source_rebuild_20261023/DB_연구진행_진단.json)**: 미동정 혼합물·이성질체 포함 문서 216건, 원문 함량 합계100 불가능 문서 3건, 성분이 잠정 순물질 조합인 문서 46건, 현재 파일럿 물성으로 계산한 6건.
 - PDF 원본, 원문 발췌 및 원문쪽수 증거, SQLite 전체 연구 DB는 로컬에 보관하고 공개 GitHub에 배포하지 않는다. 전체 분석과 속성 검증은 `src/build_msds_registry.py` 및 `src/audit_research_readiness.py`로 재현한다.
+
+### 02단계 다음: PubChem·KOSHA·법제처 및 MSDS 사용용도 자동 근거수집
+
+[02a–02d 자동 근거수집 자세한 설명](docs/PIPELINE_02a_02d_AUTO_ENRICH.md). `src/run_auto_enrichment.py` 하나로 PubChem 54 CAS의 동정·분자량 및 25°C VP 직접기재 후보, KOSHA 참고 MSDS, 법제처 현행 고시·별표 목록, 실제 270 MSDS의 제1항 용도 문맥을 수집할 수 있습니다. 검증 필드는 미승인으로 유지하고 07단계의 ‘같은 용도 안에서 덜 위험한 신나 후보’ 순위를 임의 생성하지 않습니다.
