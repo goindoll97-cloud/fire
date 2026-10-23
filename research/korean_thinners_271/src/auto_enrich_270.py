@@ -17,7 +17,7 @@ from pathlib import Path
 import re
 import sys
 import time
-from urllib.parse import quote, urlencode
+from urllib.parse import quote, urlencode, unquote
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
 import xml.etree.ElementTree as ET
@@ -45,6 +45,15 @@ def dump(p,obj):
     p=Path(p);p.parent.mkdir(parents=True,exist_ok=True)
     p.write_text(json.dumps(obj,ensure_ascii=False,indent=2),encoding='utf-8')
 def sha(raw):return hashlib.sha256(raw).hexdigest()
+
+def decode_kosha_service_key(raw):
+    """Accept either data.go.kr's encoded or decoded service key, without double-encoding.
+
+    Values remain secret. urllib.urlencode performs the sole encoding for transport.
+    """
+    key=raw.strip()
+    return unquote(key) if re.search(r'%[0-9A-Fa-f]{2}',key) else key
+
 def load_env():
     # Delegate to the repository's existing non-overwriting loader.
     from pipeline_270_core import load_env as safe_load_env
@@ -254,7 +263,7 @@ def safe_xml_cas_snippets(xml_data, cas, window=190):
 def official_twa_evidence(*,fetch=None,limit=54,sleep=0.25,work=WORK,offline=False):
     load_env();out=Path(work)/'02b_twa_evidence';out.mkdir(parents=True,exist_ok=True)
     rows=read(Path(work)/'02_review'/TWA)
-    key=os.environ.get('KOSHA_MSDS_SERVICE_KEY','').strip()
+    key=decode_kosha_service_key(os.environ.get('KOSHA_MSDS_SERVICE_KEY',''))
     law=os.environ.get('LAW_OC','').strip()
     evidence=[];law_evidence=[]
     if not offline and law:
