@@ -79,3 +79,18 @@ Windows에서 저장소 폴더가 `D:\fire2\fire-main`처럼 다른 경로인 �
 - 기존 7종 물성표는 출처·온도·단위를 논문 분석 전 재검증해야 하고, 외부 HANNA 모델의 도료신나 적용 가능 영역도 별도 검증해야 한다.
 
 참고: `docs/최적화_입력조건.md`, `data/모델검수_가이드.md`.
+## 논문 타당성 검증 실험: 다중 시드·조성 추출 민감도·외부 VLE
+
+**[전체 실험 설계 및 로컬 실행 가이드](docs/논문_가치검증_전체실험.md)**
+
+기존 200시나리오 단일실험을 확장한 별도 파이프라인입니다. 두 조성추출법(legacy/Gibbs)과 여러 난수시드로 동일 MSDS 조성 범위 안의 HANNA/Raoult 차이를 평가합니다. 결과 파일의 질량합계, 몰분율, 분압, 활동도계수, 입력 SHA-256을 검사하고 검증 실패 시 중단합니다.
+
+~~~powershell
+cd D:\fire2
+$env:HANNA_HOME = 'D:\fire2\HANNA'
+python research/korean_thinners_271/src/paper_experiment_271.py run --samples 200 --batch-size 8
+python research/korean_thinners_271/src/plot_paper_experiment_271.py --reports research/korean_thinners_271/output/paper_full/reports
+python research/korean_thinners_271/src/validate_external_vle_271.py --write-templates research/korean_thinners_271/output/external_vle_evidence
+~~~
+
+**주의:** 실제 로컬 HANNA 체크포인트가 있어야 하며, 2개 추출법 × 3개 시드 × 현재 6개 문서 × 200조성으로 총 7,200개 가상 시나리오를 계산합니다. 독립 실측과 순물질 물성 승인 전에는 모델 정확도·산업안전·저유해성 제품 순위를 주장하지 않습니다. 기존 동일 용도 검증과 최적화 안전조건은 유지합니다.
