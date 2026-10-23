@@ -33,3 +33,9 @@ python -m unittest discover -s research/korean_thinners_271/src -p 'test_*.py' -
 - `domestic_product_inputs/`: 기존 KCC 등 **별도 참고자료 7건**, 271건에 자동 합산하지 않음
 
 현재 검증 필요 없는 것은 **인터페이스 작동**뿐입니다. 실제 모델 예측 정확도, 현행 한국 TWA의 CAS별 확인, 271개 문서 중 구조 미상 성분과 중복 문서, 공정별 호환성은 후속 검증이 필요합니다. 실제 기화속도·작업장 노출농도·저유해성 제품 인증을 결과로 주장하지 않습니다.
+## 논문 가치 검증을 위한 재현 실험
+
+기존 MSDS 271문서 분석을 바탕으로 동일 조성 내 Raoult/HANNA 차이, 표본추출법·난수시드 민감도, 증기상 성분 전환, 외부 VLE 검증을 단계적으로 평가합니다. **모형 간 불일치만으로 모델 정확도 향상이나 안전성 우위를 주장하지 않습니다.**
+
+- [실험 설계·Windows 실행법](research/korean_thinners_271/docs/논문_가치검증_전체실험.md)
+- [기존 데이터·동일 용도 비교와 배합 탐색 가이드](research/korean_thinners_271/README.md)
