@@ -280,6 +280,10 @@ def stage03(a):
     load_env();out=WORK/'03_official';out.mkdir(parents=True,exist_ok=True)
     lawkey=os.environ.get('LAW_OC','').strip()
     koskey=os.environ.get('KOSHA_MSDS_SERVICE_KEY','').strip()
+    # data.go.kr offers both URL-encoded and plain keys. urlencode() below
+    # must encode exactly once (as proven by the working single-CAS probe).
+    if re.search(r'%[0-9A-Fa-f]{2}', koskey):
+        koskey=urllib.parse.unquote(koskey)
     rows=[]
     if lawkey and not a.offline:
         for query in ('화학물질 및 물리적 인자의 노출기준','산업안전보건법'):
