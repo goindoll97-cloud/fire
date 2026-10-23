@@ -120,3 +120,46 @@ python "$src/02b_diagnose_kosha_access.py"
 
 KOSHA MSDS 조회는 **참고용**이고, 현행 한국 법정 TWA는
 법제처 공식 고시 본문·별표에서 CAS·단위·시행일 확인이 별도로 필요합니다.
+
+
+## 파일 누락 반복을 막는 로컬 Git 동기화 점검
+
+사용자 PC가 `F:\\fire2`이고 GitHub `main`에 있는 Python 파일이 로컬에
+누락되는 사례가 반복되었습니다. `git fetch`는 작업 폴더를 갱신하지 않습니다.
+다음 명령은 **GitHub origin/main에 등록된 연구 Python 소스 파일 중 로컬에 없는
+것만 복구**하며, **존재하는 로컬 수정 파일이나 .env, 실험 결과는 변경하지 않습니다.**
+
+```powershell
+cd F:\fire2
+git fetch origin main
+
+$src = "research/korean_thinners_271/src"
+$missing = @(
+  git ls-tree -r --name-only origin/main -- "$src" |
+  Where-Object { -not (Test-Path -LiteralPath $_) }
+)
+
+Write-Host "누락 파일 수: $($missing.Count)"
+$missing | ForEach-Object { Write-Host "복구 예정: $_" }
+if ($missing.Count -gt 0) {
+  git restore --source=origin/main --worktree -- $missing
+}
+```
+
+동기화의 근본 원인은 다음 명령 출력으로 확인합니다.
+```powershell
+git rev-parse --show-toplevel
+git branch --show-current
+git status --short
+git rev-parse --short HEAD
+git rev-parse --short origin/main
+git sparse-checkout list
+```
+`git sparse-checkout list`는 설정되지 않은 경우 오류 메시지를 출력할 수 있습니다.
+이는 그 자체로 결함이 아닙니다. 로컬과 원격의 HEAD가 서로 다르다면 정상적으로
+`git pull --ff-only origin main`이 가능한지 확인합니다. 로컬 수정 때문에
+병합이 거부될 경우 데이터를 강제 초기화하지 않습니다.
+
+단일 API 접근 진단기 `src/02b_diagnose_kosha_access.py`는 이제
+`pipeline_270_core.py`를 import하지 않고 저장소 루트의 `.env`를 직접
+안전하게 읽으므로 **독립적으로 실행**할 수 있습니다.
