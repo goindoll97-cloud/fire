@@ -79,3 +79,44 @@ python -m unittest discover -s research/korean_thinners_271/src -p 'test_auto_en
 
 - 공식 API 참고 문서: [PubChem PUG REST](https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest), [PUG View](https://pubchem.ncbi.nlm.nih.gov/docs/pug-view), [법제처 행정규칙 본문 API](https://open.law.go.kr/LSO/openApi/guideResult.do?htmlName=admrulInfoGuide), [행정규칙 별표 API](https://open.law.go.kr/LSO/openApi/guideResult.do?htmlName=admrulBylListGuide), [KOSHA MSDS 조회 서비스](https://www.data.go.kr/data/15157612/openapi.do).
 - API 키는 실제 `.env`에만 존재하고 Git에 커밋되지 않습니다. 공식 XML은 로컬 생성 폴더에만 두고 인증키 값은 기록하지 않습니다.
+
+## KOSHA HTTP 403과 로컬 실행기 누락 복구 (2026-10-24)
+
+KOSHA 조회 54건이 모두 `REQUEST_FAILED_...HTTP_403`이라면
+**검색된 CAS가 0건이 아니라 기관 API 게이트웨이 접근이 거부된 상황**입니다.
+공공데이터포털 [물질안전보건자료 조회 서비스](https://www.data.go.kr/data/15157612/openapi.do)
+(서비스 ID 15157612)의 *활용신청·승인 상태*와 발급받은 인증키를 확인해야 합니다.
+`serviceKey`의 디코딩키/인코딩키 처리, 제공기관 권한 및 요청 IP 차단도 점검합니다.
+인증키 값이나 전체 호출 URL을 채팅/GitHub/이슈에 붙여넣지 마세요.
+
+```powershell
+cd F:\fire2
+git fetch origin main
+$src = "research/korean_thinners_271/src"
+# 아래 경로에 작성한 로컬 코드가 없다면 GitHub 승인본 복구
+git restore --source=origin/main --worktree -- "$src/run_auto_enrichment.py" "$src/auto_enrich_270.py" "$src/02b_diagnose_kosha_access.py"
+Test-Path "$src/run_auto_enrichment.py"
+python "$src/02b_diagnose_kosha_access.py"
+```
+
+`02b_diagnose_kosha_access.py`는 벤젠 CAS 한 번만 요청합니다.
+결과는 `output/full270/02b_twa_evidence/KOSHA_단일요청_접근진단.json`에
+인증키 제외하여 저장하며 `http_status`, `provider_code`,
+`provider_status`, `diagnosis`을 구분합니다.
+포털에 등록된 키를 `.env`에 URL 인코딩된 형태로 저장한 경우,
+이 진단기는 디코딩 후 요청 시 한 번만 URL 인코딩하도록 처리합니다.
+
+공식 반환 오류코드 예:
+- `20`: 키 누락 또는 서비스 이용 권한 거부
+- `30`: 미등록 인증키
+- `31`: 인증키 만료
+- `22`/`23`: 호출량/호출속도 제한
+- `29`: IP 차단
+
+`403`만으로 구체적인 원인은 확정하지 않습니다. XML 기관 오류코드가
+존재하면 함께 확인합니다. 또한 일괄 `02b`는 첫 403 이후 나머지 CAS 요청을
+`SKIPPED_AFTER_HTTP_403_CHECK_API_PERMISSION`으로 표시해 불필요한 호출을
+중단합니다. 데이터 없음 `NO_EXACT_CAS_IN_RESPONSE`과 인증 거부를 구분합니다.
+
+KOSHA MSDS 조회는 **참고용**이고, 현행 한국 법정 TWA는
+법제처 공식 고시 본문·별표에서 CAS·단위·시행일 확인이 별도로 필요합니다.
