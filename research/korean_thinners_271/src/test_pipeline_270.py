@@ -128,6 +128,23 @@ class CoreTests(unittest.TestCase):
             p.stage09(None)
         self.assertTrue((self.work/'09_report'/'논문용_진행보고서.md').exists())
 
+    def test_stage03_kosha_query_unquotes_portal_key_once(self):
+        from types import SimpleNamespace
+        import xml.etree.ElementTree as ET
+        seen=[]
+        def mock_http(url, params):
+            seen.append((url,params))
+            return ET.fromstring('<response><resultCode>00</resultCode></response>')
+        args=SimpleNamespace(offline=False,kosha_query_param='searchWrd',kosha_limit=1)
+        with patch.object(p,'load_env'),patch.object(p,'http_xml',side_effect=mock_http),patch.object(
+            p,'read',return_value=[{'CAS':'71-43-2'}]),patch.dict('os.environ',{
+            'LAW_OC':'','KOSHA_MSDS_SERVICE_KEY':'MOCK%2BKEY%2F%3D'}):
+            p.stage03(args)
+        self.assertEqual(len(seen),1)
+        self.assertEqual(seen[0][1]['serviceKey'],'MOCK+KEY/=')
+        self.assertEqual(seen[0][1]['searchWrd'],'71-43-2')
+        self.assertNotIn('MOCK',(self.work/'03_official'/'기관API_증거수집현황.csv').read_text(encoding='utf-8-sig'))
+
     def fake_source(self):
         p.write(self.source/p.DOCFILE,[{'문서키':'A','기존제품ID':'X','원본SHA256':'x',
         '제품명_파일명기반':'검증된 가상A','함량합계100가능_표기성분만':'예'}],
