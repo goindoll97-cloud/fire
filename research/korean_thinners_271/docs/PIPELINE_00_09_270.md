@@ -132,3 +132,27 @@ python research/korean_thinners_271/src/run_full_pipeline.py --offline `
 | `09_report` | 연구 진행 표·보류 사유·논문 해석범위 | 논문 준비상태 |
 
 **중요**: 외부 실측 VLE 또는 headspace 참값이 없는 한 모델 예측의 실제 정확도가 검증된 것으로 주장하면 안 된다. 270개 MSDS는 통계적으로 독립된 임의 시장 표본이 아니다. 반복 시뮬레이션은 독립 제품 샘플 수를 늘리지 않는다. 모든 단계에서 실제 작업장 공기측정/직업노출기준 위반 여부/산업현장 대체 가능성은 판정하지 않는다.
+
+### F:\fire2 등 로컬 checkout에서 08단계 모듈 누락 시
+
+\`[STAGE 08] ModuleNotFoundError: No module named 'optimize_verified_blend'\`는
+**로컬의 \`src/optimize_verified_blend.py\` 누락 또는 import 경로 문제**입니다.
+GitHub \`main\`에는 파일이 존재합니다. 기존 00–07 출력 폴더는 삭제하지 마세요.
+
+\`\`\`powershell
+cd F:\fire2
+git fetch origin main
+Test-Path "research/korean_thinners_271/src/optimize_verified_blend.py"
+# 실제 파일이 없거나 로컬 수정이 필요 없는 경우에만 복구
+git restore --source=origin/main --worktree -- "research/korean_thinners_271/src/optimize_verified_blend.py"
+python research/korean_thinners_271/src/08_prepare_blend_optimization.py
+python research/korean_thinners_271/src/09_integrated_paper_report.py
+\`\`\`
+
+현재 전체 파이프라인은 해당 모듈이 정말 없을 때에도
+**미승인 JSON 제약서식만 생성**하고
+\`08_optimization/최적화_진행조건.json\`에
+\`optimizer_module_available: false\`,
+\`optimizer_missing_status: DISABLED_MISSING_LOCAL_MODULE\`을 남깁니다.
+이 경우 최적화는 실행 불가이며, 09단계 보고서 생성만 허용합니다.
+복합물/법정 TWA/동일 공정 검증 누락값을 자동 승인하는 기능은 없습니다.

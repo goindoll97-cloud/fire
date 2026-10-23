@@ -575,18 +575,51 @@ def stage07(a):
 
 
 def stage08(a):
-    # Prepare but never auto-approve experimental functional constraints for optimization.
+    """Prepare an UNAPPROVED optimization template even in a partial local checkout.
+
+    Do not silently approve properties/constraints or claim an optimization result.
+    The actual optimizer module is required for any later manual optimization.
+    """
     out=WORK/'08_optimization';out.mkdir(parents=True,exist_ok=True)
-    from optimize_verified_blend import template
+    requirements=['성분구조검증','동일공정호환성검증','물성출처검증',
+                  '한국TWA최신성검증','기능제약실측검증']
+    optimizer_available=True
+    try:
+        from optimize_verified_blend import template
+        blank=template()
+    except ModuleNotFoundError as exc:
+        # Only tolerate a missing optimizer file. Do NOT suppress a missing
+        # dependency *inside* an available optimizer or any other import error.
+        if exc.name!='optimize_verified_blend':
+            raise
+        optimizer_available=False
+        blank={
+          '대상제품군':'예: 특정 도료 및 공정에서 호환성 검증된 그룹',
+          '근거문서':'TDS/실측/법령 출처',
+          '검증':{key:False for key in requirements},
+          '온도_K':298.15,
+          '목표_총평형증기압범위_kPa':[0.0,101.325],
+          '성분':[{'CAS':'REPLACE','SMILES':'REPLACE','분자량_g_mol':None,
+                  '포화증기압_kPa':None,'한국_TWA_ppm':None,
+                  '최소질량비_pct':None,'최대질량비_pct':None}],
+        }
+        print('08: WARNING optimize_verified_blend.py is missing locally; '
+              'writing UNAPPROVED template only. Manual optimization is DISABLED.')
+    # Preserve manually edited, unapproved templates instead of overwriting them.
     cfg=out/'검증전_Pareto_제약서식.json'
-    if not cfg.exists():jsonfile(cfg,template())
+    if not cfg.exists():jsonfile(cfg,blank)
     pairs=read(WORK/'07_same_use'/'같은용도_제품쌍_비교.csv')
     jsonfile(out/'최적화_진행조건.json',{
       'same_use_pairs_evidence':len(pairs),
       'auto_optimization_performed':False,
-      'conditions_required':['성분구조검증','동일공정호환성검증','물성출처검증','한국TWA최신성검증','기능제약실측검증'],
-      'action':'Fill constraints with measured evidence and run optimize_verified_blend.py explicitly',
-      'not_proved':'Optimal real-world mixture, product substitution, regulatory exposure'} )
+      'optimizer_module_available':optimizer_available,
+      'optimizer_missing_status':'DISABLED_MISSING_LOCAL_MODULE' if not optimizer_available else '',
+      'conditions_required':requirements,
+      'action':('Fill constraints with measured evidence and run optimize_verified_blend.py explicitly'
+                if optimizer_available else
+                'Restore research/korean_thinners_271/src/optimize_verified_blend.py '
+                'from the GitHub main branch before any manual optimization'),
+      'not_proved':'Optimal real-world mixture, product substitution, regulatory exposure'})
     print('08: Pareto template exists, unapproved; optimization not executed')
 
 
