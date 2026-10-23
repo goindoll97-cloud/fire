@@ -31,6 +31,8 @@ PROPS='CAS_물성_검증.csv'
 TWA='CAS_한국TWA_검증.csv'
 PRODUCT='제품_원문TDS_검증.csv'
 CAS_PATTERN=re.compile(r'(?<![0-9])\d{2,7}-\d{2}-\d(?![0-9])')
+# Known non-single-molecular entries: ATSDR Stoddard solvent; NITE acrylic polymer.
+NON_SINGLE_CAS={'8052-41-3','26588-80-7'}
 
 
 def read(p):
@@ -133,7 +135,7 @@ def direct_25c_vp_candidates(annotations):
     """
     factors={'mmhg':0.13332236842105263,'torr':0.13332236842105263,
              'kpa':1.0,'pa':0.001,'hpa':0.1,'bar':100.0,'atm':101.325}
-    pat=re.compile(r'(?i)(?<![\d.])(\d+(?:\.\d+)?(?:e[+\-]?\d+)?)\s*'
+    pat=re.compile(r'(?i)(?<![\w.+\-])(\d+(?:\.\d+)?(?:e[+\-]?\d+|[x×]\s*10\s*\^?\s*[+\-]?\d+)?)\s*'
                    r'(mm\s*hg|torr|kpa|hpa|pa|bar|atm)\b')
     tpat=re.compile(r'(?i)\b25\s*(?:°\s*|deg\s*|degrees\s*)?c(?:elsius)?\b|'
                     r'\b298\.15\s*k\b')
@@ -144,7 +146,13 @@ def direct_25c_vp_candidates(annotations):
             matches=list(pat.finditer(statement))
             if len(matches)!=1:continue  # avoid multiple units/numbers in one phrase
             m=matches[0];raw_unit=m.group(2).replace(' ','').lower()
-            try:val=float(m.group(1))*factors[raw_unit]
+            try:
+                num=m.group(1).replace('×','x')
+                if re.search(r'(?i)x\s*10',num):
+                    base,exp=re.split(r'(?i)x\s*10\s*\^?\s*',num,maxsplit=1)
+                    magnitude=float(base)*(10**int(exp))
+                else:magnitude=float(num)
+                val=magnitude*factors[raw_unit]
             except (ValueError,KeyError,OverflowError):continue
             if not (0 < val < 1000):continue
             out.append((val,statement.strip()[:240]))
@@ -160,9 +168,32 @@ def property_enrich(*,fetch=None,limit=54,sleep=0.35,work=WORK,apply=True):
     review=Path(work)/'02_review'
     path=review/PROPS;rows=read(path)
     out=Path(work)/'02a_pubchem';out.mkdir(parents=True,exist_ok=True)
-    candidates=[];raw=[]
+    candidates=[];raw=[];repairs=[]
     for entry in rows[:limit]:
-        cas=entry['CAS']; mixture=entry['복합물또는이성질체']!='아니오'
+        cas=entry['CAS']
+        if cas in NON_SINGLE_CAS:
+            if entry['HANNA입력승인']=='승인':
+                raise ValueError(f'{cas}: known polymer/UVCB cannot be approved as one molecule')
+            entry['복합물또는이성질체']='예'
+        mixture=entry['복합물또는이성질체']!='아니오'
+        source=entry.get('물성출처와측정조건','')
+        if (entry['HANNA입력승인']!='승인'
+                and entry.get('25C_포화증기압_kPa','').strip()
+                and ' ; original: ' in source
+                and '자동후보/출처 원문 미승인' in source):
+            raw_phrase=source.split(' ; original: ',1)[1].split(' ; 자동후보',1)[0]
+            parsed,_status=direct_25c_vp_candidates([raw_phrase])
+            try:
+                stored=float(entry['25C_포화증기압_kPa'])
+                mismatch=parsed is not None and abs(stored-parsed[0])>max(parsed[0]*0.02,1e-5)
+            except ValueError:
+                mismatch=True
+            if mismatch:
+                repairs.append({'CAS':cas,'기존값_kPa':entry['25C_포화증기압_kPa'],
+                    '원문':raw_phrase,'파서재판독_kPa':format(parsed[0],'.8g') if parsed else '',
+                    '상태':'미승인 자동후보 정정·재검토 필요'})
+                entry['25C_포화증기압_kPa']=''
+                entry['물성출처와측정조건']=''
         if mixture:
             cand={'CAS':cas,'상태':'UVCB_혼합이성질체_단일구조차단','CID':'','SMILES_후보':'','분자량_후보_g_mol':'','InChIKey':'','PubChem_URL':'','VP_후보문구':'','VP_상태':'차단'}
         else:
@@ -194,12 +225,15 @@ def property_enrich(*,fetch=None,limit=54,sleep=0.35,work=WORK,apply=True):
         candidates.append(cand)
     fields=['CAS','상태','CID','CID_목록','SMILES_후보','분자량_후보_g_mol','InChIKey','PubChem_URL','VP_상태','VP_후보문구','VP_출처','VP_25C_직접후보_kPa','VP_25C_자동판독상태']
     write(out/'PubChem_54CAS_구조분자량_자동후보.csv',candidates,fields)
+    write(out/'자동VP후보_오류정정감사.csv',repairs,
+          ['CAS','기존값_kPa','원문','파서재판독_kPa','상태'])
     dump(out/'PubChem_VP_원문후보_검수.json',raw)
     if apply:write(path,rows,list(rows[0]))
     summary={'processed':len(candidates),'structure_candidates':sum(c.get('상태')=='CAS_동의어_일치_구조후보' for c in candidates),
              'mixed_blocked':sum(c.get('상태')=='UVCB_혼합이성질체_단일구조차단' for c in candidates),
              'VP_25C_direct_candidates':sum(bool(c.get('VP_25C_직접후보_kPa')) for c in candidates),
-             'VP_25C_values_automatically_approved':0,'property_approvals_created':0}
+             'VP_25C_values_automatically_approved':0,'property_approvals_created':0,
+             'VP_candidates_corrected':len(repairs)}
     dump(out/'summary.json',summary)
     print('02a:',summary)
     return summary
@@ -284,11 +318,24 @@ def official_twa_evidence(*,fetch=None,limit=54,sleep=0.25,work=WORK,offline=Fal
                 # Try the current path first; fallback only on request failure.
                 params={'serviceKey':key,'searchWrd':cas,'searchCnd':'1',
                         'numOfRows':10,'pageNo':1}
-                endpoints=('https://apis.data.go.kr/B552468/msdschem/getChemList',
-                           'https://apis.data.go.kr/B552468/msdschem1/getChemList001')
+                endpoints=('https://apis.data.go.kr/B552468/msdschem1/getChemList001',
+                           'https://apis.data.go.kr/B552468/msdschem/getChemList')
                 for endpoint in endpoints:
                     try:
                         raw=get_bytes(endpoint,params,fetch=fetch)
+                        try:
+                            root=ET.fromstring(raw)
+                            code=(root.findtext('.//resultCode') or root.findtext('.//returnReasonCode') or '').strip()
+                            message=(root.findtext('.//resultMsg') or root.findtext('.//returnAuthMsg') or '').strip().upper()
+                            bad=(code not in ('','00','0','000','NORMAL_SERVICE') or
+                                 any(z in message for z in
+                                    ('ERROR','INVALID','UNREGISTERED','SERVICE_KEY','AUTHORIZATION')))
+                            if bad:
+                                if endpoint==endpoints[0]:continue
+                                raise RuntimeError('PROVIDER_XML_ERROR_'+(code or 'MESSAGE'))
+                        except ET.ParseError:
+                            if endpoint==endpoints[0]:continue
+                            raise RuntimeError('PROVIDER_XML_INVALID') from None
                         break
                     except RuntimeError:
                         if endpoint == endpoints[-1]:raise
@@ -305,7 +352,10 @@ def official_twa_evidence(*,fetch=None,limit=54,sleep=0.25,work=WORK,offline=Fal
         if sleep and fetch is None and key and not offline:time.sleep(sleep)
     write(out/'54CAS_KOSHA_공식TWA_검토큐.csv',evidence,list(evidence[0]))
     write(out/'법제처_공식고시_원문검토상태.csv',law_evidence,['source','status','sha256','message'])
-    summary={'CAS_considered':len(evidence),'KOSHA_reference_candidates':sum(x['KOSHA_상태']=='KOSHA_REFERENCE_FOUND' for x in evidence),
+    from collections import Counter
+    summary={'KOSHA_status_counts':dict(Counter(x['KOSHA_상태'] for x in evidence)),
+             'LAW_status_counts':dict(Counter(x['status'] for x in law_evidence)),
+             'CAS_considered':len(evidence),'KOSHA_reference_candidates':sum(x['KOSHA_상태']=='KOSHA_REFERENCE_FOUND' for x in evidence),
              'approved_Korean_TWA_added':0,'law_annex_validated':False,
              'notice':'TWA 수치 자동 승인 불가: 현행 별표·CAS·단위 원문 검증 필요'}
     dump(out/'summary.json',summary)
