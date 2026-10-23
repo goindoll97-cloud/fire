@@ -1,8 +1,0 @@
-﻿CAS,chemical,Molecular_weight_g_mol,VP_25C_kPa,NIOSH_REL_TWA_ppm,VP_source_type,VP_source_URL,NIOSH_REL_source_URL,parameter_tuple
-71-43-2,벤젠,78.1118,12.676607963703335,0.1,NIST_Antoine,https://webbook.nist.gov/cgi/cbook.cgi?ID=C71432&Type=ANTOINE,https://www.cdc.gov/niosh/npg/npgd0049.html,"(4.01814, 1203.835, -53.226)"
-67-64-1,아세톤,58.0791,30.599959368591456,250.0,NIST_Antoine,https://webbook.nist.gov/cgi/cbook.cgi?ID=C67641&Type=ANTOINE,https://www.cdc.gov/niosh/npg/npgd0004.html,"(4.42448, 1312.253, -32.445)"
-141-78-6,에틸아세테이트,88.1051,12.615993079340795,400.0,NIST_Antoine,https://webbook.nist.gov/cgi/cbook.cgi?ID=C141786&Type=ANTOINE,https://www.cdc.gov/niosh/npg/npgd0260.html,"(4.22809, 1245.702, -55.189)"
-108-88-3,톨루엔,92.1384,3.79151100254244,100.0,NIST_Antoine,https://webbook.nist.gov/cgi/cbook.cgi?ID=C108883&Type=ANTOINE,https://www.cdc.gov/niosh/npg/npgd0619.html,"(4.14157, 1377.578, -50.507)"
-67-56-1,메탄올,32.0419,16.938450392599165,200.0,NIST_Antoine,https://webbook.nist.gov/cgi/cbook.cgi?ID=C67561&Type=ANTOINE,https://www.cdc.gov/niosh/npg/npgd0397.html,"(5.20409, 1581.341, -33.5)"
-123-86-4,n-부틸아세테이트,116.158,1.5336217952361082,150.0,EPA_Perry,https://19january2021snapshot.epa.gov/sites/static/files/documents/Romic_Section_D.pdf,https://www.cdc.gov/niosh/npg/npgd0072.html,"(71.34, -7285.8, -6.9459, 9.99e-18, 6)"
-108-10-1,메틸이소부틸케톤,100.1589,2.6367892628570777,50.0,EPA_Perry,https://19january2021snapshot.epa.gov/sites/static/files/documents/Romic_Section_D.pdf,https://www.cdc.gov/niosh/npg/npgd0326.html,"(153.23, -10055.0, -19.848, 1.64e-05, 2)"
