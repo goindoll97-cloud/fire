@@ -1,4 +1,4 @@
-﻿# 대용량 EPA 원본
+﻿# 외부 원시데이터 / 대용량 다운로드
 ChemExpo_bulk_composition*
 chemexpo_bulk_composition*
 
@@ -34,3 +34,9 @@ secrets.json
 # 임시파일
 *.tmp
 *.log
+
+# 국내 신나 연구 - 생성 시나리오, 원본 다운로드 사본, OS 파일
+research/korean_thinners_271/output/
+**/._*
+.DS_Store
+Thumbs.db
