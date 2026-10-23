@@ -1,0 +1,37 @@
+{
+  "source": "supplied ZIP PDFs (original bytes not uploaded to Github)",
+  "timestamp_utc": "2026-10-23T10:38:30.484405+00:00",
+  "noru_zip_sha256": "1a4e44fb050e345f82db796e12eeb08ea249233c50c8a6faea78ab583d8adbf2",
+  "samhwa_zip_sha256": "a902daa330ade4d95ecf95a8e9d52a39ef6c52965270bdd0a7cd0db1c93b5d62",
+  "pdf_count": 270,
+  "brand_counts": {
+    "NORU": 183,
+    "SAMHWA": 87
+  },
+  "distinct_cas_regex_valid": 54,
+  "pdf_section3_with_cas": 270,
+  "component_cas_document_records": 1454,
+  "pdf_all_numeric_bounds_parsed": 270,
+  "pdf_sum100_compatible_reported_components": 267,
+  "pdf_with_named_isomer_or_uvcb_mixture": 216,
+  "pdf_with_only_pilot7_reference_cas_and_feasible_intervals": 6,
+  "manual_review_needed_docs": 216,
+  "legacy_matched_exact_sha256": 270,
+  "limitations": [
+    "Section 3 values extracted from PDFs; no chemical/properties human approval claimed",
+    "Private evidence file contains source snippets and should not be published automatically",
+    "Valid MSDS composition intervals need not reflect actual formulation",
+    "Some undisclosed ingredients may be missing from MSDS; no exposure rate derived",
+    "CAS regex result is not complete ontology of chemical entities",
+    "No imputation for UVCB, mixed-isomers, unknown structures or Korean OELs",
+    "Only reference 7 CAS have prior pilot physical properties; all source validations pending"
+  ],
+  "legacy_sha_matches_verified_against_github_20261023": 270,
+  "legacy_non_thinner_excluded": [
+    {
+      "id": "NR007",
+      "reason": "신나무 검색어로 유입된 수성페인트",
+      "source_sha256": "9b6972af03a761e841fd2fc561d232c761cbafbac2770b97c4894595cdc370c8"
+    }
+  ]
+}
