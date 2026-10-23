@@ -280,8 +280,18 @@ def official_twa_evidence(*,fetch=None,limit=54,sleep=0.25,work=WORK,offline=Fal
         state='OFFLINE_OR_KEY_MISSING';raw=b'';snippets=[]
         if not offline and key:
             try:
-                raw=get_bytes('https://apis.data.go.kr/B552468/msdschem1/getChemList001',{
-                    'serviceKey':key,'searchWrd':cas,'searchCnd':'1','numOfRows':10,'pageNo':1},fetch=fetch)
+                # Two provider-published paths exist across catalogue revisions.
+                # Try the current path first; fallback only on request failure.
+                params={'serviceKey':key,'searchWrd':cas,'searchCnd':'1',
+                        'numOfRows':10,'pageNo':1}
+                endpoints=('https://apis.data.go.kr/B552468/msdschem/getChemList',
+                           'https://apis.data.go.kr/B552468/msdschem1/getChemList001')
+                for endpoint in endpoints:
+                    try:
+                        raw=get_bytes(endpoint,params,fetch=fetch)
+                        break
+                    except RuntimeError:
+                        if endpoint == endpoints[-1]:raise
                 snippets=safe_xml_cas_snippets(raw,cas)
                 state='KOSHA_REFERENCE_FOUND' if snippets else 'NO_EXACT_CAS_IN_RESPONSE'
                 (out/f'KOSHA_MSDS_{cas}.xml').write_bytes(raw.replace(key.encode(),b'[REDACTED]'))
