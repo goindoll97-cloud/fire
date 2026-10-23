@@ -16,10 +16,36 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 
-from pipeline_270_core import load_env
-
 ROOT=Path(__file__).resolve().parents[1]
+PROJECT_ROOT=Path(__file__).resolve().parents[3]
 DEST=ROOT/'output'/'full270'/'02b_twa_evidence'
+
+def load_env():
+    """Load the project's .env independently; never expose or overwrite secret keys.
+
+    This diagnostic deliberately has NO imports from pipeline_270_core or other
+    project modules so it still runs on partially synchronized checkouts.
+    """
+    path=PROJECT_ROOT/'.env'
+    if not path.is_file():
+        return
+    for line in path.read_text(encoding='utf-8-sig').splitlines():
+        item=line.strip()
+        if not item or item.startswith('#'):
+            continue
+        if item.startswith('export '):
+            item=item[7:].strip()
+        if '=' not in item:
+            continue
+        name,value=item.split('=',1)
+        name=name.strip()
+        if not re.fullmatch(r'[A-Z][A-Z0-9_]*',name):
+            continue
+        value=value.strip()
+        if len(value)>1 and value[0]==value[-1] and value[0] in ('"',"'"):
+            value=value[1:-1]
+        os.environ.setdefault(name,value)
+
 ENDPOINT='https://apis.data.go.kr/B552468/msdschem1/getChemList001'
 KNOWN_CODES={
     '01':'GW_APPLICATION_ERROR',

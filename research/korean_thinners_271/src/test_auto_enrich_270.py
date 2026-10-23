@@ -173,6 +173,31 @@ class AutoEnrichTests(unittest.TestCase):
         self.assertFalse(d['korean_TWA_validated'])
         self.assertNotIn('SECRET',json.dumps(d))
 
+    def test_kosha_diagnostic_imports_without_pipeline_core(self):
+        # The standalone access probe must work when local checkout lacks
+        # pipeline_270_core.py, the user's recurrent partial-sync failure.
+        import importlib.util
+        module_path=Path(__file__).parent/'02b_diagnose_kosha_access.py'
+        spec=importlib.util.spec_from_file_location('kosha_standalone',module_path)
+        module=importlib.util.module_from_spec(spec)
+        with patch.dict(sys.modules, {'pipeline_270_core':None}):
+            spec.loader.exec_module(module)
+        self.assertTrue(callable(module.load_env))
+        self.assertTrue(callable(module.probe))
+
+    def test_kosha_standalone_env_preserves_existing_values(self):
+        import importlib.util
+        module_path=Path(__file__).parent/'02b_diagnose_kosha_access.py'
+        spec=importlib.util.spec_from_file_location('kosha_standalone_env',module_path)
+        module=importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        path=self.work/'.env'
+        path.write_text('KOSHA_MSDS_SERVICE_KEY=FROM_LOCAL_ENV\\n',encoding='utf-8')
+        with patch.object(module,'PROJECT_ROOT',self.work),patch.dict(
+              os.environ,{'KOSHA_MSDS_SERVICE_KEY':'EXISTING_VALUE'}):
+            module.load_env()
+            self.assertEqual(os.environ['KOSHA_MSDS_SERVICE_KEY'],'EXISTING_VALUE')
+
     def test_queue_does_not_create_approvals(self):
         summary=a.report_queue(work=self.work)
         self.assertEqual(summary['review_queue_count'],5)
