@@ -27,6 +27,7 @@ from pathlib import Path
 import numpy as np
 from hanna_gamma_adapter import _get_model
 from run_raoult_271 import feasible_compositions, quantile
+from composition_sampling import sample_bounded_simplex
 
 BASE = Path(__file__).resolve().parents[1]
 DATA = BASE / 'data'
@@ -80,6 +81,10 @@ def main():
     ap.add_argument('--samples', type=int, default=20, help='Feasible composition draws per eligible PDF (initial smoke: 20)')
     ap.add_argument('--batch-size', type=int, default=8, help='HANNA inference batch size (CPU: 8 or 16)')
     ap.add_argument('--seed', type=int, default=20261023)
+    ap.add_argument('--sampler', choices=['legacy', 'gibbs'], default='legacy',
+                    help='legacy conditional rejection or bounded-simplex Gibbs (exploratory)')
+    ap.add_argument('--burn-in', type=int, default=300, help='Gibbs warmup pair updates')
+    ap.add_argument('--thin', type=int, default=12, help='Pair updates per retained Gibbs draw')
     ap.add_argument('--output', type=Path, default=BASE / 'output')
     ap.add_argument('--all-eligible', action='store_true', help='Scan all 46 molecular candidates; missing properties excluded')
     args = ap.parse_args()
@@ -87,6 +92,8 @@ def main():
         ap.error('--samples must be between 1 and 100000')
     if not 1 <= args.batch_size <= 1000:
         ap.error('--batch-size must be between 1 and 1000')
+    if args.burn_in < 0 or args.thin < 1:
+        ap.error('--burn-in must be >=0 and --thin >=1')
 
     classify_path = DATA / '제품271건_용도재분류.csv'
     components_path = DATA / '성분별함량_1462.csv'
@@ -138,7 +145,10 @@ def main():
                 smiles.append(smi)
                 mw.append(positive_property(pr, 'MW_g_mol', cas))
                 vp.append(positive_property(pr, 'VP_25C_kPa', cas))
-            weights = feasible_compositions(comps, args.samples, rng)
+            if args.sampler == 'legacy':
+                weights = feasible_compositions(comps, args.samples, rng)
+            else:
+                weights = sample_bounded_simplex(comps, args.samples, rng, burn_in=args.burn_in, thin=args.thin)
         except (ValueError, RuntimeError, KeyError) as exc:
             excluded.append({'제품ID': pid, '제품명': name, '제외사유': str(exc)})
             continue
@@ -215,7 +225,8 @@ def main():
         'model': '2026 multicomponent HANNA local ensemble',
         'model_home': os.environ.get('HANNA_HOME', '<adapter default>'),
         'temperature_K': 298.15, 'composition': 'hypothetical valid MSDS interval scenarios',
-        'seed': args.seed, 'samples_requested_per_document': args.samples,
+        'seed': args.seed, 'sampler': args.sampler, 'burn_in': args.burn_in, 'thin': args.thin,
+        'samples_requested_per_document': args.samples,
         'batch_size': args.batch_size, 'all_eligible': args.all_eligible,
         'input_sha256': {
             'classification': fingerprint(classify_path),
@@ -228,6 +239,7 @@ def main():
             'Preliminary equilibrium screening only; not measured emission rate or workplace exposure.',
             'MSDS concentration intervals do not identify actual manufacturer formulations.',
             'Selected 5th/95th percentiles are distribution of generated scenarios, not statistical confidence intervals.',
+            'Gibbs chain draws are autocorrelated; uniformity and mixing have not been proven for a finite run.',
             'Existing property table requires independent temperature, units and source verification.',
             'Unresolved complex substances and isomer mixtures are not replaced with arbitrary SMILES.',
             'HANNA predictive accuracy for this thinner application has not been externally validated.',
