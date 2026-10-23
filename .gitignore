@@ -34,3 +34,9 @@ secrets.json
 # 임시파일
 *.tmp
 *.log
+
+# 271-product research - generated scenarios, raw download copies, OS metadata
+research/korean_thinners_271/output/
+**/._*
+.DS_Store
+Thumbs.db
