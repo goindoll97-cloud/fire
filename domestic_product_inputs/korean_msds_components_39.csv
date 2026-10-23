@@ -1,0 +1,40 @@
+product_id,product_name,CAS,component_name,wt_pct_min,wt_pct_max,msds_original_expression,min_inclusive,max_inclusive,chemical_identity,source_pdf_page,source_file,source_pdf_sha256,msds_revision,note
+KR_SAMHWA_LA2000,LA신나2000,540-88-5,tert-부틸아세테이트,70,80,70 이상 ~ 80% 미만,yes,no,single,2,13129962-3_LA신나2000_GHS국문.pdf,2e452c23ce3002bac9c58ed602c8bd0c80a0d4ceec14a5d8f754a9e95329d318,2022-04-19,
+KR_SAMHWA_LA2000,LA신나2000,67-64-1,아세톤,10,20,10 이상 ~ 20% 미만,yes,no,single,2,13129962-3_LA신나2000_GHS국문.pdf,2e452c23ce3002bac9c58ed602c8bd0c80a0d4ceec14a5d8f754a9e95329d318,2022-04-19,
+KR_SAMHWA_LA2000,LA신나2000,108-88-3,톨루엔,10,20,10 이상 ~ 20% 미만,yes,no,single,2,13129962-3_LA신나2000_GHS국문.pdf,2e452c23ce3002bac9c58ed602c8bd0c80a0d4ceec14a5d8f754a9e95329d318,2022-04-19,
+KR_SAMHWA_LA2000,LA신나2000,111-76-2,2-부톡시에탄올,1,10,1 이상 ~ 10% 미만,yes,no,single,2,13129962-3_LA신나2000_GHS국문.pdf,2e452c23ce3002bac9c58ed602c8bd0c80a0d4ceec14a5d8f754a9e95329d318,2022-04-19,
+KR_KCC_LACQUER030,락카희석제030,1330-20-7,자일렌(혼합이성질체),40,47,40 ~ 47,yes,yes,mixed_isomers,3,0_KCC_MSDS_락카희석제030_kor.pdf,0244f34805ea747ed129c640509b9e5c26a8d80fe5c4b4d2d688ba39ff4397f4,2026-07-31,혼합 자일렌: 이성질체 조성 확인 전 단일 SMILES로 모델 입력 금지
+KR_KCC_LACQUER030,락카희석제030,108-88-3,톨루엔,16,23,16 ~ 23,yes,yes,single,3,0_KCC_MSDS_락카희석제030_kor.pdf,0244f34805ea747ed129c640509b9e5c26a8d80fe5c4b4d2d688ba39ff4397f4,2026-07-31,
+KR_KCC_LACQUER030,락카희석제030,108-10-1,4-메틸-2-펜탄온(MIBK),7,14,7 ~ 14,yes,yes,single,3,0_KCC_MSDS_락카희석제030_kor.pdf,0244f34805ea747ed129c640509b9e5c26a8d80fe5c4b4d2d688ba39ff4397f4,2026-07-31,
+KR_KCC_LACQUER030,락카희석제030,100-41-4,에틸벤젠,4,11,4 ~ 11,yes,yes,single,3,0_KCC_MSDS_락카희석제030_kor.pdf,0244f34805ea747ed129c640509b9e5c26a8d80fe5c4b4d2d688ba39ff4397f4,2026-07-31,
+KR_KCC_LACQUER030,락카희석제030,111-76-2,2-부톡시에탄올,4,11,4 ~ 11,yes,yes,single,3,0_KCC_MSDS_락카희석제030_kor.pdf,0244f34805ea747ed129c640509b9e5c26a8d80fe5c4b4d2d688ba39ff4397f4,2026-07-31,
+KR_KCC_LACQUER030,락카희석제030,67-63-0,2-프로판올,1,8,1 ~ 8,yes,yes,single,3,0_KCC_MSDS_락카희석제030_kor.pdf,0244f34805ea747ed129c640509b9e5c26a8d80fe5c4b4d2d688ba39ff4397f4,2026-07-31,
+KR_KCC_LACQUER030,락카희석제030,67-56-1,메탄올,1,8,1 ~ 8,yes,yes,single,3,0_KCC_MSDS_락카희석제030_kor.pdf,0244f34805ea747ed129c640509b9e5c26a8d80fe5c4b4d2d688ba39ff4397f4,2026-07-31,
+KR_KCC_LACQUER030,락카희석제030,123-86-4,n-부틸아세테이트,1,8,1 ~ 8,yes,yes,single,3,0_KCC_MSDS_락카희석제030_kor.pdf,0244f34805ea747ed129c640509b9e5c26a8d80fe5c4b4d2d688ba39ff4397f4,2026-07-31,
+KR_KCC_LACQUER,KCC락카신나,108-88-3,톨루엔,10,20,15 ± 5%,yes,yes,single,2,0_KCC_MSDS_락카신나_kor.pdf,38ef4d207e77f5eb9090494cae91e62c3352a370a528c7e3b7dd18cf32488866,2024-01-05,
+KR_KCC_LACQUER,KCC락카신나,67-64-1,아세톤,5,15,10 ± 5%,yes,yes,single,2,0_KCC_MSDS_락카신나_kor.pdf,38ef4d207e77f5eb9090494cae91e62c3352a370a528c7e3b7dd18cf32488866,2024-01-05,
+KR_KCC_LACQUER,KCC락카신나,79-20-9,아세트산메틸,36,46,41 ± 5%,yes,yes,single,2,0_KCC_MSDS_락카신나_kor.pdf,38ef4d207e77f5eb9090494cae91e62c3352a370a528c7e3b7dd18cf32488866,2024-01-05,
+KR_KCC_LACQUER,KCC락카신나,67-56-1,메탄올,0,9,4 ± 5%,yes,yes,single,2,0_KCC_MSDS_락카신나_kor.pdf,38ef4d207e77f5eb9090494cae91e62c3352a370a528c7e3b7dd18cf32488866,2024-01-05,SDS 원문 수학적 하한 -1%를 물리적 가능 하한 0%로 절단; 원문값 원칙적으로 그대로 보존
+KR_KCC_LACQUER,KCC락카신나,108-65-6,프로필렌글리콜모노메틸에테르아세테이트,10,20,15 ± 5%,yes,yes,single,2,0_KCC_MSDS_락카신나_kor.pdf,38ef4d207e77f5eb9090494cae91e62c3352a370a528c7e3b7dd18cf32488866,2024-01-05,
+KR_KCC_LACQUER,KCC락카신나,763-69-9,에틸3-에톡시프로피오네이트,10,20,15 ± 5%,yes,yes,single,2,0_KCC_MSDS_락카신나_kor.pdf,38ef4d207e77f5eb9090494cae91e62c3352a370a528c7e3b7dd18cf32488866,2024-01-05,
+KR_KCC_ACRYLIC,KCC아크릴신나,1330-20-7,자일렌(혼합이성질체),55,65,60 ± 5%,yes,yes,mixed_isomers,2,1_KCC_MSDS_아크릴신나_kor.pdf,7926280212a7780879ec3b7b6b3dc83d3666a8efe74fc34536e24836abb7641a,2024-01-05,혼합 자일렌: 이성질체 조성 확인 전 단일 SMILES로 모델 입력 금지
+KR_KCC_ACRYLIC,KCC아크릴신나,100-41-4,에틸벤젠,35,45,40 ± 5%,yes,yes,single,2,1_KCC_MSDS_아크릴신나_kor.pdf,7926280212a7780879ec3b7b6b3dc83d3666a8efe74fc34536e24836abb7641a,2024-01-05,
+KR_KCC_ENAMEL,KCC에나멜신나,64741-41-9,중질 나프타,25,35,30 ± 5%,yes,yes,UVCB,2,2_KCC_MSDS_에나멜신나_kor.pdf,465e091ed81959cdc1ce11d0dffcf5e08ac17e1e5b782c68cfe6379549be8500,2024-07-05,석유계 가변조성 물질: 단일 분자 취급 금지
+KR_KCC_ENAMEL,KCC에나멜신나,64741-46-4,경질 나프타,25,35,30 ± 5%,yes,yes,UVCB,2,2_KCC_MSDS_에나멜신나_kor.pdf,465e091ed81959cdc1ce11d0dffcf5e08ac17e1e5b782c68cfe6379549be8500,2024-07-05,석유계 가변조성 물질: 단일 분자 취급 금지
+KR_KCC_ENAMEL,KCC에나멜신나,64742-49-0,수소처리 경질 나프타,35,45,40 ± 5%,yes,yes,UVCB,2,2_KCC_MSDS_에나멜신나_kor.pdf,465e091ed81959cdc1ce11d0dffcf5e08ac17e1e5b782c68cfe6379549be8500,2024-07-05,석유계 가변조성 물질: 단일 분자 취급 금지
+KR_NOROO_DR170_GOLD,락카신나 DR-170(골드),1330-20-7,자일렌(혼합이성질체),33,43,33∼43,yes,yes,mixed_isomers,2,TA0000231_AC_011_KO_20220729_1406.pdf,5a7a6618c6fdcb7a5e3eb4d725cf1390f3fa42bdf685b29dba2869be560f8dc1,2022-07-29,혼합 자일렌: 이성질체 조성 확인 전 단일 SMILES로 모델 입력 금지
+KR_NOROO_DR170_GOLD,락카신나 DR-170(골드),67-64-1,아세톤,15,25,15∼25,yes,yes,single,2,TA0000231_AC_011_KO_20220729_1406.pdf,5a7a6618c6fdcb7a5e3eb4d725cf1390f3fa42bdf685b29dba2869be560f8dc1,2022-07-29,
+KR_NOROO_DR170_GOLD,락카신나 DR-170(골드),108-88-3,톨루엔,7,17,7∼17,yes,yes,single,2,TA0000231_AC_011_KO_20220729_1406.pdf,5a7a6618c6fdcb7a5e3eb4d725cf1390f3fa42bdf685b29dba2869be560f8dc1,2022-07-29,
+KR_NOROO_DR170_GOLD,락카신나 DR-170(골드),108-65-6,프로필렌글리콜모노메틸에테르아세테이트,8,18,8∼18,yes,yes,single,2,TA0000231_AC_011_KO_20220729_1406.pdf,5a7a6618c6fdcb7a5e3eb4d725cf1390f3fa42bdf685b29dba2869be560f8dc1,2022-07-29,
+KR_NOROO_DR170_GOLD,락카신나 DR-170(골드),616-38-6,탄산다이메틸,4,14,4∼14,yes,yes,single,2,TA0000231_AC_011_KO_20220729_1406.pdf,5a7a6618c6fdcb7a5e3eb4d725cf1390f3fa42bdf685b29dba2869be560f8dc1,2022-07-29,
+KR_NOROO_DR170_GOLD,락카신나 DR-170(골드),67-56-1,메탄올,4,14,4∼14,yes,yes,single,2,TA0000231_AC_011_KO_20220729_1406.pdf,5a7a6618c6fdcb7a5e3eb4d725cf1390f3fa42bdf685b29dba2869be560f8dc1,2022-07-29,
+KR_NOROO_DR170_GOLD,락카신나 DR-170(골드),100-41-4,에틸벤젠,5,15,5∼15,yes,yes,single,2,TA0000231_AC_011_KO_20220729_1406.pdf,5a7a6618c6fdcb7a5e3eb4d725cf1390f3fa42bdf685b29dba2869be560f8dc1,2022-07-29,
+KR_NOROO_DR170_GOLD,락카신나 DR-170(골드),111-76-2,2-부톡시에탄올,1,10,1∼10,yes,yes,single,2,TA0000231_AC_011_KO_20220729_1406.pdf,5a7a6618c6fdcb7a5e3eb4d725cf1390f3fa42bdf685b29dba2869be560f8dc1,2022-07-29,
+KR_NOROO_DR170L,LACQUER THINER DR-170L,1330-20-7,자일렌(혼합이성질체),20,30,20~30,yes,yes,mixed_isomers,3,LACQUER_THINER_DR-170L_KR_1.4.pdf,e9ad91fb2f704ccfc893c0acfe27fb52545e97aadb4de07283910ca0772aec05,2026-09-10,혼합 자일렌: 이성질체 조성 확인 전 단일 SMILES로 모델 입력 금지
+KR_NOROO_DR170L,LACQUER THINER DR-170L,108-88-3,톨루엔,15,24,15~24,yes,yes,single,3,LACQUER_THINER_DR-170L_KR_1.4.pdf,e9ad91fb2f704ccfc893c0acfe27fb52545e97aadb4de07283910ca0772aec05,2026-09-10,
+KR_NOROO_DR170L,LACQUER THINER DR-170L,123-86-4,n-부틸아세테이트,12,20,12~20,yes,yes,single,3,LACQUER_THINER_DR-170L_KR_1.4.pdf,e9ad91fb2f704ccfc893c0acfe27fb52545e97aadb4de07283910ca0772aec05,2026-09-10,
+KR_NOROO_DR170L,LACQUER THINER DR-170L,67-64-1,아세톤,3,10,3~10,yes,yes,single,3,LACQUER_THINER_DR-170L_KR_1.4.pdf,e9ad91fb2f704ccfc893c0acfe27fb52545e97aadb4de07283910ca0772aec05,2026-09-10,
+KR_NOROO_DR170L,LACQUER THINER DR-170L,67-56-1,메탄올,1,5,1~5,yes,yes,single,3,LACQUER_THINER_DR-170L_KR_1.4.pdf,e9ad91fb2f704ccfc893c0acfe27fb52545e97aadb4de07283910ca0772aec05,2026-09-10,
+KR_NOROO_DR170L,LACQUER THINER DR-170L,108-65-6,프로필렌글리콜메틸에테르아세테이트,1,5,1~5,yes,yes,single,3,LACQUER_THINER_DR-170L_KR_1.4.pdf,e9ad91fb2f704ccfc893c0acfe27fb52545e97aadb4de07283910ca0772aec05,2026-09-10,
+KR_NOROO_DR170L,LACQUER THINER DR-170L,100-41-4,에틸벤젠,1,5,1~5,yes,yes,single,3,LACQUER_THINER_DR-170L_KR_1.4.pdf,e9ad91fb2f704ccfc893c0acfe27fb52545e97aadb4de07283910ca0772aec05,2026-09-10,
+KR_NOROO_DR170L,LACQUER THINER DR-170L,78-93-3,메틸에틸케톤,1,5,1~5,yes,yes,single,3,LACQUER_THINER_DR-170L_KR_1.4.pdf,e9ad91fb2f704ccfc893c0acfe27fb52545e97aadb4de07283910ca0772aec05,2026-09-10,
