@@ -156,3 +156,16 @@ python research/korean_thinners_271/src/09_integrated_paper_report.py
 \`optimizer_missing_status: DISABLED_MISSING_LOCAL_MODULE\`을 남깁니다.
 이 경우 최적화는 실행 불가이며, 09단계 보고서 생성만 허용합니다.
 복합물/법정 TWA/동일 공정 검증 누락값을 자동 승인하는 기능은 없습니다.
+
+## 02a–02d 추가: 빈 자료 수작업 입력을 줄이는 자동 근거수집
+
+최신 [자동 보완 자세한 안내](PIPELINE_02a_02d_AUTO_ENRICH.md)를 참조하세요. 02단계를 마친 뒤 아래 명령으로 PubChem·KOSHA·법제처 공식자료와 두 제조사 원본 MSDS의 용도 근거를 한 번에 수집합니다. **00–09의 별도 04–07 승인 판정은 유지**됩니다.
+
+~~~powershell
+cd F:\fire2
+python research/korean_thinners_271/src/run_auto_enrichment.py `
+  --noru-zip 'F:\fire2\노루_신나(1).zip' `
+  --samhwa-zip 'F:\fire2\삼화_신나(1).zip'
+~~~
+
+자동 수집은 인증받은 물성·국내 법정 TWA·기능 호환성 검증 완료와 같지 않으며, **자동 후보는 근거 검토 후에만 승인**합니다.

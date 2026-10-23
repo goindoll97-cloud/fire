@@ -46,3 +46,7 @@ python -m unittest discover -s research/korean_thinners_271/src -p 'test_*.py' -
 ## 원본 PDF 기반 전체 연구 DB
 
 [270건 원본대조 및 1,454개 성분·54 CAS 연구 DB](research/korean_thinners_271/docs/원본MSDS_270건_데이터재구축.md) — 원본 문서의 해시·함량 범위·복합물 구조 차단·용도 및 중복 검토·물성 검증상태를 분리 관리합니다. 결측 물성, 공식 국내 TWA, 제조사 실제 배합비는 자동 생성하지 않습니다.
+
+### 54 CAS·270개 제품 자동 근거수집 (02a–02d)
+
+[PubChem/법제처/KOSHA 및 원본 MSDS 자동 수집 안내](research/korean_thinners_271/docs/PIPELINE_02a_02d_AUTO_ENRICH.md) — CAS 구조·분자량은 출처와 함께 미승인 상태로 자동 채우고, 제품 용도 원문 및 한국 TWA 공식 근거를 검토 대기 파일로 모읍니다. **현행 한국 TWA·물성·동일 용도 비교제품을 자동 승인하지 않습니다.**
