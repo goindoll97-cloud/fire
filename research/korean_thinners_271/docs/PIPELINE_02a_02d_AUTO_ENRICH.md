@@ -163,3 +163,42 @@ git sparse-checkout list
 단일 API 접근 진단기 `src/02b_diagnose_kosha_access.py`는 이제
 `pipeline_270_core.py`를 import하지 않고 저장소 루트의 `.env`를 직접
 안전하게 읽으므로 **독립적으로 실행**할 수 있습니다.
+
+
+## 2026-10-24: KOSHA 진단 HTTP 200인데 일괄 수집이 403인 경우
+
+단일 진단기에서 \`key_was_percent_encoded: true\`, \`http_status: 200\`,
+\`provider_code: 00\`을 확인한 경우 서비스 접근 성공입니다. 이전
+\`auto_enrich_270.py\`와 \`pipeline_270_core.py\`가 .env의 인코딩된 키를
+\`urlencode\`로 한 번 더 인코딩하는 오류를 수정했습니다.
+일괄 수집 02b와 03 단계 모두 인코딩된 키는 한 번 디코딩하고
+실제 HTTP 전송에서는 한 번만 인코딩합니다. 기존 .env 키는 변경하지 마세요.
+
+로컬이 구버전 \`main\`이고 최신 GitHub 파일을 개별 \`git restore\`한 뒤
+\`git status --short\`에 \`?? src/02b_diagnose_kosha_access.py\`처럼 나타나는
+경우, GitHub의 최신 추적파일과 로컬 미추적 파일이 충돌해 pull이 차단될 수
+있습니다. 작업 파일을 먼저 **저장소 밖으로 이동해 백업한 뒤**
+\`git pull --ff-only origin main\`을 수행하세요.
+
+~~~powershell
+cd F:\fire2
+git fetch origin main
+$relative = 'research/korean_thinners_271/src/02b_diagnose_kosha_access.py'
+$backup = Join-Path $env:TEMP ('fire2_diagnostic_' + (Get-Date -Format yyyyMMdd_HHmmss) + '.py')
+if ((git ls-files -- $relative).Length -eq 0 -and (Test-Path -LiteralPath $relative)) {
+    Move-Item -LiteralPath $relative -Destination $backup
+    Write-Host "기존 미추적 파일 백업: $backup"
+}
+git pull --ff-only origin main
+git status --short
+python research/korean_thinners_271/src/02b_diagnose_kosha_access.py
+python research/korean_thinners_271/src/02b_auto_prefill_korean_twa.py
+~~~
+
+위 명령은 \`.env\`, 기존 검토 CSV, MSDS ZIP, 실험 결과, 미추적
+\`chemprop_before_hanna.yml\`은 변경하지 않습니다.
+\`git pull\` 전 \`git status --short\`에서 다른 수정파일이 있으면
+덮어쓰지 말고 먼저 충돌 항목을 확인해야 합니다.
+
+KOSHA 참고 API 응답 성공은 한국 법정 TWA 승인 완료가 아닙니다.
+법제처 고시의 실제 적용 별표, ppm 단위, CAS, 유효일자를 확인해야 합니다.

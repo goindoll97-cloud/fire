@@ -198,6 +198,36 @@ class AutoEnrichTests(unittest.TestCase):
             module.load_env()
             self.assertEqual(os.environ['KOSHA_MSDS_SERVICE_KEY'],'EXISTING_VALUE')
 
+    def test_kosha_percent_encoded_key_decoded_once_for_full_batch(self):
+        # The single-CAS probe returns HTTP 200 when the portal-encoded key is
+        # unquoted before urlencode. Batch requests must do exactly the same.
+        attempts=[]
+        def good_kosha(url,params):
+            if 'law.go.kr' in url:
+                raise AssertionError('LAW_OC should be unset for this test')
+            attempts.append((url, dict(params)))
+            self.assertEqual(params['serviceKey'],'MOCK+SECRET/=')
+            self.assertEqual(params['searchCnd'],'1')
+            self.assertEqual(params['searchWrd'],'75-07-0')
+            return (b'<response><header><resultCode>00</resultCode></header>'
+                    b'<body><item><casNo>75-07-0</casNo></item></body></response>')
+        with patch.object(a,'load_env'),patch.dict(os.environ,{
+            'LAW_OC':'','KOSHA_MSDS_SERVICE_KEY':'MOCK%2BSECRET%2F%3D'}):
+            summary=a.official_twa_evidence(fetch=good_kosha,work=self.work,
+                                            limit=1,sleep=0)
+        self.assertEqual(len(attempts),1)
+        self.assertEqual(summary['KOSHA_reference_candidates'],1)
+        self.assertEqual(summary['approved_Korean_TWA_added'],0)
+        self.assertEqual(a.read(self.review/a.TWA)[0]['검증상태'],'미검증')
+        self.assertNotIn('MOCK+SECRET',
+             (self.work/'02b_twa_evidence'/'summary.json').read_text(encoding='utf-8'))
+        self.assertNotIn('MOCK%2BSECRET',
+             (self.work/'02b_twa_evidence'/'summary.json').read_text(encoding='utf-8'))
+
+    def test_kosha_decoded_key_is_preserved_without_double_decode(self):
+        self.assertEqual(a.decode_kosha_service_key('MOCK%2BKEY%2F%3D'),'MOCK+KEY/=')
+        self.assertEqual(a.decode_kosha_service_key('MOCK+KEY/='),'MOCK+KEY/=')
+
     def test_queue_does_not_create_approvals(self):
         summary=a.report_queue(work=self.work)
         self.assertEqual(summary['review_queue_count'],5)
