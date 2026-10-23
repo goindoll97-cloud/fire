@@ -100,6 +100,34 @@ class CoreTests(unittest.TestCase):
             p.stage07(None)
         self.assertEqual(p.read(self.work/'07_same_use'/'같은용도_낮은잠재지표_후보.csv'),[])
 
+    def test_stage08_missing_optimizer_is_explicitly_blocked_not_crashed(self):
+        # A partial Windows checkout may lack optimize_verified_blend.py;
+        # data reports should still reach stage 09, but optimization must stay disabled.
+        p.write(self.work/'07_same_use'/'같은용도_제품쌍_비교.csv',[],
+                ['비교군ID','용도ID'])
+        with patch.dict(sys.modules, {'optimize_verified_blend': None}):
+            p.stage08(None)
+        folder=self.work/'08_optimization'
+        cfg=json.loads((folder/'검증전_Pareto_제약서식.json').read_text(encoding='utf-8'))
+        status=json.loads((folder/'최적화_진행조건.json').read_text(encoding='utf-8'))
+        self.assertFalse(status['optimizer_module_available'])
+        self.assertEqual(status['optimizer_missing_status'],'DISABLED_MISSING_LOCAL_MODULE')
+        self.assertFalse(status['auto_optimization_performed'])
+        self.assertEqual(len(status['conditions_required']),5)
+        self.assertTrue(all(value is False for value in cfg['검증'].values()))
+        self.assertEqual(cfg['성분'][0]['CAS'],'REPLACE')
+        self.assertEqual(cfg['성분'][0]['한국_TWA_ppm'],None)
+        # 09 reporting is independent of a missing optimizer module.
+        p.write(self.work/'04_eligibility'/'270건_모델입력_판정.csv',[],
+                ['문서키','HANNA계산허용'])
+        p.write(self.work/'06_hazard'/'성분별_잠재지표_시나리오.csv',[],
+                ['문서키'])
+        p.write(self.work/'07_same_use'/'같은용도_낮은잠재지표_후보.csv',[],
+                ['문서키'])
+        with patch.object(p,'ensure_source',return_value=([{'문서키':'A'}],[{'CAS':'A1'}],[{'CAS':'A1'}])):
+            p.stage09(None)
+        self.assertTrue((self.work/'09_report'/'논문용_진행보고서.md').exists())
+
     def fake_source(self):
         p.write(self.source/p.DOCFILE,[{'문서키':'A','기존제품ID':'X','원본SHA256':'x',
         '제품명_파일명기반':'검증된 가상A','함량합계100가능_표기성분만':'예'}],
