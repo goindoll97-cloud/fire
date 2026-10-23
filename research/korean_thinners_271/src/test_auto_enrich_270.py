@@ -85,6 +85,55 @@ class AutoEnrichTests(unittest.TestCase):
         self.assertIsNone(a.direct_25c_vp_candidates(['10 mmHg at 20 C'])[0])
         self.assertIsNone(a.direct_25c_vp_candidates(['10 mmHg at 25 C','20 mmHg at 25 C'])[0])
 
+    def test_scientific_notation_vapor_pressure_does_not_parse_exponent_only(self):
+        parsed,state=a.direct_25c_vp_candidates(
+          ['4.60X10+1 mm Hg at 25 °C /Extrapolated/'])
+        self.assertEqual(state,'VP_25C_직접조건후보_검증필요')
+        self.assertAlmostEqual(parsed[0],46*0.13332236842105263,places=6)
+        self.assertIsNone(a.direct_25c_vp_candidates(['4.60X10+1 mm Hg at 20 °C'])[0])
+
+    def test_previously_wrong_unapproved_vp_is_quarantined_and_reassessed(self):
+        rows=a.read(self.review/a.PROPS)
+        rows[0]['CAS']='142-82-5'
+        rows[0]['25C_포화증기압_kPa']='0.13332237'
+        rows[0]['물성출처와측정조건']=(
+          'https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/8900/JSON'
+          ' ; original: 4.60X10+1 mm Hg at 25 °C /Extrapolated/'
+          ' ; 자동후보/출처 원문 미승인')
+        a.write(self.review/a.PROPS,rows,list(rows[0]))
+        def heptane_fetch(url, params):
+            if '/name/' in url and url.endswith('/cids/JSON'):
+                return b'{"IdentifierList":{"CID":[8900]}}'
+            if '/property/' in url:
+                return b'{"PropertyTable":{"Properties":[{"CID":8900,"SMILES":"CCCCCCC","MolecularWeight":"100.2"}]}}'
+            if '/synonyms/' in url:
+                return b'{"InformationList":{"Information":[{"Synonym":["142-82-5"]}]}}'
+            if 'pug_view' in url:
+                return json.dumps({'Record':{'Section':[{
+                  'TOCHeading':'Vapor Pressure','Information':[{'Value':{
+                   'StringWithMarkup':[{'String':'4.60X10+1 mm Hg at 25 °C /Extrapolated/'}]}}]}]}}).encode()
+            raise AssertionError(url)
+        summary=a.property_enrich(fetch=heptane_fetch,work=self.work,limit=1,sleep=0)
+        row=a.read(self.review/a.PROPS)[0]
+        self.assertEqual(summary['VP_candidates_corrected'],1)
+        self.assertAlmostEqual(float(row['25C_포화증기압_kPa']),46*0.13332236842105263,places=5)
+        self.assertEqual(row['HANNA입력승인'],'미승인')
+        audit=a.read(self.work/'02a_pubchem'/'자동VP후보_오류정정감사.csv')
+        self.assertEqual(audit[0]['기존값_kPa'],'0.13332237')
+
+    def test_non_single_identifiers_are_never_structurally_approved(self):
+        rows=a.read(self.review/a.PROPS)
+        rows[0]['CAS']='8052-41-3'
+        rows[1]['CAS']='26588-80-7'
+        rows[0]['복합물또는이성질체']='아니오'
+        rows[1]['복합물또는이성질체']='아니오'
+        a.write(self.review/a.PROPS,rows,list(rows[0]))
+        summary=a.property_enrich(fetch=mock_fetch,work=self.work,limit=2,sleep=0)
+        self.assertEqual(summary['mixed_blocked'],2)
+        result=a.read(self.review/a.PROPS)
+        self.assertTrue(all(r['복합물또는이성질체']=='예' for r in result))
+        self.assertTrue(all(r['SMILES']=='' and r['HANNA입력승인']=='미승인' for r in result))
+
     def test_queue_does_not_create_approvals(self):
         summary=a.report_queue(work=self.work)
         self.assertEqual(summary['review_queue_count'],5)
