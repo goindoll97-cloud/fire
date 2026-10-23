@@ -134,6 +134,45 @@ class AutoEnrichTests(unittest.TestCase):
         self.assertTrue(all(r['복합물또는이성질체']=='예' for r in result))
         self.assertTrue(all(r['SMILES']=='' and r['HANNA입력승인']=='미승인' for r in result))
 
+
+    def test_kosha_403_stops_remaining_54_requests(self):
+        # A rejected API key is not 54 separate negative chemical search results.
+        attempts=[]
+        def forbidden(url,params):
+            attempts.append(params['searchWrd'])
+            raise RuntimeError('기관 요청 실패: HTTP_403')
+        with patch.object(a,'load_env'),patch.dict(os.environ,
+             {'LAW_OC':'','KOSHA_MSDS_SERVICE_KEY':'FAKE_DO_NOT_PRINT'}):
+            summary=a.official_twa_evidence(fetch=forbidden,work=self.work,
+                                            sleep=0,limit=2)
+        self.assertEqual(summary['KOSHA_status_counts'].get(
+             'SKIPPED_AFTER_HTTP_403_CHECK_API_PERMISSION'),1)
+        self.assertEqual(summary['KOSHA_reference_candidates'],0)
+        self.assertEqual(summary['approved_Korean_TWA_added'],0)
+        self.assertTrue(all(cas=='75-07-0' for cas in attempts))
+        self.assertNotIn('FAKE_DO_NOT_PRINT',
+           (self.work/'02b_twa_evidence'/'summary.json').read_text(encoding='utf-8'))
+
+    def test_kosha_access_diagnostic_never_prints_token(self):
+        import importlib.util
+        module_path=Path(__file__).parent/'02b_diagnose_kosha_access.py'
+        spec=importlib.util.spec_from_file_location('kosha_diagnostic',module_path)
+        module=importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        self.assertEqual(module.normalize_key('a%2Bb'),('a+b',True))
+        self.assertEqual(module.normalize_key('a+b'),('a+b',False))
+        with patch.object(module,'load_env'),patch.dict(os.environ,
+             {'KOSHA_MSDS_SERVICE_KEY':'SECRET%2BKEY'}):
+            d=module.probe(fetch=lambda endpoint,params:
+               (403,b'<response><returnReasonCode>30</returnReasonCode>'
+                    b'<returnAuthMsg>SECRET+KEY NOT REGISTERED</returnAuthMsg></response>'))
+        self.assertEqual(d['http_status'],403)
+        self.assertEqual(d['provider_code'],'30')
+        self.assertEqual(d['provider_status'],'SERVICE_KEY_NOT_REGISTERED')
+        self.assertTrue(d['key_was_percent_encoded'])
+        self.assertFalse(d['korean_TWA_validated'])
+        self.assertNotIn('SECRET',json.dumps(d))
+
     def test_queue_does_not_create_approvals(self):
         summary=a.report_queue(work=self.work)
         self.assertEqual(summary['review_queue_count'],5)

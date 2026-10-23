@@ -308,11 +308,15 @@ def official_twa_evidence(*,fetch=None,limit=54,sleep=0.25,work=WORK,offline=Fal
                   'sha256':'','message':type(exc).__name__+' (key hidden)'})
         except RuntimeError as exc:law_evidence.append({'source':'LAW_SEARCH','status':'REQUEST_FAILED','sha256':'','message':str(exc)})
     else:law_evidence.append({'source':'LAW_SEARCH','status':'OFFLINE_OR_KEY_MISSING','sha256':'','message':'공식 고시 원문 확인 필요'})
+    # Stop after a definite 403 access denial: 54 retries cannot resolve a key/access problem.
+    access_denied=False
     # KOSHA current catalogue CAS search: searchCnd=1 and searchWrd=CAS.
     for entry in rows[:limit]:
         cas=entry['CAS']
         state='OFFLINE_OR_KEY_MISSING';raw=b'';snippets=[]
-        if not offline and key:
+        if access_denied:
+            state='SKIPPED_AFTER_HTTP_403_CHECK_API_PERMISSION'
+        elif not offline and key:
             try:
                 # Two provider-published paths exist across catalogue revisions.
                 # Try the current path first; fallback only on request failure.
@@ -342,7 +346,13 @@ def official_twa_evidence(*,fetch=None,limit=54,sleep=0.25,work=WORK,offline=Fal
                 snippets=safe_xml_cas_snippets(raw,cas)
                 state='KOSHA_REFERENCE_FOUND' if snippets else 'NO_EXACT_CAS_IN_RESPONSE'
                 (out/f'KOSHA_MSDS_{cas}.xml').write_bytes(raw.replace(key.encode(),b'[REDACTED]'))
-            except RuntimeError as exc:state='REQUEST_FAILED_'+str(exc).replace(' ','_')[:45]
+            except RuntimeError as exc:
+                state='REQUEST_FAILED_'+str(exc).replace(' ','_')[:45]
+                if 'HTTP_403' in str(exc):
+                    access_denied=True
+                    print('02b: KOSHA HTTP 403; remaining CAS requests skipped. '
+                          'Check API service application/key permissions or run '
+                          '02b_diagnose_kosha_access.py (no credentials printed).')
         evidence.append({'CAS':cas,'KOSHA_상태':state,'KOSHA_조회원문_해시':sha(raw.replace(key.encode(),b'[REDACTED]')) if raw and key else (sha(raw) if raw else ''),
                          'KOSHA_CAS_일치원문발췌':' | '.join(snippets[:3])[:700],
                          '공식_국내_TWA_ppm_후보':'','법정고시_별표_확인상태':'미확인',
