@@ -122,7 +122,7 @@ def main(argv=None):
     p.add_argument('--cas',default='71-43-2',help='One CAS to probe, default benzene')
     p.add_argument('--out',type=Path,default=DEST/'KOSHA_단일요청_접근진단.json')
     args=p.parse_args(argv)
-    if not re.fullmatch(r'\\d{2,7}-\\d{2}-\\d',args.cas):
+    if not re.fullmatch(r'\d{2,7}-\d{2}-\d',args.cas):
         p.error('Invalid CAS syntax')
     report=probe(cas=args.cas)
     args.out.parent.mkdir(parents=True,exist_ok=True)
