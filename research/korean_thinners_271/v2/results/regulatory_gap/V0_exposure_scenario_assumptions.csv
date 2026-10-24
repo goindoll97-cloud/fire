@@ -1,0 +1,6 @@
+﻿scenario_name,room_volume_m3,source_surface_m2,mass_transfer_m_per_h,air_exchange_per_h,source_duration_h,observation_h,end_of_use_to_saturation,eight_hour_mean_to_saturation,assumption_scope
+small_surface_high_vent_15min,100,0.1,0.1,8,0.25,8,0.00001080821614858785,3.906222282018641e-7,"well-mixed, constant composition, replenished liquid, zero initial background"
+small_surface_moderate_vent_1h,100,0.5,0.2,5,1,8,0.00019861403470907075,0.000024995993871399263,"well-mixed, constant composition, replenished liquid, zero initial background"
+medium_surface_moderate_vent_1h,100,1,0.5,3,1,8,0.0015814662989543362,0.00020809633011496543,"well-mixed, constant composition, replenished liquid, zero initial background"
+large_surface_low_vent_4h,100,3,1,1,4,8,0.02865307239489466,0.014601826318567724,"well-mixed, constant composition, replenished liquid, zero initial background"
+large_surface_very_low_vent_4h,100,5,1,0.5,4,8,0.0808360765125151,0.04455673568400864,"well-mixed, constant composition, replenished liquid, zero initial background"
