@@ -165,6 +165,10 @@
 ## 코드와 재현 출처
 
 - **규제함량 교차표:** `src/analyze_regulatory_vapor_gap.py`
+- **CAS별 확인·미확인 원문 표:** `results/regulatory_gap/L1_all_source_CAS_legal_coverage_ledger.csv` (54 CAS),
+  `L2_270_MSDS_unreviewed_CAS.csv` (270개 MSDS 문서).
+- **2026-5호 공식 별표 CAS 원문 대조:** `L3_official_2026_5_annex_matched_CAS_rows.csv` 및
+  `L5_official_NICS_2026_5_xlsx_provenance.json` (6개 직접 일치, 해시 및 행번호 검증).
 - **54개 CAS 법령 검수 범위:** `src/audit_all_source_cas_scope.py`;
   `results/regulatory_gap/L0_legal_scope_integrity.json`
 - **8시간 가상 농도:** `src/analyze_ventilated_scenarios.py`;
