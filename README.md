@@ -32,7 +32,7 @@
 
 ## 어디부터 읽을까
 
-- **[법령 함량 기준과 포화증기 잠재지수 교차분석](research/korean_thinners_271/v2/REGULATORY_VAPOR_GAP_20261024.md)** — 270개 MSDS 중 공식 CAS 기준을 확인한 5개 물질을 우선 검토; 166개 문서에서 특정 성분의 포화기상 농도/TWA 지수 ≥10, 38개 문서에서 원액 기준 수치 대비 기상 용제 분율의 가상 교차(법적 기준 초과 아님).
+- **[현행 지정목록 CAS 대조와 환기·증발량 민감도 분석](research/korean_thinners_271/v2/REGULATORY_VENTILATION_SENSITIVITY_20261024.md)** — 공식 2026-5호 전체 XLSX 원본 확인(6개 원문 CAS 일치), 출처 확인된 총 10개 CAS 조항, 포화잠재지수 10 이상 170개 MSDS 및 증기분율 가상 경계교차 39건. 25/35°C, 환기·작업시간, 신나 1kg·5kg 공급량 제한을 검토. **법적 비해당·실제 노출 초과 판정이 아님**.
 
 
 - **[비실험 연구 보완 결과](research/korean_thinners_271/v2/RESULTS_NONEXPERIMENTAL_20261024.md)** — 의존적 제품쌍 CI(67.2~88.1%), Pareto 정정, 3모델·TWA·최신 MSDS 선택 민감도.
