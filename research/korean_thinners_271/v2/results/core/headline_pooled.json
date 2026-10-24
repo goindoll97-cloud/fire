@@ -16,8 +16,8 @@
   "pairwise_pairs": 117,
   "pairwise_concordance_model_fp": 0.795,
   "pairwise_concordance_model_fp_ci95": [
-    0.655,
-    0.919
+    0.672,
+    0.881
   ],
   "pairwise_concordance_msds_fp": 0.663,
   "pairwise_pairs_msds_evaluable": 83,
@@ -27,8 +27,15 @@
   "pairwise_concordance_diff_maker": 0.75,
   "pairwise_pairs_same_maker_n": 81,
   "field_list_labels": {
-    "두 지표 모두 더 나은 제품이 있음": 39,
-    "이 군에서 두 지표 모두 우위": 26,
-    "다른 제품과 일장일단 (상충)": 3
-  }
+    "Pareto 비지배(일부 제품에 동시 우위)": 26,
+    "비Pareto(두 지표 모두 개선되는 상대제품 존재)": 39,
+    "Pareto 비지배(동시 우위 상대 없음·상충 가능)": 3
+  },
+  "pairwise_ci_method": "cluster bootstrap: resample the 21 same-use groups, not product pairs",
+  "pairwise_group_equal_concordance": 0.835,
+  "pairwise_leave_one_group_out_range": [
+    0.778,
+    0.832
+  ],
+  "pairwise_within_group_flashpoint_permutation_p_exploratory": 0.001
 }
