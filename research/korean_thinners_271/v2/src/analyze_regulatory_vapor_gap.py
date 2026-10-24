@@ -166,6 +166,38 @@ def main():
     ).reset_index()
     grouped.to_csv(OUT / 'R2_regulatory_rule_summary.csv', index=False,
                    encoding='utf-8-sig')
+
+    # Three activity-coefficient baselines are compared on the SAME source
+    # CAS / document / regulation clause, not on different model populations.
+    mod_keys = ['문서키', 'CAS_원문', '규정범주', '고유번호']
+    cv = df.pivot_table(index=mod_keys, columns='기상모델',
+                        values='모형_개별성분_TierA_OEL지수', aggfunc='first')
+    elig = primary[primary['해당규정_함량비교'].eq('below_rule_threshold') &
+                   primary['기상성분추적신뢰'].eq('central_model_value')]
+    cv = cv.join(elig.set_index(mod_keys)[
+        ['해당규정_함량비교']], how='inner')
+    common_models = cv.dropna(subset=['HANNA', 'Raoult', 'UNIFAC']).copy()
+    for model in ('HANNA', 'Raoult', 'UNIFAC'):
+        common_models[model + '_over_TWA_10x'] = common_models[model].ge(10)
+    common_models.to_csv(OUT / 'R4_common_case_model_sensitivity.csv',
+                         encoding='utf-8-sig')
+    model_robustness = {
+        'eligible_common_three_model_cases': int(len(common_models)),
+        'all_three_over_10x': int(common_models[[
+            'HANNA_over_TWA_10x', 'Raoult_over_TWA_10x',
+            'UNIFAC_over_TWA_10x']].all(axis=1).sum()),
+        'any_three_models_over_10x': int(common_models[[
+            'HANNA_over_TWA_10x', 'Raoult_over_TWA_10x',
+            'UNIFAC_over_TWA_10x']].any(axis=1).sum()),
+    }
+    matched = primary[primary['함량미만_성분포화지수10']].copy()
+    examples = matched.sort_values('모형_개별성분_TierA_OEL지수', ascending=False)
+    examples = examples.drop_duplicates(['CAS_원문', '고유번호']).head(8)
+    examples = examples[[
+        '기존제품ID', '제품명', 'CAS_원문', '규정범주',
+        'MSDS_액상하한_mass_pct', 'MSDS_액상상한_mass_pct',
+        '규정_액상함량기준_mass_pct', '모형_포화기상농도_ppm_in_air',
+        '모형_개별성분_TierA_OEL지수', 'UVCB대리물질사용']]
     bydoc = primary.groupby('문서키').agg(
         검토규정_연결성분수=('CAS_원문', 'nunique'),
         비교된규정행수=('CAS_원문', 'size'),
@@ -196,6 +228,11 @@ def main():
         'documents_with_at_least_one_case_ge_100':
             int(bydoc['일부규정_함량미만포화100이상_존재'].sum()),
         'rule_status_distribution': primary['해당규정_함량비교'].value_counts().to_dict(),
+        'composition_unique_in_total': int(products['조성지문'].nunique()),
+        'documents_flagged_unique_composition': int(
+            bydoc.loc[bydoc['일부규정_함량미만포화10이상_존재'],
+                      '조성지문'].nunique()),
+        'model_crosscheck': model_robustness,
         'with_UVCB_origin_overlap_cases': int(
             primary['기상성분추적신뢰'].eq('surrogate_origin_overlap').sum()),
         'note_1': 'Excluded below-threshold flag does not determine other-acts legal applicability.',
@@ -206,6 +243,10 @@ def main():
     }
     (OUT / 'headline_regulatory_vapor_gap.json').write_text(
         json.dumps(counts, ensure_ascii=False, indent=2), encoding='utf-8')
+    print('REGULATORY_VAPOR_RULE_GROUPS ' +
+          json.dumps(grouped.to_dict(orient='records'), ensure_ascii=False))
+    print('REGULATORY_VAPOR_EXAMPLES ' +
+          json.dumps(examples.to_dict(orient='records'), ensure_ascii=False))
     print('REGULATORY_VAPOR_GAP ' + json.dumps(counts, ensure_ascii=False))
 
 
