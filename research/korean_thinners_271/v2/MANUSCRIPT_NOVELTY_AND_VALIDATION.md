@@ -1,7 +1,7 @@
 # 한국산업보건학회지 투고: 노벨티·연구가설·검증 계획
 
 작성: 2026-10-24 / 기존 저장소 v2 코드 및 공개 선행연구 대조.
-**본문 수치의 최종 반영은 새로운 용도감사 기준 재실행 후에만 가능**.
+**용도감사 반영 결과는 이미 재실행되었으며, 본 문서의 실험 의존 항목은 비실험 설계로 변경한다.** 비교군 의존성·개정본 및 모형 민감도는 `NONEXPERIMENTAL_MANUSCRIPT_READINESS.md`를 따른다.
 
 ## 권장 제목
 
@@ -42,12 +42,12 @@
 - 건조속도, 수지 호환성 및 표면 성능 미검증이므로 실제 대체 승인 아님.
 - 분자 모형 비교(Raoult/UNIFAC/HANNA)는 계산가능성·순위 바뀜을 보고하되 HANNA 정확도 우월 주장 금지.
 
-## 검증 설계: 심사 가능성을 가장 크게 개선할 과제
+## 검증 설계: 실험을 제외한 투고 보강 항목
 
 1. **용도 신뢰성:** `USE_CLASSIFICATION_AUDIT.md`의 270건 감사표·충돌 건·빈 제1항을 TDS/PDF로 확인. 기존 넓은 그룹과 세부군의 결과 차이를 비교하는 ablation 분석.
-2. **온도 및 인화점 검증:** 관련 표준시험에 따라 대표 8–10개 제품의 인화점 측정(가능하면 극단·경계·일반 대표제품을 사전 선정). MSDS와 예측값은 별도 비교.
+2. **비실험 인화점 검토:** MSDS 제9항 인화점과 모형 예측 간 일치도와 기재치 차이를 정량화하되, 이를 실제 제품 인화점의 정확도 검증으로 부르지 않는다. 순수 성분 FP 물성 출처 감사와 ±15°C 민감도(S1)를 사용하고 **혼합물 실측은 수행하지 않는다**.
 3. **활동도계수:** HANNA는 기학습 공개 모델. Raoult(γ=1)·수정 UNIFAC을 동일 입력에서 대조하고, 인화점 계산에서 25°C γ를 전체 T에 고정하는 근사의 민감도 분석.
-4. **TWA 및 미설정 성분:** 노출기준 고시 최신본으로 Tier A/Tier B 구분 재확인. 커버리지가 낮은 제품을 누락하지 않고 **미평가/불확실**로 보고.
+4. **TWA 및 미설정 성분:** 법제처 현행 목록의 2020-48호와 별표 CAS 매핑을 확인하고 Tier A/Tier B 민감도(S2)를 비교. 커버리지가 낮은 제품을 누락하지 않고 **미평가/불확실**로 보고.
 5. **MSDS 조성:** 제품당 100개 범위 시나리오, UVCB 대리성분 선택, 시드/배합범위, 불확실성의 범위를 구분.
 6. **통계:** 제품 간 의존성(동일 제조사·동일 배합)의 영향, 비교군 내 제품 수, 표본선택 및 임계값에 따른 민감도를 함께 제시.
 7. **표준화:** 동일 제조사의 개정판이 중복 반영되지 않는지 개정일을 검수하고, 공개된 사용가능성 부호와 감사기록을 보존한다.
@@ -56,7 +56,7 @@
 ## 논문 결과표 제안
 
 - **Table 1.** MSDS 270건 구성·용도감사·중복·제1항 커버리지 및 분석 제외 흐름
-- **Table 2.** 활동도 모델별 계산가능성, MSDS 보고 인화점 대조와 측정 후 실측 MAE
+- **Table 2.** 활동도 모델별 계산가능성 및 MSDS 보고 인화점과의 차이(MAE; 실측 정확도 검증이 아님)
 - **Table 3.** 세부용도군별 노출잠재지수–인화점 방향성, 표본수, 불확실성
 - **Table 4.** 용도검증을 통과한 **조건부 탐색 후보** 및 충돌 사례; 공정 호환성 미검증 명시
 - **Supplement.** 모든 원본 문서·SHA·용도감사·분류변경·보류 이유와 민감도 분석
@@ -75,3 +75,4 @@
 - Prat D et al. (2016), *CHEM21 selection guide of classical- and less classical-solvents.* Green Chemistry 18, 288–296. [DOI: 10.1039/C5GC01008J](https://doi.org/10.1039/C5GC01008J).
 - Liaw H.-J. et al. (2011), *Prediction of miscible mixtures flash-point from UNIFAC group contribution methods.* Fluid Phase Equilibria 300, 70–82. [DOI: 10.1016/j.fluid.2010.10.007](https://doi.org/10.1016/j.fluid.2010.10.007).
 - da Cunha S, Liaw H.-J, Gerbaud V. (2017), *On the relation between azeotropic behavior and minimum/maximum flash point occurrences in binary mixtures of flammable compounds.* Fluid Phase Equilibria 452, 113–134. [DOI: 10.1016/j.fluid.2017.08.019](https://doi.org/10.1016/j.fluid.2017.08.019).
+
