@@ -32,6 +32,11 @@ jobs:
       - name: Validate no unapproved same-use rankings
         run: |
           python -c "import csv,pathlib; p=pathlib.Path('research/korean_thinners_271/output/full270/07_same_use/같은용도_낮은잠재지표_후보.csv'); assert list(csv.DictReader(p.open(encoding='utf-8-sig'))) == []"
+      - name: Full-population manuscript RQ1 RQ2 RQ3 (offline, no unverified rankings)
+        run: python research/korean_thinners_271/src/run_paper_research_questions.py
+      - name: Assert 270-document census and honest unanswered research questions
+        run: |
+          python -c "import csv,json,pathlib; d=pathlib.Path('research/korean_thinners_271/output/full270/10_13_paper_questions'); rows=list(csv.DictReader((d/'00_전체270건_모델적용성및보류.csv').open(encoding='utf-8-sig'))); summary=json.loads((d/'RQ_논문실험_성립여부_판정.json').read_text(encoding='utf-8')); assert len(rows)==270; assert summary['ranked_pairs_RQ1']==0; assert summary['reversed_rank_pairs_RQ2']==0; assert summary['question3_anchor_scenarios']==0; assert summary['question1_status'].startswith('ON_HOLD')"
       - name: Generate blank, unapproved comparison templates
         run: python research/korean_thinners_271/src/screen_same_use_271.py --write-templates --output-dir /tmp/thinner_research
       - name: Generate unverified optimization template (do not run optimizer)
