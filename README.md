@@ -1,11 +1,65 @@
-> **2026-10-24 v2: 270건 전수 계산 결과 확보.** UVCB·이성질체 대리물질, 고시 자동 파싱(Tier A)과 보충 노출기준(Tier B), OEL 커버리지 공백, Raoult/수정 UNIFAC/HANNA 3모델, 25·35°C. → [v2/README.md](research/korean_thinners_271/v2/README.md) · [논문 방향 v2](research/korean_thinners_271/v2/PAPER_DIRECTION_v2.md) · 결과 `research/korean_thinners_271/v2/results/rq/`
+# 사업주의 화재 이익과 근로자의 흡입 보호는 같은 방향인가
+### 국내 시판 신나 270종의 MSDS 조성 기반 화재·흡입 동시 평가 (AI 활동도계수 HANNA)
 
-> **2026-10-24 논문 본실험 확정: [RQ1 동일 용도 배수 · RQ2 Raoult/HANNA 순위·상대등급 역전 · RQ3 MSDS 하중상 불확실성](research/korean_thinners_271/docs/PAPER_RQ1_RQ2_RQ3_270.md).** 270개 MSDS 전체가 연구 모집단입니다. 오래된 271건 파일럿 안내 대신 이 문서와 `src/run_full_paper_experiment.py`, `src/run_paper_research_questions.py`를 우선 사용합니다. **법정 TWA·물성·TDS 미승인 항목을 임의 승인하지 않으며, 혼합물 지표는 성분별 합계 평형 잠재치입니다(작업장 실측 노출이 아님).**
+한국산업보건학회지 투고를 목표로 하는 연구 저장소입니다.
 
+## 연구 질문
+소규모 사업장은 근로자 건강 보호만으로는 움직이기 어렵습니다. 반면 **화재 손실과 위험물 허가 부담은 사업주 본인의 비용**입니다.
+그래서 같은 용도의 신나 안에서 **사업주가 화재 때문에 고를 제품(인화점이 높은 제품)이 근로자의 흡입 노출도 낮추는지** 확인하고, 두 위험이 엇갈리는 제품을 찾아냅니다.
 
-> **권장 연구 실행 방법:** [원본 신나 MSDS 270건 번호별 00–09 전체 파이프라인](research/korean_thinners_271/docs/PIPELINE_00_09_270.md). 원문 검증·54 CAS 물성 승인·국내 TWA·동일 용도 공정 호환성 조건을 단계별로 관리합니다. `.env`의 실제 LAW_OC/KOSHA_MSDS_SERVICE_KEY는 GitHub에 공개하지 않습니다.
+## 방법
+1. 원본 신나 MSDS 270건(삼화 87·노루 183)의 제3항 조성에서 출발합니다. 석유계 혼합물은 대리 성분 구간으로 전개합니다.
+2. **HANNA(기계학습 활동도계수)** 한 모델로 증기 분압을 구하고, 같은 계산에서 두 지표를 냅니다.
+   - 흡입 노출 지수 `I_mix = Σ 10^6 p_i/(P·OEL_i)`
+   - 혼합물 인화점(Liaw 모델)과 폭발하한 도달비
+3. 같은 용도·같은 계절/건조 등급 안에서 비교합니다. 노출기준이 없는 성분이 증기의 대부분인 제품은 순위에서 빼고 따로 보고합니다.
+4. AI의 역할은 기존 방법(Raoult, 수정 UNIFAC)이 계산하지 못하거나 결과가 달라지는 제품을 다루는 것입니다. 인화점 예측 정확도를 높인다고 주장하지 않습니다.
 
-# 국내 시판 신나 MSDS · 기액평형 · 저유해성 후보 탐색
+## 현재 결과 (HANNA, 25°C, 제품당 100개 조성 시나리오)
+- 같은 용도 안에서 예측 인화점이 높은 제품은 노출 지수도 낮은 경우가 약 81%. 한쪽만 좋은 예외 제품 20종.
+- 노출은 확실히 낮고 인화점은 확실히 높은 대체 제품이 75종(노출 지수 중앙값 3.3배 감소, 인화점 +18°C, 26종은 석유류 구분이 바뀜).
+- 노출기준 공백 제품 12종("LV", "Zero VOC" 포함)은 25°C에서 이미 포화증기가 폭발범위 안입니다. 저VOC 표시가 저화재나 저독성을 뜻하지 않습니다.
+- 사업주가 보는 MSDS 인화점으로 비교하면 관계가 약합니다(같은 방향 59%). MSDS 인화점이 조성과 모순되는 경우가 많기 때문입니다.
+
+## 반드시 알아둘 한계
+결과는 포화 상부공간의 **노출 잠재력**이지 실제 작업장 노출이 아닙니다. 예측 인화점은 아직 실측으로 검증하지 않았고, 현행 노출기준 고시로 재실행해야 하며, 위험물 구분 기준(21°C, 70°C)은 법제처 현행 조문으로 확인해야 합니다.
+
+## 어디부터 읽을까
+| 문서 | 내용 |
+|---|---|
+| [CORE_PAPER.md](research/korean_thinners_271/v2/CORE_PAPER.md) | 본문 범위, 결과 표 C1~C4, 정직하게 써야 할 한계 |
+| [FOLLOW_UP_PAPERS.md](research/korean_thinners_271/v2/FOLLOW_UP_PAPERS.md) | 후속 논문 후보 8개 (AI 배합 탐색, MSDS 신뢰성, 노출기준 공백 등) |
+| [v2/README.md](research/korean_thinners_271/v2/README.md) | 재현 명령, 입력 자료와 가정 |
+| [PAPER_DIRECTION_fire_health.md](research/korean_thinners_271/v2/PAPER_DIRECTION_fire_health.md) | 화재·흡입 동시 평가의 근거와 남은 일 |
+| [PAPER_DIRECTION_v2.md](research/korean_thinners_271/v2/PAPER_DIRECTION_v2.md) | 노출기준 공백 중심의 이전 방향 (확장 주제로 이동) |
+
+결과 파일은 `research/korean_thinners_271/v2/results/core/`(본문용)와 `results/rq/`(확장 분석)에 있습니다.
+
+## 재현
+```bash
+cd research/korean_thinners_271/v2
+python src/parse_korean_oel.py && python src/build_properties.py && python src/build_oel.py
+python src/build_flammability.py
+python src/run_v2.py --samples 100 --seed 20261024 --hanna-home <HANNA 경로>
+PYTHONPATH=src python src/run_flammability.py --samples 100 --seed 20261024 --hanna-home <HANNA 경로>
+PYTHONPATH=src python src/analyze_core.py
+python -m unittest discover -s src -p "test_v2.py"
+```
+HANNA는 공개 다성분 버전(https://github.com/marco-hoffmann/HANNA)을 그대로 사용하며 새로 학습하지 않습니다. MSDS PDF에서 인화점을 뽑는 방법은 v2/README.md를 보세요.
+
+## 선행 연구와의 관계
+혼합 용제 증기의 활동도계수 기반 예측(Hori 등 2012, Tischer·Roitzsch 2022), 혼합물 인화점 예측(Liaw 계열, 하동명·이성진 2014), 용제 선정 지침의 건강·안전 점수(CHEM21), 국내 MSDS 오기재(윤충식 외 2000, 안병준 외 2018)가 각각 있습니다. 제품 MSDS 조성에서 출발해 화재와 흡입을 같은 계산으로 함께 평가하고 사업주 이익과 연결한 연구는 검색에서 찾지 못했습니다. 투고 전 재확인이 필요합니다.
+
+---
+
+## 이전 자료 (v1·271건 파일럿)
+아래 설명과 문서는 이전 단계의 것입니다. 현재 분석은 위 v2를 기준으로 합니다.
+
+> **2026-10-24 v2:** [v2/README.md](research/korean_thinners_271/v2/README.md) · 결과 `research/korean_thinners_271/v2/results/rq/`
+> **2026-10-24 RQ1~RQ3:** [PAPER_RQ1_RQ2_RQ3_270.md](research/korean_thinners_271/docs/PAPER_RQ1_RQ2_RQ3_270.md)
+> **원본 MSDS 270건 00–09 파이프라인:** [PIPELINE_00_09_270.md](research/korean_thinners_271/docs/PIPELINE_00_09_270.md). `.env`의 LAW_OC/KOSHA_MSDS_SERVICE_KEY는 GitHub에 공개하지 않습니다.
+
+### v1 파이프라인 설명 (참고용)
 
 기존 검색 수집 271개 PDF 문서(삼화 87·노루 184)를 원본 재검증한 결과, 노루 자료의 `NR007`은 비신나 수성페인트 오탐이었습니다. **실제 신나 MSDS는 270건(삼화 87·노루 183)**이며 제3항에 1,454개 성분기록과 54종 CAS가 포함되어 있습니다. 초기 271건 기록은 추적용으로 유지합니다. 이는 고유 제품 270종이나 국내시장 대표표본을 의미하지 않습니다.
 
