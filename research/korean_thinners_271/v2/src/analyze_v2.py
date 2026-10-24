@@ -24,8 +24,59 @@ import pandas as pd
 
 V2 = Path(__file__).resolve().parents[1]
 RES = V2 / 'results'
+USE_AUDIT = V2 / 'data' / 'use_classification_audit_270.csv'
 OUT = RES / 'rq'
 EXCLUDE_GROUPS = {'명칭만으로 판별 불가', '검색 오탐·비신나', ''}
+
+
+def apply_use_audit(prod):
+    """Apply documentary use review; fail closed on missing/outdated records.
+
+    The original product classifications remain untouched in the 271-record source.
+    An exploratory same-use comparison is NOT a validated field substitution.
+    """
+    if not USE_AUDIT.is_file():
+        raise FileNotFoundError(f'270건 용도 감사표 누락: {USE_AUDIT}')
+    aud = pd.read_csv(USE_AUDIT, dtype=str, encoding='utf-8-sig').fillna('')
+    required = ['문서키', '기존제품ID', '원본SHA256', '용도군_감사', '비교세부군',
+                '계절형_감사', '비교군_감사', '용도감사상태', '탐색비교허용', '현장대체검증']
+    missing = [c for c in required if c not in aud]
+    if missing:
+        raise ValueError(f'용도 감사표 필수 열 누락: {missing}')
+    if aud['문서키'].duplicated().any() or prod['문서키'].duplicated().any():
+        raise ValueError('감사표 또는 모델 결과에 중복 문서키가 있습니다.')
+    if set(aud['문서키']) != set(prod['문서키']):
+        raise ValueError('감사표와 270건 모델 입력 문서키가 다릅니다. 용도감사를 갱신하세요.')
+    if (aud['기존제품ID'].str.strip() == '').any():
+        raise ValueError('용도 감사표에 제품ID 결측이 있습니다.')
+    if not aud['탐색비교허용'].isin(['0', '1']).all():
+        raise ValueError('탐색비교허용은 0 또는 1이어야 합니다.')
+    if (aud['현장대체검증'] != '0').any():
+        raise ValueError('TDS/공정 호환성 현장검증 전에 대체승인을 표시할 수 없습니다.')
+    if '기존제품ID' in prod:
+        chk = aud[['문서키', '기존제품ID']].merge(
+            prod[['문서키', '기존제품ID']], on='문서키', suffixes=('_audit', '_model'), validate='one_to_one')
+        if (chk['기존제품ID_audit'] != chk['기존제품ID_model']).any():
+            raise ValueError('용도 감사표 제품 ID와 모델 입력 ID가 불일치합니다.')
+    raw_path = V2.parent / 'data' / 'source_rebuild_20261023' / 'MSDS_원본대조_270.csv'
+    if raw_path.is_file():
+        raw = pd.read_csv(raw_path, dtype=str, encoding='utf-8-sig').fillna('')
+        chk = aud[['문서키', '원본SHA256']].merge(
+            raw[['문서키', '원본SHA256']], on='문서키', suffixes=('_audit', '_raw'), validate='one_to_one')
+        if len(chk) != len(aud) or (chk['원본SHA256_audit'] != chk['원본SHA256_raw']).any():
+            raise ValueError('감사표 SHA256과 원본 MSDS 문서 정보가 불일치합니다.')
+    aud = aud[required].drop(columns=['기존제품ID', '원본SHA256'])
+    out = prod.merge(aud, on='문서키', how='left', validate='one_to_one')
+    out['용도군_원분류'] = out['용도군']
+    out['용도군'] = out['용도군_감사']
+    out['세부분류'] = out['비교세부군']
+    out['탐색비교허용'] = out['탐색비교허용'].eq('1')
+    out['현장대체검증'] = False
+    out['비교군'] = out['비교군_감사']
+    if out['용도군'].isna().any() or out['비교군'].isna().any():
+        raise ValueError('감사표 병합 결과에 결측 분류가 있습니다.')
+    return out
+
 MIN_COVERAGE = 0.9   # a product is rankable only if >=90 % of its saturated vapour has an OEL (Tier B)
 ALCOHOLS = {'67-56-1', '64-17-5', '67-63-0', '71-36-3', '78-83-1', '107-98-2', '111-76-2',
             '112-34-5', '123-42-2', '97-64-3', '2110-78-3'}
@@ -42,10 +93,9 @@ def load():
     # composition-identical documents (same CAS and ranges) -> one representative
     prod['대표문서'] = prod.groupby('조성지문')['문서키'].transform('first')
     prod['중복여부'] = prod['문서키'] != prod['대표문서']
-    # comparison group = use group x drying/season variant (a retarder is not a substitute
-    # for a fast-dry thinner, nor a winter grade for a summer grade)
-    variant = prod['계절변형'].replace({'표기 없음': '표준'}).str.replace('표기 없음 / ', '', regex=False)
-    prod['비교군'] = prod['용도군'] + ' / ' + variant
+    # Evidence-checked same-use subgroup and season/grade are loaded from a
+    # document-keyed audit, not inferred from the broad product family alone.
+    prod = apply_use_audit(prod)
     return s, prod, sp
 
 
@@ -63,7 +113,7 @@ def summarise(s):
 
 def rq1(summ, prod):
     base = summ[(summ['T'] == '25C') & (summ.model == 'HANNA')].merge(prod, on='문서키')
-    base = base[~base['중복여부'] & ~base['용도군'].isin(EXCLUDE_GROUPS)].copy()
+    base = base[(~base['중복여부']) & base['탐색비교허용'] & ~base['용도군'].isin(EXCLUDE_GROUPS)].copy()
     # same manufacturer + same product name = revisions/variants of one product, not alternatives
     base = base.sort_values('문서키').drop_duplicates(['제조사', '제품명'], keep='first')
     base['순위가능'] = base['OELcov_TierB'] >= MIN_COVERAGE
@@ -107,7 +157,7 @@ def rq1(summ, prod):
 
 def rq2(summ, prod, sp):
     c = summ[summ['T'] == '25C'].pivot_table(index='문서키', columns='model', values='I_mix_TierB')
-    c = c.join(prod.set_index('문서키')[['제품명', '용도군', '중복여부', 'UNIFAC비고']])
+    c = c.join(prod.set_index('문서키')[['제품명', '용도군', '비교군', '탐색비교허용', '중복여부', 'UNIFAC비고']])
     cen = sp[(sp['T'] == '25C') & (sp.model == 'HANNA')]
     alc = cen[cen.CAS.isin(ALCOHOLS)].groupby('문서키').x_liq.sum()
     c['알코올몰분율'] = alc.reindex(c.index).fillna(0)
@@ -130,14 +180,14 @@ def rq2(summ, prod, sp):
         'spearman_HANNA/Raoult_vs_alcohol_x': round(u[['HANNA/Raoult', '알코올몰분율']].corr('spearman').iloc[0, 1], 3),
     }
     rev = []
-    g = u[~u['용도군'].isin(EXCLUDE_GROUPS)]
-    for grp, d in g.groupby('용도군'):
+    g = u[u['탐색비교허용'] & ~u['용도군'].isin(EXCLUDE_GROUPS)]
+    for grp, d in g.groupby('비교군'):
         for (ia, a), (ib, b) in itertools.combinations(d.iterrows(), 2):
             if np.sign(a.Raoult - b.Raoult) != np.sign(a.HANNA - b.HANNA):
                 rev.append({'용도군': grp, '제품A': a.제품명, '제품B': b.제품명,
                             'Raoult A/B': round(a.Raoult / b.Raoult, 3), 'HANNA A/B': round(a.HANNA / b.HANNA, 3),
                             '알코올몰분율 A': round(a.알코올몰분율, 3), '알코올몰분율 B': round(b.알코올몰분율, 3)})
-    npairs = sum(len(d) * (len(d) - 1) // 2 for _, d in g.groupby('용도군'))
+    npairs = sum(len(d) * (len(d) - 1) // 2 for _, d in g.groupby('비교군'))
     summary['within_group_pairs'] = int(npairs)
     summary['raoult_vs_hanna_order_reversals'] = len(rev)
     return c.reset_index(), pd.DataFrame(rev), summary
@@ -165,7 +215,7 @@ def rq4(summ, prod, sp):
     contrib = contrib.sort_values('증기몰분율합', ascending=False)
     # rank shift within groups: Tier A (official only) vs Tier B
     shifts = []
-    for g, d in b[~b['용도군'].isin(EXCLUDE_GROUPS)].groupby('용도군'):
+    for g, d in b[b['탐색비교허용'] & ~b['용도군'].isin(EXCLUDE_GROUPS)].groupby('비교군'):
         if len(d) < 3:
             continue
         ra, rb = d.I_mix_TierA.rank(), d.I_mix_TierB.rank()
