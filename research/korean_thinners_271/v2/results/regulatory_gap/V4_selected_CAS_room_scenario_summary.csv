@@ -1,0 +1,6 @@
+﻿scenario_name,eligible_rule_CAS_rows,single_CAS_hypo_8h_index_ge1,single_CAS_hypo_8h_ge1_documents,single_CAS_hypo_8h_ge10,interpretation
+large_surface_low_vent_4h,300,145,120,2,not real 8h measured exposure; source and room assumptions hypothetical
+large_surface_very_low_vent_4h,300,255,161,79,not real 8h measured exposure; source and room assumptions hypothetical
+medium_surface_moderate_vent_1h,300,0,0,0,not real 8h measured exposure; source and room assumptions hypothetical
+small_surface_high_vent_15min,300,0,0,0,not real 8h measured exposure; source and room assumptions hypothetical
+small_surface_moderate_vent_1h,300,0,0,0,not real 8h measured exposure; source and room assumptions hypothetical
