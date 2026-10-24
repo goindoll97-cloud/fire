@@ -1,0 +1,660 @@
+﻿일련번호,국문,영문,화학식,TWA_ppm,TWA_mgm3,STEL_ppm,STEL_mgm3,CAS,비고
+1,가솔린,Gasoline,-,300.0,,500.0,,8006-61-9,"[8006-61-9] 발암성 1B, (가솔린 증기의 직업적 노출에 한정함), 생식세포 변이원성 1B"
+2,개미산,Formic acid,HCOOH,5.0,,,,64-18-6,[64-18-6]
+3,게르마늄테트라하이드라이드,Germanium tetrahydride,GeH4,0.2,,,,7782-65-2,[7782-65-2]
+4,고형 파라핀 흄,Paraffin wax fume,-,,2.0,,,8002-74-2,[8002-74-2]
+5,곡물분진,Grain dust,-,,4.0,,,,-
+6,곡분분진,Flour dust(Inhalable fraction),-,,0.5,,,,흡입성
+7,과산화벤조일,Benzoyl peroxide,(C6H5CO)2O2,,5.0,,,94-36-0,[94-36-0]
+8,과산화수소,Hydrogen peroxide,H2O2,1.0,,,,7722-84-1,[7722-84-1] 발암성 2
+9,광물털 섬유,Mineral wool fiber,-,,10.0,,,,"발암성 2, (알칼리 산화물 및 알칼리토금속 산화 물의  중량비가 18% 이상인 불특정 모양의 인공 유리규산 섬유에 한정함)"
+10,구리(분진 및 미스트),"Copper(Dust & mist, as Cu)",Cu,,1.0,,2.0,7440-50-8,[7440-50-8]
+11,구리(흄),Copper(Fume),Cu,,0.1,,,7440-50-8,[7440-50-8]
+12,규산칼슘,Calcium silicate,CaSiO3,,10.0,,,1344-95-2,[1344-95-2]
+13,규조토,Diatomaceous earth,-,,10.0,,,,-
+14,글루타르알데히드,Glutaraldehyde,OCH(CH2)3CHO,,,,,111-30-8,[111-30-8]
+15,글리세린미스트,Glycerin mist,CH2OHCHOH?CH2OH,,10.0,,,56-81-5,[56-81-5]
+18,금속가공유(혼합용매추출물),Metal Working Fluids(as mixed solvent soluble aerosol),-,,0.8,,,,-
+19,나프탈렌,Naphthalene,C10H8,10.0,,15.0,,91-20-3,"[91-20-3] 발암성 2, Skin"
+21,납 및 그 무기화합물,"Lead and Inorganic compounds, asPb",Pb,,0.05,,,7439-92-1,"[7439-92-1] 발암성 1B, 생식독성 1A (납(금속)의 경우 발암성 2)"
+23,내화성세라믹섬유,Refractory ceramic fibers(Respirable fibers),-,,,,,,"호흡성, 발암성 1B(알칼리 산화물 및 알칼리토금속 산화물의 중량비가 18% 이하인 불특정 모양의 인공 유리규산 섬유에 한정함)"
+24,노난,Nonane,CH3(CH2)7CH3,200.0,,,,111-84-2,[111-84-2]
+26,2-N-디부틸아미노에탄올,2-N-Dibutylaminoethanol,(C4H9)2NCH2CH2OH,2.0,,,,102-81-8,[102-81-8] Skin
+27,N-메틸 아닐린,N-Methyl aniline,C6H5NHCH3,0.5,,,,100-61-8,[100-61-8] Skin
+28,노말-발레알데히드,n-Valeraldehyde,CH3(CH2)3CHO,50.0,,,,110-62-3,[110-62-3]
+29,노말-부틸 글리시딜에테르,n-Butyl glycidyl ether(BGE),C4H9OCH2CHOCH2,3.0,,,,2426-08-6,"[2426-08-6] 발암성 2, 생식세포 변이원성 2, Skin"
+30,노말-부틸 락테이트,n-Butyl lactate,CH3CH(OH)COO(CH2)3CH3,5.0,,,,138-22-7,[138-22-7]
+31,노말-부틸아크릴레이트,n-Butyl acrylate,C7H12O2,2.0,,10.0,,141-32-2,[141-32-2]
+32,노말-부틸알코올,n-Butyl alcohol(1-Butanol),CH3CH2CH2CH2OH,20.0,,,,71-36-3,[71-36-3]
+33,N-비닐-2-피롤리돈,N-Vinyl-2-pyrrolidone(NVP),C6H9NO,0.05,,,,88-12-0,[88-12-0] 발암성 2
+34,N-에틸모르폴린,N-Ethylmorpholine,C6H13ON,5.0,,,,100-74-3,[100-74-3] Skin
+35,N-이소프로필아닐린,N-Isopropyl aniline,C6H5NHCH(CH3)2,2.0,,,,768-52-5,[768-52-5] Skin
+36,노말-초산 부틸,n-Butyl acetate,CH3COO(CH2)3CH3,150.0,,200.0,,123-86-4,[123-86-4]
+37,노말-초산 아밀,n-Amyl acetate,CH3COOC5H11,50.0,,100.0,,628-63-7,[628-63-7]
+38,N-페닐-베타-나프틸 아민,N-Phenyl-β-naphthyl amine,C10H7NHC6H5,,,,,135-88-6,[135-88-6] 발암성 2
+39,노말-프로필 니트레이트,n-Propyl nitrate,C3H8NO3,25.0,,40.0,,627-13-4,[627-13-4]
+41,노말-프로필 알코올,n-Propyl alcohol,CH3CH2CH2OH,200.0,,250.0,,71-23-8,[71-23-8] Skin
+42,노말-헥산,n-Hexane,CH3(CH2)4CH3,50.0,,,,110-54-3,"[110-54-3] 생식독성 2, Skin"
+43,니켈(가용성화합물),"Nickel(Soluble compounds, as Ni)",Ni,,0.1,,,7440-02-0,[7440-02-0] 발암성 1A
+44,니켈(불용성 무기화합물),"Nickel(InsolubleInorganic compounds, as Ni)",Ni,,0.2,,,7440-02-0,[7440-02-0] 발암성 1A
+45,니켈(금속),Nickel(Metal),Ni,,1.0,,,7440-02-0,[7440-02-0] 발암성 2
+46,니켈 카르보닐,"Nickel carbonyl, as Ni",Ni(CO4),0.001,,,,13463-39-3,"[13463-39-3] 발암성 1A, 생식독성 1B"
+47,니코틴,Nicotine,C10H14N2,,0.5,,,54-11-5,[54-11-5] Skin
+49,니트로글리세린,Nitroglycerin(NG),CH2NO3CHNO3CH2NO3,0.05,,,,55-63-0,[55-63-0] Skin
+51,4-니트로디페닐,4-Nitrodiphenyl,C6H5C6H4NO2,,,,,92-93-3,"[92-93-3] 발암성 1B, Skin"
+52,니트로메탄,Nitromethane,CH3NO2,20.0,,,,75-52-5,[75-52-5] 발암성 2
+53,니트로벤젠,Nitrobenzene,C6H5NO2,1.0,,,,98-95-3,"[98-95-3] 발암성 2, 생식독성 IB, Skin"
+54,니트로에탄,Nitroethane,C2H5NO2,100.0,,,,79-24-3,[79-24-3]
+55,"니트로톨루엔(오쏘, 메타, 파라-이성체)","Nitrotoluene(o, m, p-isomers)",CH3C6H4NO2,2.0,,,,88-72-2|99-08-1|99-99-0,"[88-72-2] 발암성 1B, 생식세포 변이원성 1B, 생식독성 2, Skin, [99-08-1][99-99-0] Skin"
+57,1-니트로프로판,1-Nitropropane,CH3CH2CH2NO3,25.0,,,,108-03-2,[108-03-2]
+58,2-니트로프로판,2-Nitropropane,CH3CHNO2CH3,10.0,,,,79-46-9,[79-46-9] 발암성 1B
+59,대리석,Marble,-,,10.0,,,,-
+60,데미톤,Demeton,(C2H5O)2PSOC2H4SC2H5,,0.1,,,8065-48-3,[8065-48-3] Skin
+61,데카보란,Decaborane,B10H14,0.05,,0.15,,17702-41-9,[17702-41-9] Skin
+62,"2,4-디","2,4-D(2,4-Dichloro phenoxyaceticacid)(Inhalable fraction)",Cl2C6H3OCH2COOH,,10.0,,,94-75-7,"[94-75-7] 발암성 2, 흡입성"
+63,디글리시딜에테르,Diglycidyl ether(DGE),C6H10O3,0.1,,,,2238-07-5,[2238-07-5]
+64,디니트로벤젠(모든 이성체),Dinitrobenzene(all isomers),C6H4(NO2)2,0.15,,,,528-29-0|99-65-0|100-25-4|25154-54-5,[528-29-0][99-65-0][100-25-4][25154-54-5] Skin
+65,디니트로-오쏘-크레졸,Dinitro-o-cresol,CH3C6H2OH(NO2)2,,0.2,,,534-52-1,"[534-52-1] 생식세포 변이원성 2, Skin"
+66,"3,5-디니트로-오쏘-톨루아미드","3,5-Dinitro-o-toluamide",C8H7N3O5,,5.0,,,148-01-6,[148-01-6]
+67,디니트로톨루엔,Dinitrotoluene,(NO2)2C6H3CH3,,0.2,,,25321-14-6,"[25321-14-6] 발암성 1B, 생식세포 변이원성 2, 생식독성 2, Skin"
+68,디메톡시메탄,Dimethoxymethane,CH3OCH2OCH3,1000.0,,,,109-87-5,[109-87-5]
+69,디메틸니트로소아민,Dimethylnitrosoamine,(CH3)2NNO,,,,,62-75-9,"[62-75-9] 발암성 1B, Skin"
+70,"디메틸-1,2-디브로모-2,2-디클로로에틸포스페이트","Dimethyl-1,2-dibromo-2,2-dichloroethy1 phosphate",C4H7Br2Cl2O4P,,3.0,,,300-76-5,[300-76-5] Skin
+72,디메틸아닐린,"Dimethylaniline(N,N-Dimethylaniline)",C6H4N(CH3)2,5.0,,10.0,,121-69-7,"[121-69-7] 발암성 2, Skin"
+73,디메틸아미노벤젠(혼합이성체 포함),"Dimethylaminobenzene(mixedisomers, Inhalabable fraction andvapor)",(CH3)2C6H3NH2,0.5,,,,1300-73-8,"[1300-73-8] 발암성 2, Skin, 흡입성 및 증기"
+74,디메틸아민,Dimethylamine,(CH3)2NH,5.0,,15.0,,124-40-3,[124-40-3]
+75,"N,N-디메틸아세트아미드","N,N-Dimethyl acetamide",C4H9NO,10.0,,,,127-19-5,"[127-19-5] 생식독성 1B, Skin"
+76,디메틸카르바모일클로라이드,Dimethyl carbamoylchloride,(CH3)2NCOCl,0.005,,,,79-44-7,"[79-44-7] 발암성 1B, Skin"
+77,디메틸포름아미드,Dimethylformamide,HCON(CH3)2,10.0,,,,68-12-2,"[68-12-2] 생식독성 1B, Skin"
+78,디메틸프탈레이트,Dimethylphthalate,C10H10O4,,5.0,,,131-11-3,[131-11-3]
+80,"1,1-디메틸하이드라진","1,1-Dimethylhydrazine",(CH3)2NNH2,0.01,,,,57-14-7,"[57-14-7] 발암성 1B, Skin"
+81,디보란,Diborane,B2H6,0.1,,,,19287-45-7,[19287-45-7]
+82,디부틸 포스페이트,Dibutyl phosphate(Inhalablefraction and vapor),(C4H9O)2(OH)PO,,5.0,,10.0,107-66-4,"[107-66-4] Skin, 흡입성 및 증기"
+83,디부틸 프탈레이트,Dibutyl phthalate,C6H4(CO2C4H9)2,,5.0,,,84-74-2,[84-74-2] 생식독성 1B
+84,"1,2-디브로모에탄","1,2-Dibromoethane",CH2BrCH2Br,,,,,106-93-4,"[106-93-4] 발암성 1B, Skin"
+85,디비닐 벤젠,Divinyl benzene,C6H4(CH=CH2)2,10.0,,,,1321-74-0,[1321-74-0]
+86,디설피람,Disulfiram,C10H20N2S4,,2.0,,,97-77-8,[97-77-8]
+87,디설포톤,Disulfoton(Inhalable fraction andvapor),C8H19O2PS3,,0.05,,,298-04-4,"[298-04-4] Skin, 흡입성 및 증기"
+88,디시클로펜타디에닐 철,Dicyclopentadienyl iron,C10H10Fe,,10.0,,,102-54-5,[102-54-5]
+89,디시클로펜타디엔,Dicyclopentadiene,C10H12,5.0,,,,77-73-6,[77-73-6]
+90,디아니시딘,Dianisidine,C14H16N2O2,,0.01,,,119-90-4,[119-90-4] 발암성 1B
+91,"1,2-디아미노에탄","1,2-Diaminoethane",H2NCH2CH2NH2,10.0,,,,107-15-3,[107-15-3] Skin
+92,디아세톤 알코올,Diaceton alcohol,C6H12O2,50.0,,,,123-42-2,[123-42-2]
+93,디아조메탄,Diazomethane,CH2N2,0.2,,,,334-88-3,[334-88-3] 발암성 1B
+94,디아지논,Diazinon(Inhalable fraction and vapor),C12H21N2O3PS,,0.01,,,333-41-5,"[333-41-5] 발암성 1B, Skin, 흡입성 및 증기"
+95,디에탄올아민,Diethanolamine,(HOCH2CH2)2NH,,2.0,,,111-42-2,"[111-42-2] 발암성 2, Skin"
+96,디에틸렌 글리콜 모노부틸에테르,Diethylene glycol monobutyl ether,CH2(CH2)3OCH2CH2OCH2 CH2OH,10.0,,,,112-34-5,[112-34-5]
+97,2-디에틸아미노에탄올,2-Diethylamino ethanol,(C2H5)2NC2H4OH,2.0,,,,100-37-8,[100-37-8] Skin
+98,디에틸아민,Diethylamine,(C2H5)2NH,5.0,,15.0,,109-89-7,[109-89-7] Skin
+99,디에틸 에테르,Diethyl ether,C2H5OC2H5,400.0,,500.0,,60-29-7,[60-29-7]
+100,디에틸 케톤,Diethyl ketone,C2H5COC2H5,200.0,,,,96-22-0,[96-22-0]
+101,디에틸렌 트리아민,Diethylene triamine,(NH2CH2CH2)2NH,1.0,,,,111-40-0,[111-40-0] Skin
+102,디에틸프탈레이트,Diethyl phthalate,C6H4(COOC2H5)2,,5.0,,,84-66-2,[84-66-2]
+103,디(2-에틸헥실)프탈레이트,Di(2-ethylhexyl)phthalate,C6H4(COOC8H17)2,,5.0,,10.0,117-81-7,"[117-81-7] 발암성 2, 생식독성 1B"
+104,디엘드린,Dieldrin,C12H8Cl6O,,0.25,,,60-57-1,"[60-57-1] 발암성 2, Skin,"
+105,디옥사티온,Dioxathion,C12H26O6P2S4,,0.2,,,78-34-2,[78-34-2] Skin
+106,"1,4-디옥산","1,4-Dioxane(Diethylene dioxide)",OCH2CH2OCH2CH2,20.0,,,,123-91-1,"[123-91-1] 발암성 2, Skin"
+107,디우론,Diuron,C9H10Cl2N2O,,10.0,,,330-54-1,[330-54-1] 발암성 2
+108,디이소부틸케톤,Diisobutyl ketone,[(CH3)2CHCH2]2CO,25.0,,,,108-83-8,[108-83-8]
+109,디이소프로필아민,Diisopropylamine,(CH3)2CHNHCH(CH3)2,5.0,,,,108-18-9,[108-18-9] Skin
+110,"2,6-디-삼차-부틸-파라-크레졸","2,6-Di-tert-butyl-p-cresol(Inhalablefraction and vapor)",C15H24O,,2.0,,,128-37-0,[128-37-0] 흡입성 및 증기
+112,디쿼트,Diquat(Inhalable fraction),C12H12Br2N2,,0.5,,,2764-72-9|85-00-7|6385-62-2,"[2764-72-9][85-00-7][6385-62-2] Skin, 흡입성"
+113,디크로토포스,Dicrotophos,C8H16NO5P,,0.25,,,141-66-2,[141-66-2] Skin
+114,디클로로디페닐트리클로로에탄,Dichlorodiphenyltrichloroethane(D.D.T),C14H9Cl5,,1.0,,,50-29-3,[50-29-3] 발암성 2
+115,"1,1-디클로로-1-니트로에탄","1,1-Dichloro-1-nitroethane",CH3CCl2NO2,2.0,,,,594-72-9,[594-72-9]
+116,"1,3-디클로로-5,5-디메틸 하이단토인","1,3-Dichloro-5,5-dimethyl hydantoin",C5H6Cl2N2O2,,0.2,,0.4,118-52-5,[118-52-5]
+117,디클로로디플루오로메탄,Dichlorodifluoromethane,CCl2F2,1000.0,,,,75-71-8,[75-71-8]
+118,디클로로메탄,Dichloromethane,CH2Cl2,50.0,,,,75-09-2,[75-09-2] 발암성 2
+119,"3,3-디클로로벤지딘","3,3-Dichlorobenzidine",C12H10Cl2N2,,,,,91-94-1,"[91-94-1] 발암성 1B, Skin"
+120,디클로로아세트산,Dichloro acetic acid,C2H2Cl2O2,0.5,,,,79-43-6,"[79-43-6] 발암성 2, Skin"
+121,디클로로아세틸렌,Dichloroacetylene,ClCCCl,,,,,7572-29-4,[7572-29-4] 발암성 2
+122,"1,1-디클로로에탄","1,1-Dichloroethane",CH3CHCl2,100.0,,,,75-34-3,[75-34-3]
+124,"1,1-디클로로에틸렌","1,1-Dichloroethylene",CH2CCl2,5.0,,20.0,,75-35-4,[75-35-4] 발암성 2
+125,"1,2-디클로로에틸렌","1,2-Dichloroethylene",CHClCHCl,200.0,,,,540-59-0,[540-59-0]
+126,디클로로에틸에테르,Dichloroethylether,(ClCH2CH2)2O,5.0,,10.0,,111-44-4,"[111-44-4] 발암성 2, Skin"
+127,디클로로테트라플루오로에탄,Dichlorotetrafluoroethane,F2ClCCClF2,1000.0,,,,76-14-2,[76-14-2]
+128,"2,2-디클로로-1,1,1-트라이플루오로에탄","2,2-Dichloro-1,1,1-trifluoroethane",CHCl2CF3,10.0,,,,306-83-2,[306-83-2]
+129,"1,2-디클로로프로판","1,2-Dichloropropane",CH3CHClCH2Cl,10.0,,110.0,,78-87-5,[78-87-5] 발암성 1A
+130,디클로로프로펜,Dichloropropene,CHClCHCH2Cl,1.0,,,,542-75-6,"[542-75-6] 발암성 2, Skin"
+131,"2,2-디클로로프로피온산","2,2-Dichloropropionic acid(Inhalablefraction)",CH3CCl2COOH,,6.0,,,75-99-0,[75-99-0] 흡입성
+132,디클로로플루오로메탄,Dichlorofluoromethane,CHCl2F,10.0,,,,75-43-4,[75-43-4]
+133,"1,1-디클로로-1-플루오로에탄","1,1-Dichloro-1-fluoro ethane",C2Cl2FH3,500.0,,,,1717-00-6,[1717-00-6]
+134,디클로르보스,Dichlorvos(Inhalable fraction andvapor),(CH3O)2POOCHCCl2/ C4H7Cl2O4P,,0.1,,,62-73-7,"[62-73-7] 발암성 2, Skin, 흡입성 및 증기"
+137,디페닐아민,Diphenylamine,C6H5NHC6H5,,10.0,,,122-39-4,[122-39-4]
+138,디프로필렌글리콜메틸 에테르,Dipropylene glycol methyl ether,CH3CH(OCH3)CH2OCH2C H(OH)CH3,100.0,,150.0,,34590-94-8,[34590-94-8] Skin
+139,디프로필 케톤,Dipropyl ketone,(CH3CH2CH2)2CO,50.0,,,,123-19-3,[123-19-3]
+140,디플루오로디브로모메탄,Difluorodibromomethane,CBr2F2,100.0,,,,75-61-6,[75-61-6]
+141,디하이드록시벤젠,Dihydroxybenzene,C6H4(OH)2,,2.0,,,123-31-9,"[123-31-9] 발암성 2, 생식세포 변이원성 2"
+142,러버 솔벤트,Rubber solvent(Naphtha),-,400.0,,,,8030-30-6,"[8030-30-6] 발암성 1B, 생식세포 변이원성 1B (벤젠 0.1% 이상인 경우에 한정함)"
+143,레조시놀,Resorcinol,C6H4(OH)2,10.0,,20.0,,108-46-3,[108-46-3]
+144,로듐금속,"Rhodium, Metal",Rh,,0.1,,,7440-16-6,[7440-16-6]
+145,"로듐, 불용성화합물","Rhodium, Insoluble compounds,as Rh",Rh,,1.0,,,7440-16-6,[7440-16-6]
+146,로진 열분해산물,"Rosin core solder pyrolysisproducts, as Formaldehyde",-,,0.1,,,,
+147,로테논,Rotenone(Commercial),C23H22O6,,5.0,,,83-79-4,[83-79-4]
+148,론넬,Ronnel,(CH3O)2PSOC6H2Cl3,,10.0,,,299-84-3,[299-84-3]
+149,루지,Rouge,-,,10.0,,,,
+150,리튬하이드라이드,Lithium hydride,LiH,,0.025,,,7580-67-8,[7580-67-8]
+151,린데인,Lindane,C6H6Cl6,,0.5,,,58-89-9,"[58-89-9] 발암성 1A, 수유독성, Skin"
+152,말라티온,Malathion(Inhalable fraction andvapor),C10H19O6PS2,,1.0,,,121-75-5,"[121-75-5]발암성 1B, Skin, 흡입성 및 증기"
+153,망간 및 무기 화합물,"Manganese&Inorganic compounds, as Mn",Mn,,1.0,,,7439-96-5,[7439-96-5]
+154,망간 시클로펜타디에닐트리카보닐,"Manganese cyclopentadienyltricarbonyl, as Mn",C5H5Mn(CO)3,,0.1,,,12079-65-1,[12079-65-1] Skin
+155,망간(흄),Manganese(Fume),Mn,,1.0,,3.0,7439-96-5,[7439-96-5]
+156,메빈포스,Mevinphos,(CH3O)2PO2C(CH3)CHCOOCH3,0.01,,0.03,,7786-34-7,[7786-34-7] Skin
+157,메타크릴 산,Methacrylic acid,CH2CCH3COOH,20.0,,,,79-41-4,[79-41-4]
+158,"메타-크실렌-알파,알파-디아민","m-Xylene-α, α´-diamine",C6H4(CH2NH2)2,,,,,1477-55-0,[1477-55-0] Skin
+159,메타-톨루이딘,m-Toluidine,CH3C6H4NH2,2.0,,,,108-44-1,[108-44-1] Skin
+160,메타-프탈로디니트릴,m-Phthalodinitrile(Inhalablefraction and vapor),C8H4N2,,5.0,,,626-17-5,[626-17-5] 흡입성 및 증기
+162,메탄에티올,Methanethiol,CH3SH,0.5,,,,74-93-1,[74-93-1]
+163,메토밀,Methomyl,C5H10N2O2S,,2.5,,,16752-77-5,[16752-77-5]
+164,2-메톡시에탄올,2-Methoxyethanol,CH3OCH2CH2OH,5.0,,,,109-86-4,"[109-86-4] 생식독성 1B, Skin"
+165,2-메톡시에틸아세테이트,2-Methoxyethyl acetate,CH3COOCH2CH2OCH3,5.0,,,,110-49-6,"[110-49-6] 생식독성 1B, skin"
+166,메톡시클로르,Methoxychlor,C16H15Cl3O2,,10.0,,,72-43-5,[72-43-5]
+167,4-메톡시페놀,4-Methoxyphenol,CH3OC6H4OH,,5.0,,,150-76-5,[150-76-5]
+168,메트리뷰진,Metribuzin,C8H14N4OS,,5.0,,,21087-64-9,[21087-64-9]
+169,메틸 노말-부틸케톤,Methyl n-butylketone,CH3COCH2CH2CH2CH3,5.0,,,,591-78-6,"[591-78-6] 생식독성 2, skin"
+170,메틸 노말-아밀케톤,Methyl n-amylketone,CH3(CH2)4COCH3,50.0,,,,110-43-0,[110-43-0]
+171,메틸 데메톤,Methyl demeton,(CH3O)2PSO(CH2)2SC2H5,,0.5,,,8022-00-2,[8022-00-2] Skin
+172,"4,4'-메틸렌디아닐린","4,4'-Methylenedianiline",H2NC6H4CH2C6H4NH2,0.1,,,,101-77-9,"[101-77-9] 발암성 1B, 생식세포 변이원성 2, Skin"
+173,"1,1'-메틸렌비스(4-이소시아네이토사이클로헥산)","1,1'-Methylenebis(4-isocyanatocyclohexane)",CH2[(C6H10)NCO]2,0.005,,,,5124-30-1,[5124-30-1]
+174,"4,4'-메틸렌비스(2-클로로아닐린)","4,4'-Methylenebis(2-chloroaniline)",CH2(C6H4ClNH2)2,0.01,,,,101-14-4,"[101-14-4] 발암성 1A, Skin"
+175,메틸렌비스페닐이소시아네이트,Methylene bisphenyl isocyanate,NCOC6H4CH2C6H4NCO,0.005,,,,101-68-8,[101-68-8] 발암성 2
+176,메틸메타크릴레이트,Methyl methacrylate,CH2C(CH3)COOCH3,50.0,,100.0,,80-62-6,[80-62-6]
+178,메틸삼차 부틸에테르,Methyl tert-butyl ether(MTBE),C5H12O,50.0,,,,1634-04-4,[1634-04-4] 발암성 2
+179,메틸 2-시아노아크릴레이트,Methyl 2-cyanoacrylate,CH2C(CN)COOCH3,2.0,,4.0,,137-05-3,[137-05-3]
+180,2-메틸시클로펜타디에닐망간트리카르보닐,"2-Methylcyclopentadienylmanganese tricarbonyl, as Mn",CH3C5H5Mn(CO)3,,0.2,,,12108-13-3,[12108-13-3] Skin
+181,메틸시클로헥사놀,Methylcyclohexanol,C7H14O,50.0,,,,25639-42-3,[25639-42-3]
+182,메틸시클로헥산,Methylcyclohexane,CH3C6H11,400.0,,,,108-87-2,[108-87-2]
+183,메틸실리케이트,Methyl silicate,(CH3O)4Si,1.0,,,,681-84-5,[681-84-5]
+184,메틸 아민,Methyl amine,CH3NH2,5.0,,15.0,,74-89-5,[74-89-5]
+185,메틸 아밀알코올,Methyl amylalcohol,(CH3)2CHCH2CHOHCH3,25.0,,40.0,,108-11-2,[108-11-2] Skin
+186,메틸 아세틸렌,Methyl acetylene,C3H4,1000.0,,1250.0,,74-99-7,[74-99-7]
+187,메틸 아세틸렌 프로파디엔혼합물,Methyl acetylene propadienemixture(MAPP),-,1000.0,,1250.0,,59355-75-8,[59355-75-8]
+188,메틸 아크릴레이트,Methyl acrylate,CH2CHCOOCH3,2.0,,,,96-33-3,[96-33-3] Skin
+189,메틸 아크릴로니트릴,Methyl acrylonitrile,CH2CCH3CN,1.0,,,,126-98-7,[126-98-7] Skin
+191,메틸 알코올,Methanol,CH3OH,200.0,,250.0,,67-56-1,[67-56-1] Skin
+192,메틸 에틸 케톤,Methyl ethyl ketone(M.E.K),CH3COC2H5,200.0,,300.0,,78-93-3,[78-93-3]
+193,메틸 에틸 케톤 퍼옥사이드,Methyl ethyl ketone peroxide,C8H16O4/C8H18O6,,,,,1338-23-4,[1338-23-4]
+194,메틸 이소부틸 케톤,Methyl isobutyl ketone,CH3COCH2CH(CH3)2,50.0,,75.0,,108-10-1,[108-10-1] 발암성 2
+195,메틸 이소시아네이트,Methyl isocyanate,CH3NCO,0.02,,,,624-83-9,"[624-83-9] 생식독성 2, Skin"
+197,메틸 이소아밀 케톤,Methyl isoamyl ketone,CH3COCH(C2H5)2,50.0,,,,110-12-3,[110-12-3]
+198,메틸 이소프로필 케톤,Methyl isopropyl ketone,(CH3)2CH3COCH,200.0,,,,563-80-4,[563-80-4]
+199,메틸 클로라이드,Methyl chloride,CH3Cl,50.0,,100.0,,74-87-3,"[74-87-3] 발암성 2, Skin"
+200,메틸 클로로포름,Methyl chloroform,CH3CCl3,350.0,,450.0,,71-55-6,[71-55-6]
+201,메틸 파라티온,Methyl parathion(Inhalablefraction and vapor),C8H10NO5PS,,0.2,,,298-00-0,"[298-00-0] Skin, 흡입성 및 증기"
+202,메틸 포메이트,Methyl formate,HCOOCH3,100.0,,150.0,,107-31-3,[107-31-3]
+203,메틸 프로필 케톤,Methyl propyl ketone,CH3COC3H7,200.0,,250.0,,107-87-9,[107-87-9]
+204,메틸 하이드라진,Methyl hydrazine,CH3NHNH2,0.01,,,,60-34-4,"[60-34-4] 발암성 2, Skin"
+206,면분진,"Cotton dust, raw",-,,0.2,,,,-
+207,모노크로토포스,Monocrotophos(Inhalable fractionand vapor),C7H14NO5P,,0.05,,,6923-22-4,"[6923-22-4] 생식세포 변이원성 2, Skin, 흡입성 및 증기"
+209,모르폴린,Morpholine,C4H9ON,20.0,,30.0,,110-91-8,[110-91-8] Skin
+210,목재분진(적삼목),"Wood dust(Western red cedar,Inhalable fraction)",-,,0.5,,,,"흡입성, 발암성 1A"
+211,목재분진(적삼목외 기타 모든 종),"Wood dust(All other species,Inhalable fraction)",-,,1.0,,,,"흡입성, 발암성 1A"
+212,몰리브덴(불용성화합물),Molybdenum(Insolublecompounds)(Inhalable fraction),Mo,,10.0,,,7439-98-7,[7439-98-7] 흡입성
+213,몰리브덴(불용성화합물),Molybdenum(Insoluble compounds)(Respirable fraction)..,Mo,,5.0,,,7439-98-7,[7439-98-7] 호흡성
+214,몰리브덴(수용성화합물),Molybdeunum(Soluble compounds) (Respirablefraction),Mo,,0.5,,,7439-98-7,"[7439-98-7] 발암성 2, 호흡성"
+215,무수 말레산,Maleic anhydride,(CHCO)2O,,0.4,,,108-31-6,[108-31-6]
+216,무수 초산,Acetic anhydride,(CH3CO)2O,1.0,,3.0,,108-24-7,[108-24-7]
+217,무수 프탈산,Phthalic anhydride,C6H4(CO)2O,1.0,,,,85-44-9,[85-44-9] Skin
+218,바륨 및 그 가용성화합물,Barium and soluble compounds,Ba,,0.5,,,7440-39-3,[7440-39-3]
+219,백금(가용성염),"Platinum(Soluble salts, as Pt)",Na2PtCl6?6H2O/ PtCl4/(NH4)2PtCl6,,0.002,,,7440-06-4,[7440-06-4]
+220,백금(금속),Platinum(Metal),Pt,,1.0,,,7440-06-4,[7440-06-4]
+221,배노밀,Benomyl,C14H18N4O3,,10.0,,,17804-35-2,"[17804-35-2] 발암성 2, 생식세포 변이원성 1B, 생식독성 1B"
+222,베릴륨 및 그 화합물,Beryllium & Compounds,Be,,0.002,,0.01,7440-41-7,"[7440-41-7] 발암성 1A, Skin"
+223,베타-나프틸아민,β-Naphthylamine,C10H7NH2,,,,,91-59-8,[91-59-8] 발암성 1A
+225,베타-프로피오락톤,β-Propiolactone,C3H4O2,0.5,,,,57-57-8,"[57-57-8] 발암성 1B, Skin"
+226,벤젠,Benzene,C6H6,0.5,,2.5,,71-43-2,"[71-43-2] 발암성 1A, 생식세포 변이원성 1B, Skin"
+227,"1,2-벤젠디아민","1,2-Benzenediamine",C6H4(NH2)2,,0.1,,,95-54-5,[95-54-5]
+228,"1,3-벤젠디아민","1,3-Benzenediamine",C6H4(NH2)2,,0.1,,,108-45-2,[108-45-2]
+229,벤조일클로라이드,Benzoyl chloride,C7H5ClO,,,,,98-88-4,[98-88-4] 발암성 1B
+230,벤조트리클로라이드,Benzotrichloride,C7H5Cl3,,,,,98-07-7,"[98-07-7] 발암성 1B, Skin"
+231,벤조 피렌,Benzo(a) pyrene,C20H12,,,,,50-32-8,"[50-32-8] 발암성 1A, 생식세포 변이원성 1B, 생식독성 1B"
+232,벤지딘,Benzidine,NH2C6H4C6H4NH2,,,,,92-87-5,"[92-87-5] 발암성 1A, Skin"
+234,"1,3-부타디엔","1,3-Butadiene",CH2CHCHCH2,2.0,,10.0,,106-99-0,"[106-99-0] 발암성 1A, 생식세포 변이원성 1B"
+235,부탄(이성체),"Butane, isomers",CH3(CH2)2CH3,800.0,,,,75-28-5|106-97-8,"[75-28-5][106-97-8] 발암성 1A, 생식세포 변이원성 1B (부타디엔 0.1% 이상인 경우에 한정함)"
+236,2-부톡시에탄올,2-Butoxyethanol,C4H9OCH2CH2OH,20.0,,,,111-76-2,"[111-76-2] 발암성 2, Skin"
+237,부탄에티올,Butanethiol,CH3CH2CH2CH2SH,0.5,,,,109-79-5,[109-79-5]
+239,부틸아민,Butylamine,C4H9NH2,,,,,109-73-9,[109-73-9] Skin
+240,이차-부틸알코올,sec-Butyl alcohol(2-Butanol),CH3CHOHCH2CH3,100.0,,150.0,,78-92-2,[78-92-2]
+241,삼차-부틸알코올,tert-Butyl alcohol,(CH3)3COH,100.0,,150.0,,75-65-0,[75-65-0]
+242,불소,Fluorine,F2,0.1,,,,7782-41-4,[7782-41-4]
+243,불화수소,"Hydrogen fluoride, as F",HF,0.5,,,,7664-39-3,[7664-39-3] Skin
+244,붕소산 사나트륨염(무수물),Borates tetrasodium salts(Anhydrous)(Inhalable fraction),Na2B4O7,,1.0,,,1330-43-4,"[1330-43-4] 생식독성 1B, 흡입성"
+245,붕소산 사나트륨염(오수화물),Borates tetrasodium salts(Pentahydrate)(Inhalable fraction),Na2B4O7?5H2O,,1.0,,,12179-04-3,"[12179-04-3] 생식독성 1B, 흡입성"
+246,붕소산 사나트륨염(십수화물),Borates tetrasodiumsalts(Decahydrate)(Inhalablefraction),Na2B4O7?10H2O,,5.0,,,1303-96-4,"[1303-96-4] 생식독성 1B, 흡입성"
+247,브로마실,Bromacil,C9H13BrN2O2,,10.0,,,314-40-9,[314-40-9] 발암성 2
+248,브로모클로로메탄,Bromochloromethane,CH2BrCl,200.0,,250.0,,74-97-5,[74-97-5]
+249,브로모포롬,Bromoform,CHBr3,0.5,,,,75-25-2,"[75-25-2] 발암성 2, Skin"
+250,1-브로모프로판,1-Bromopropane,CH3CH2CH2Br,25.0,,,,106-94-5,"[106-94-5] 발암성 2, 생식독성 1B"
+251,2-브로모프로판,2-Bromopropane,(CH3)2CHBr,1.0,,,,75-26-3,[75-26-3] 생식독성 1A
+252,브롬,Bromine,Br2,0.1,,0.3,,7726-95-6,[7726-95-6]
+253,브롬화 메틸,Methyl bromide,CH3Br,1.0,,,,74-83-9,"[74-83-9] 생식세포 변이원성 2, Skin"
+254,브롬화 비닐,Vinyl bromide,C2H3Br,0.5,,,,593-60-2,[593-60-2] 발암성 1B
+255,브롬화 수소,Hydrogen bromide,HBr,,,,,10035-10-6,[10035-10-6]
+256,브롬화 에틸,Ethyl bromide,C2H5Br,5.0,,,,74-96-4,"[74-96-4] 발암성 2, Skin"
+257,브이엠 및 피 나프타,VM & P Naphtha,-,300.0,,,,8032-32-4,"[8032-32-4] 발암성 1B, 생식세포 변이원성 1B (벤젠 0.1% 이상인 경우에 한정함)"
+259,비닐 시클로헥센디옥사이드,Vinyl cyclohexenedioxide,C8H12O2,0.1,,,,106-87-6,"[106-87-6] 발암성 2, Skin"
+260,비닐 아세테이트,Vinyl acetate,CH3COOCHCH2,10.0,,15.0,,108-05-4,[108-05-4] 발암성 2
+261,비닐 톨루엔,Vinyl toluene,CH3C6H4CHCH2,50.0,,,,25013-15-4,[25013-15-4]
+262,비소 및 그 무기화합물,"Arsenic &  inorganic  compounds,as As",As,,0.01,,,7440-38-2,[7440-38-2] 발암성 1A
+263,비스-(클로로메틸)에테르,bis-(Chloromethyl)ether,O(CH2Cl)2,0.001,,,,542-88-1,[542-88-1] 발암성 1A
+264,비페닐,Biphenyl,C12H10,0.2,,,,92-52-4,[92-52-4]
+265,사브롬화 아세틸렌,Acetylene tetrabromide,CHBr2CHBr2,1.0,,,,79-27-6,[79-27-6]
+266,사브롬화 탄소,Carbon tetrabromide,CBr4,0.1,,0.3,,558-13-4,[558-13-4]
+267,사산화 오스뮴,"Osmium tetroxide, as Os",OsO4,0.0002,,0.0006,,20816-12-0,[20816-12-0]
+268,사염화탄소,Carbon tetrachloride,CCl4,5.0,,,,56-23-5,"[56-23-5] 발암성 1B, Skin"
+269,산화규소(결정체 석영),Silica(Crystalline quartz)(Respirable fraction),SiO2,,0.05,,,14808-60-7,"[14808-60-7] 발암성 1A, 호흡성"
+270,산화규소(결정체 크리스토바라이트),Silica(Crystalline cristobalite)(Respirable fraction),SiO2,,0.05,,,14464-46-1,"[14464-46-1] 발암성 1A, 호흡성"
+271,산화규소(결정체 트리디마이트),Silica(Crystalline tridymite)(Respirable fraction),SiO2,,0.05,,,15468-32-3,"[15468-32-3] 발암성 1A, 호흡성"
+272,산화규소(결정체 트리폴리),Silica(Crystalline tripoli)(Respirable fraction),SiO2,,0.1,,,1317-95-9,"[1317-95-9] 발암성 1A, 호흡성"
+273,"산화규소(비결정체 규소, 용융된)","Silica(Amorphous silica, fused)(Respirable fraction)",SiO2,,0.1,,,60676-86-0,[60676-86-0] 호흡성
+274,산화규소(비결정체 규조토),Silica(Amorphous diatomaceous earth),SiO2,,10.0,,,61790-53-2,[61790-53-2]
+275,산화규소(비결정체 침전된 규소),Silica(Amorphous precipitated silica),SiO2,,10.0,,,112926-00-8,[112926-00-8]
+276,산화규소(비결정체실리카겔),Silica(Amorphous silicagel),SiO2,,10.0,,,112926-00-8,[112926-00-8]
+277,산화마그네슘,Magnesium oxide,MgO,,10.0,,,1309-48-4,[1309-48-4]
+278,산화 메시틸,Mesityl oxide,CH3COCHC(CH3)2,15.0,,25.0,,141-79-7,[141-79-7]
+279,산화 붕소,Boron oxide,B2O3,,10.0,,,1303-86-2,[1303-86-2] 생식독성 1B
+280,산화아연 분진,Zinc oxide(Respirable fraction),ZnO,,2.0,,,1314-13-2,[1314-13-2] 호흡성
+281,산화아연,Zinc oxide,ZnO,,5.0,,10.0,1314-13-2,[1314-13-2]
+283,산화 에틸렌,Ethylene oxide,(CH2)2O,1.0,,,,75-21-8,"[75-21-8] 발암성 1A, 생식세포 변이원성 1B"
+284,산화주석 및 무기화합물,"Tin oxide & Inorganiccompounds except SnH4, as Sn",Sn/SnCl2/SnCl4/SnSO4/K2Sn O3?3H2O,,2.0,,,7440-31-5,[7440-31-5] Skin
+285,산화철,"Iron oxide, as Fe",Fe2O3,,5.0,,,1309-37-1,[1309-37-1]
+286,산화철(흄),"Iron oxide(Fume, as Fe)",Fe2O3,,5.0,,,1309-37-1,[1309-37-1]
+287,산화칼슘,Calcium oxide,CaO,,2.0,,,1305-78-8,[1305-78-8]
+289,삼차부틸크롬산,"tert-Butyl chromate, as CrO3",[(CH3)3CO]2CrO2,,,,,1189-85-1,"[1189-85-1] 발암성 1A, Skin"
+290,삼불화붕소,Boron trifluoride,BF3,,,,,7637-07-2,[7637-07-2]
+291,삼불화염소,Chlorine trifluoride,ClF3,,,,,7790-91-2,[7790-91-2]
+292,삼불화질소,Nitrogen trifluoride,NF3,10.0,,,,7783-54-2,[7783-54-2]
+293,삼브롬화붕소,Boron tribromide,BBr3,,,,,10294-33-4,[10294-33-4]
+294,삼산화 안티몬(취급 및 사용물),"Antimony trioxide(Handling & use, as Sb)",Sb2O3,,0.5,,,1309-64-4,[1309-64-4] 발암성 2
+295,삼산화 안티몬(생산),Antimony trioxide(Production),Sb2O3,,,,,1309-64-4,[1309-64-4] 발암성 1B
+296,삼수소화 비소,Arsine,AsH3,0.005,,,,7784-42-1,[7784-42-1]
+297,석고,Gypsum(Inhalable fraction),CaSO4?2H2O,,10.0,,,13397-24-5,[13397-24-5] 흡입성
+298,석면(모든 형태),Asbestos(All forms),-,,,,,,발암성 1A
+299,석탄분진,Coal dust(Respirable fraction),-,,1.0,,,,호흡성
+300,석회석,Lime stone,-,,10.0,,,1317-65-3,[1317-65-3]
+301,설퍼릴 플루오라이드,Sulfuryl fluoride,SO2F2,5.0,,10.0,,2699-79-8,[2699-79-8]
+302,설퍼 모노클로라이드,Sulfur monochloride,S2Cl2,,,,,10025-67-9,[10025-67-9]
+303,설퍼 테트라플루오라이드,Sulfur tetrafluoride,SF4,,,,,7783-60-0,[7783-60-0]
+304,설퍼 펜타플루오라이드,Sulfur pentafluoride,S2F10,,,,,5714-22-7,[5714-22-7]
+305,설포텝,Sulfotep,(C2H5)4P2S2O5,,0.2,,,3689-24-5,[3689-24-5] Skin
+306,설프로포스,Sulprofos,C12H19O2PS3,,1.0,,,35400-43-2,[35400-43-2] Skin
+307,세손,Sesone,C8H7Cl2NaO5S,,10.0,,,136-78-7,[136-78-7]
+308,세슘하이드록시드,Cesium hydroxide,CsOH,,2.0,,,21351-79-1,[21351-79-1]
+309,셀레늄 및 그 화합물,Selenium and compounds,Se/Na2SeO3/Na2SeO4/ SeO2SeOCl2,,0.2,,,7782-49-2,[7782-49-2]
+310,셀루로우즈,Cellulose(paper fiber),(C6H10O5)n,,10.0,,,9004-34-6,[9004-34-6]
+312,소디움 메타바이설파이트,Sodium metabisulfite,Na2S2O5,,5.0,,,7681-57-4,[7681-57-4]
+313,소디움 비설파이트,Sodium bisulfite,NaHSO3,,5.0,,,7631-90-5,[7631-90-5]
+314,소디움 아지이드,Sodium azide,NaN3,,,,,26628-22-8,[26628-22-8]
+315,소디움 풀루오로아세테이트,Sodium fluoroacetate,CH2FCOONa,,0.05,,0.15,62-74-8,[62-74-8] Skin
+316,소석고,Plaster of Pariss(Inhalable fraction),-,,10.0,,,10034-76-1,[10034-76-1] 흡입성
+317,소우프스톤,Soapstone,3MgO?4SiO2?H2O,,6.0,,,14807-96-6,[14807-96-6]
+318,소우프스톤,Soapstone(Respirable fraction),3MgO?4SiO2?H2O,,3.0,,,14807-96-6,[14807-96-6] 호흡성
+319,수산화나트륨,Sodium hydroxide,NaOH,,,,,1310-73-2,[1310-73-2]
+320,수산화 칼륨,Potassium hydroxide,KOH,,,,,1310-58-3,[1310-58-3]
+321,수산화 칼슘,Calcium hydroxide,Ca(OH)2,,5.0,,,1305-62-0,[1305-62-0]
+322,수산화테트라메틸암모늄,Tetramethylammonium hydroxide,C4H13NO,,1.0,,,75-59-2,[75-59-2]
+323,수은(아릴화합물),Mercury(Aryl compounds),Hg,,0.1,,,7439-97-6,[7439-97-6] Skin
+324,수은 및 무기형태(아릴 및 알킬 화합물 제외),Mercury elemental and inorganicform(All forms except aryl& alkyl compounds),Hg,,0.025,,,7439-97-6,"[7439-97-6] 생식독성 1B, Skin"
+325,수은(알킬화합물),Mercury(Alkyl compounds),Hg,,0.01,,0.03,7439-97-6,[7439-97-6] Skin
+326,스토다드 용제,Stoddard solvent,C9~C11 paraffn(85%) + aromatics(15%),100.0,,,,8052-41-3,"[8052-41-3] 발암성 1B, 생식세포 변이원성 1B (벤젠 0.1% 이상인 경우에 한정함)"
+327,스트론티움크로메이트,Strontium chromate,C2H2O4?Sr,,0.0005,,,7789-06-2,[7789-06-2] 발암성 1A
+328,스트리치닌,Strychnine,C21H22N2O2,,0.15,,,57-24-9,[57-24-9]
+329,스티렌,Styrene,C6H5CHCH2,20.0,,40.0,,100-42-5,"[100-42-5] 발암성 2, 생식독성 2, Skin"
+330,스티빈,Stibine,SbH3,0.1,,,,7803-52-3,[7803-52-3]
+332,시아노겐,Cyanogen,(CN)2,10.0,,,,460-19-5,[460-19-5]
+333,시안아미드,Cyanamide,H2NCN,,2.0,,,420-04-2,[420-04-2]
+334,시안화 나트륨,Sodium cyanide,NaCN,,3.0,,5.0,143-33-9,[143-33-9] Skin
+336,시안화 수소,Hydrogen cyanide,HCN,,,,,74-90-8,[74-90-8] Skin
+338,시안화합물,"Cyanides, as CN",KCN/Ca(CN)2,,5.0,,,151-50-8|592-01-8,[151-50-8][592-01-8]Skin
+339,시클로나이트,Cyclonite,C3H6N6O6,,0.5,,,121-82-4,[121-82-4] Skin
+340,시클로펜타디엔,Cyclopentadiene,C5H6,75.0,,,,542-92-7,[542-92-7]
+341,시클로펜탄,Cyclopentane,C5H10,600.0,,,,287-92-3,[287-92-3]
+342,시클로헥사논,Cyclohexanone,C6H11O,25.0,,50.0,,108-94-1,"[108-94-1] 발암성 2, Skin"
+343,시클로헥사놀,Cyclohexanol,C6H11OH,50.0,,,,108-93-0,[108-93-0] Skin
+344,시클로헥산,Cyclohexane,C6H12,200.0,,,,110-82-7,[110-82-7]
+345,시클로헥센,Cyclohexene,C6H10,300.0,,,,110-83-8,[110-83-8]
+346,시클로헥실아민,Cyclohexylamine,C6H11NH2,10.0,,,,108-91-8,[108-91-8] 생식독성 2
+347,시헥사틴,Cyhexatin,C18H34OSn,,5.0,,,13121-70-5,[13121-70-5]
+348,실레인,Silane,SiH4,5.0,,,,7803-62-5,[7803-62-5]
+349,실리콘,Silicon,Si,,10.0,,,7440-21-3,[7440-21-3]
+350,실리콘 카바이드,Silicon carbide,SiC,,10.0,,,409-21-2,[409-21-2] 발암성 1B [섬유상(수염형태 결정 포함) 물질에 한정함]
+352,"아니시딘(오쏘, 파라-이성체)","Anisidine(o, p-isomers)",NH2C6H4OCH3,,0.5,,,29191-52-4,[29191-52-4] Skin
+353,아닐린과 아닐린 동족체,Aniline & homologues,C6H5NH2,2.0,,,,62-53-3,"[62-53-3] 발암성 2, 생식세포 변이원성 2, Skin"
+354,4-아미노디페닐,4-Aminodiphenyl,C6H5C6H4NH2,,,,,92-67-1,"[92-67-1] 발암성 1A, Skin"
+356,"3-아미노-1,2,4-트리아졸(또는 아미트롤)","3-Amino-1,2,4-triazole(or Amitrole)",-,,0.2,,,61-82-5,"[61-82-5] 발암성 2, 생식독성 2"
+357,2-아미노피리딘,2-Aminopyridine,NH2C5H4N,0.5,,,,504-29-0,[504-29-0]
+358,아세네이트 연,"Lead arsenate, as Pb(AsO4)2",Pb3HAsO4,,0.05,,,7784-40-9,"[7784-40-9] 발암성 1A, 생식독성 1A"
+359,아세토니트릴,Acetonitrile,CH3CN,20.0,,,,75-05-8,[75-05-8] Skin
+360,아세톤,Acetone,CH3COCH3,500.0,,750.0,,67-64-1,[67-64-1]
+361,아세톤시아노히드린,Acetone cyanohydrin,(CH3)2C(OH)CN,,,,,75-86-5,[75-86-5]
+362,아세트알데히드,Acetaldehyde,CH3CHO,50.0,,150.0,,75-07-0,[75-07-0] 발암성 1B
+363,아세틸살리실산,Acetylsalicylic acid(Aspirin),C9H8O4,,5.0,,,50-78-2,[50-78-2]
+364,아스팔트 흄(벤젠 추출물),Asphalt(Bitumen)fumes(as benzene soluble aerosol) (Inhalablefraction),-,,0.5,,,8052-42-4,"[8052-42-4] 발암성 2, 흡입성"
+365,아연 스테아린산,Zinc stearate(Inhalable fraction),Zn(C18H35O2)2,,10.0,,,557-05-1,[557-05-1] 흡입성
+366,아진포스 메틸,methyl(Inhalable fraction andvapor),C10H12N3O3PS2,,0.2,,,86-50-0,"[86-50-0] Skin, 흡입성 및 증기"
+367,아크로레인,Acrolein,CH2CHCHO,0.1,,0.3,,107-02-8,[107-02-8] Skin
+368,아크릴로니트릴,Acrylonitrile,CH2CHCN,2.0,,,,107-13-1,"[107-13-1] 발암성 1B, Skin"
+369,아크릴 산,Acrylic acid,CH2CHCOOH,2.0,,,,79-10-7,[79-10-7] Skin
+370,아크릴아미드,Acrylamide(Inhalable fraction andvapor),CH2CHCONH2,,0.03,,,79-06-1,"[79-06-1] 발암성 1B, 생식세포 변이원성 1B, 생식독성 2, Skin, 흡입성 및 증기"
+371,아트라진,Atrazine,C8H14CIN5,,5.0,,,1912-24-9,[1912-24-9] 발암성 2
+372,아황화니켈,Nickel subsulfide(Inhalablefraction),Ni3S2,,0.1,,,12035-72-2,"[12035-72-2] 발암성 1A, 생식세포 변이원성 2, 흡입성"
+373,안티몬과 그 화합물,"Antimony & compounds, as Sb",Sb,,0.5,,,7440-36-0,[7440-36-0]
+374,알드린,Aldrin,Cl2H8Cl6,,0.25,,,309-00-2,"[309-00-2] 발암성 2, Skin"
+375,알루미늄(가용성 염),Aluminum(Soluble salts),Al,,2.0,,,7429-90-5,[7429-90-5]
+376,알루미늄(금속분진),Aluminum(Metal dust),Al,,10.0,,,7429-90-5,[7429-90-5]
+377,알루미늄(알킬),Aluminum(Alkyls),Al,,2.0,,,7429-90-5,[7429-90-5]
+378,알루미늄(용접 흄),Aluminum(Welding fumes),Al,,5.0,,,7429-90-5,[7429-90-5]
+379,알루미늄(피로파우더),Aluminum(Pyropowders),Al,,5.0,,,7429-90-5,[7429-90-5]
+380,알릴글리시딜에테르,Allyl glycidyl ether(AGE),CH2CHCH2OC3H5O,1.0,,,,106-92-3,"[106-92-3] 발암성 2, 생식세포 변이원성 2, 생식독성 2, Skin"
+381,알릴 알코올,Allyl alcohol,CH2CHCH2OH,0.5,,4.0,,107-18-6,[107-18-6] Skin
+382,알릴프로필 디설파이드,Allylpropyl disulfide,CH2CHCH2S2C3H7,0.5,,,,2179-59-1,[2179-59-1]
+383,알파나프틸아민,α-Naphthyl amine,C10H7NH2,,0.006,,,134-32-7,[134-32-7] 발암성 2
+384,알파-나프틸티오우레아,α-Naphthylthiourea(ANTU),C11H10N2S,,0.3,,,86-88-4,"[86-88-4] 발암성 2, Skin"
+385,알파-메틸 스티렌,α-Methyl styrene,C6H5C(CH3)=CH2/C9H10,50.0,,100.0,,98-83-9,[98-83-9] 발암성 2
+386,알파-알루미나,α-Alumina,Al2O3,,10.0,,,1344-28-1,[1344-28-1]
+387,알파-클로로아세토페논,α-Chloroacetophenone,C6H5COCH2Cl,0.05,,,,532-27-4,[532-27-4]
+388,암모늄 설파메이트,Ammonium sulfamate,NH2SO3NH4,,10.0,,,7773-06-0,[7773-06-0]
+389,암모니아,Ammonia,NH3,25.0,,35.0,,7664-41-7,[7664-41-7]
+390,액화 석유가스,L.P.G(Liquified petroleum gas),C3H6/C3H8/C4H8/C4H10,1000.0,,,,68476-85-7,"[68476-85-7] 발암성 1A, 생식세포 변이원성 1B (부타디엔 0.1%이상인 경우에 한정함)"
+391,에머리,Emery,-,,10.0,,,1302-74-5,[1302-74-5]
+392,에탄 에티올,Ethanethiol,C2H5SH,0.5,,,,75-08-1,[75-08-1]
+394,에탄올아민,Ethanolamine,HOCH2CH2NH2,3.0,,6.0,,141-43-5,[141-43-5]
+395,2-에톡시에탄올,2-Ethoxyethanol,C2H5OCH2CH2OH,5.0,,,,110-80-5,"[110-80-5] 생식독성 1B, Skin"
+396,2-에톡시에틸아세테이트,2-Ethoxyethyl acetate,C2H5OCH2CH5OCOCH3,5.0,,,,111-15-9,"[111-15-9] 생식독성 1B, Skin"
+397,에티온,Ethion,C9H2O4P2S2,,0.4,,,563-12-2,[563-12-2] Skin
+398,에틸렌 글리콜 디니트레이트,Ethylene glycol dinitrate,(CH2NO3)2,0.05,,,,628-96-6,[628-96-6] Skin
+399,에틸렌글리콜모노부틸에테르아세테이트,Ethyleneglycol monobutyletheracetate,C4H9OCH2OO-CH3,20.0,,,,112-07-2,[112-07-2] 발암성 2
+400,에틸렌 글리콜메틸에테르아세테이트,Ethylene glycol methyl etheracetate,CH3COOCH2CH2OCH3,5.0,,,,110-49-6,"[110-49-6] 생식독성 1B, Skin"
+401,에틸렌 글리콜(증기 및미스트),Ethylene glycol(Vapor and mist),CH2OHCH2OH,,,,,107-21-1,[107-21-1]
+403,에틸렌이민,Ethylenimine,(CH2)2NH,0.5,,,,151-56-4,"[151-56-4] 발암성 1B, 생식세포 변이원성 1B, Skin"
+404,에틸렌 클로로하이드린,Ethylene chlorohydrin,CH3ClCH2OH,,,,,107-07-3,[107-07-3] Skin
+405,에틸리덴 노보르닌,Ethylidene norbornene,C9H12,,,,,16219-75-3,[16219-75-3]
+407,에틸 벤젠,Ethyl benzene,C2H5C6H5,100.0,,125.0,,100-41-4,[100-41-4] 발암성 2
+408,에틸 부틸 케톤,Ethyl butyl ketone,C2H5COC4H9,50.0,,,,106-35-4,[106-35-4]
+409,에틸 실리케이트,Ethyl silicate,(C2H5O)Si/(CH2H5)4SiO4,10.0,,,,78-10-4,[78-10-4]
+410,에틸 아민,Ethyl amine,C2H5NH2,5.0,,15.0,,75-04-7,[75-04-7] Skin
+411,에틸 아밀 케톤,Ethyl amyl ketone,C8H16O,25.0,,,,541-85-5,[541-85-5]
+412,에틸 아크릴레이트,Ethyl acrylate,CH2CHCOOC2H5,5.0,,,,140-88-5,[140-88-5] 발암성 2
+413,에틸 알코올,Ethyl alcohol,C2H5OH,1000.0,,,,64-17-5,[64-17-5] 발암성 1A (알코올 음주에 한정함)
+415,"1,2-에폭시프로판","1,2-Epoxypropane",CH3CHOCH2,2.0,,,,75-56-9,"[75-56-9] 발암성 1B, 생식세포 변이원성 1B"
+416,"2,3-에폭시-1-프로판올","2,3-Epoxy-1-propanol",C3H6O2,2.0,,,,556-52-5,"[556-52-5] 발암성 1B, 생식세포 변이원성 2, 생식독성 1B"
+417,에피클로로히드린,Epichlorohydrin,C3H5OCl,0.5,,,,106-89-8,"[106-89-8] 발암성 1B, Skin"
+418,엔도설판,Endosulfan(Inhalable fraction andvapor),C9H6Cl6O3S,,0.1,,,115-29-7,"[115-29-7] Skin, 흡입성 및 증기"
+419,엔드린,Endrin,C12H8Cl6O,,0.1,,,72-20-8,[72-20-8] Skin
+420,염소,Chlorine,Cl2,0.5,,1.0,,7782-50-5,[7782-50-5]
+422,염소화 산화디페닐,Chlorinated diphenyloxide,C12H4Cl6O,,0.5,,2.0,55720-99-5,[55720-99-5]
+423,염소화 캄펜,Chlorinated camphene,C10H10Cl8,,0.5,,1.0,8001-35-2,"[8001-35-2] 발암성 2, Skin"
+425,염화 벤질,Benzyl chloride,C6H5CH2Cl,1.0,,,,100-44-7,[100-44-7] 발암성 1B
+427,염화 수소,Hydrogen chloride,HCl,1.0,,2.0,,7647-01-0,[7647-01-0]
+428,염화 시아노겐,Cyanogen chloride,CClN,,,,,506-77-4,[506-77-4]
+429,염화 아연 흄,Zinc chloride fume,ZnCl2,,1.0,,2.0,7646-85-7,[7646-85-7]
+430,염화 알릴,Allyl chloride,CH2CHCH2Cl,1.0,,2.0,,107-05-1,"[107-05-1] 발암성 2, 생식세포 변이원성 2, Skin"
+431,염화 암모늄 흄,Ammonium chloride fume,NH4Cl,,10.0,,20.0,12125-02-9,[12125-02-9]
+432,염화 에틸,Ethyl chloride,C2H5Cl,1000.0,,,,75-00-3,"[75-00-3] 발암성 2, Skin"
+433,염화 에틸리덴,Ethylidene chloride,CH3CHCl2,10.0,,,,107-06-2,[107-06-2] 발암성 1B
+434,염화 티오닐,Thionyl chloride,SOCl2,,,,,7719-09-7,[7719-09-7]
+435,오쏘-이차-부틸페놀,o-sec-Butylphenol,C2H5(CH3)CHC6H4OH,5.0,,,,89-72-5,[89-72-5] Skin
+436,오쏘-디클로로벤젠,o-Dichlorobenzene,C6H4Cl2,25.0,,50.0,,95-50-1,[95-50-1]
+437,오쏘-메틸시클로헥사논,o-Methylcyclohexanone,C7H12O,50.0,,75.0,,583-60-8,[583-60-8] Skin
+438,오쏘-클로로벤질리덴말로노니트릴,o-Chlorobenzylidene malononitrile,ClC6H4CHC(CN)2,,,,,2698-41-1,[2698-41-1] Skin
+439,오쏘-클로로스티렌,o-Chlorostyrene,C8H7Cl,50.0,,75.0,,2039-87-4,[2039-87-4]
+440,오쏘-클로로톨루엔,o-Chlorotoluene,C6H4CH3Cl,50.0,,75.0,,95-49-8,[95-49-8]
+441,오쏘-톨루이딘,o-Toluidine,CH3C6H4NH2,2.0,,,,95-53-4,"[95-53-4] 발암성 1A, Skin"
+442,오쏘-톨리딘,o-Tolidine,(CH3C6H3NH2)2,,,,,119-93-7,"[119-93-7] 발암성 1B, Skin"
+443,오쏘-프탈로디니트릴,o-Phthalodinitrile(Inhalablefraction and vapor),C6H4(NH2)2,,1.0,,,91-15-6,[91-15-6] 흡입성 및 증기
+444,오불화 브롬,Bromine pentafluoride,BrF5,0.1,,,,7789-30-2,[7789-30-2]
+445,오산화바나듐,Vanadium pentoxide(Inhalablefraction),V2O5,,0.05,,,1314-62-1,"[1314-62-1] 발암성 2, 생식세포 변이원성 2, 생식독성 2, 흡입성"
+446,오카르보닐 철(펜타카르보닐철),"Iron pentacarbonyl, as Fe",Fe(CO)5,0.1,,0.2,,13463-40-6,[13463-40-6]
+447,오존,Ozone,O3,0.08,,0.2,,10028-15-6,[10028-15-6]
+448,옥살산,Oxalic acid,HOOCCOOH?2H2O,,1.0,,2.0,144-62-7,[144-62-7]
+449,옥타클로로나프탈렌,Octachloronaphthalene,C10Cl8,,0.1,,0.3,2234-13-1,[2234-13-1] Skin
+450,옥탄,Octane,C8H18,300.0,,375.0,,111-65-9,[111-65-9]
+451,와파린,Warfarin,C19H16O4,,0.1,,,81-81-2,"[81-81-2] 생식독성 1A, Skin"
+452,요오드 및 요오드화물,Iodine and iodides(Inhalablefraction and vapor),I2,0.01,,0.1,,7553-56-2,[7553-56-2] 흡입성 및 증기
+453,요오드포름,Iodoform,CHI3,0.6,,,,75-47-8,[75-47-8]
+454,요오드화 메틸,Methyl iodide,CH3I,2.0,,,,74-88-4,"[74-88-4] 발암성 2, Skin"
+455,용접 흄 및 분진,Welding fumes and dust,-,,5.0,,,,발암성 2
+456,우라늄(가용성 및 불용성 화합물),"Uranium(Soluble &insoluble compounds, as U)",U/U3O8/UF4/UH3/UF6/UO2 (NO3)2?6H2O/UO2SO4?3H2O,,0.2,,0.6,7440-61-1,[7440-61-1] 발암성 1A
+457,운모,Mica(Respirable fraction),-,,3.0,,,12001-26-2,[12001-26-2] 호흡성
+458,유리 섬유 분진,Fibrous glass dust,-,,5.0,,,,-
+459,육불화 셀레늄,"Selenium hexafluoride, as Se",SeF6,0.05,,,,7783-79-1,[7783-79-1]
+460,육불화 텔레늄,"Tellurium hexafluoride, as Te",TeF6,0.02,,,,7783-80-4,[7783-80-4]
+461,육불화 황,Sulfur hexafluoride,SF6,1000.0,,,,2551-62-4,[2551-62-4]
+462,은(가용성 화합물),"Silver(Soluble compounds, as Ag)",AgNO3/AgF,,0.01,,,7440-22-4,[7440-22-4]
+463,"은(금속, 분진 및 흄)","Silver(Metal, dust and fume)",Ag,,0.1,,,7440-22-4,[7440-22-4]
+464,이불화산소,Oxygen difluoride,OF2,,,,,7783-41-7,[7783-41-7]
+466,이산화염소,Chlorine dioxide,ClO2,0.1,,0.3,,10049-04-4,[10049-04-4]
+467,이산화질소,Nitrogen dioxide,NO2/N2O4,3.0,,5.0,,10102-44-0,[10102-44-0]
+468,이산화탄소,Carbon dioxide,CO2,5000.0,,30000.0,,124-38-9,[124-38-9]
+469,이산화티타늄,Titanium dioxide,TiO2,,10.0,,,13463-67-7,[13463-67-7] 발암성 2
+470,이산화 황,Sulfur dioxide,SO2,2.0,,5.0,,7446-09-5,[7446-09-5]
+471,이소부틸 알코올,Isobutyl alcohol,(CH3)2CHCH2OH,50.0,,,,78-83-1,[78-83-1]
+472,이소아밀 알코올,Isoamyl alcohol,(CH3)2CHCH2OH,100.0,,125.0,,123-51-3,[123-51-3]
+473,이소옥틸 알코올,Isooctyl alcohol,C7H15CH2OH,50.0,,,,26952-21-6,[26952-21-6] Skin
+474,이소포론,Isophorone,C9H14O,,,,,78-59-1,[78-59-1] 발암성 2
+475,이소포론 디이소시아네이트,Isophorone diisocyanate,C12H18N2O2,0.005,,,,4098-71-9,[4098-71-9] Skin
+476,이소프로폭시에탄올,Isopropoxyethanol,(CH3)2CHOCH2CH2OH,25.0,,,,109-59-1,[109-59-1] Skin
+477,이소프로필 글리시딜에테르,Isopropyl glycidyl ether(IGE),C6H12O2,50.0,,75.0,,4016-14-2,[4016-14-2]
+478,이소프로필아민,Isopropylamine,(CH3)2CHNH3,5.0,,10.0,,75-31-0,[75-31-0]
+479,이소프로필 알코올,Isopropyl alcohol,CH3CHOHCH3,200.0,,400.0,,67-63-0,[67-63-0]
+480,이소프로필 에테르,Isopropyl ether,[(CH3)2CH]2O,250.0,,310.0,,108-20-3,[108-20-3]
+482,이염화 에틸렌,Ethylene dichloride,ClCHCHCl,10.0,,,,107-06-2,[107-06-2] 발암성 1B
+483,이트리움(금속 및 화합물),"Yttrium(Metal & compounds, as Y)",Y/Y(NO3)3?6H2O/YCl3/Y2O3,,1.0,,,7440-65-5,[7440-65-5]
+484,이피엔,EPN(Inhalable fraction),C14H14NO4PS,,0.1,,,2104-64-5,"[2104-64-5] Skin, 흡입성"
+485,이황화탄소,Carbon disulfide,CS2,1.0,,,,75-15-0,"[75-15-0] 생식독성 2, Skin"
+486,인(황색),Phosphorus(yellow),P4,,0.1,,,12185-10-3,[12185-10-3]
+487,인덴,Indene,C9H8,10.0,,,,95-13-6,[95-13-6]
+488,인듐 및 그 화합물,"Indium & compounds, asIn(Indium & compounds as Fume)(Respirable fraction)",In,,0.01,,,7440-74-6,[7440-74-6] 호흡성
+489,인산,Phosphoric acid,H3PO4,,1.0,,3.0,7664-38-2,[7664-38-2]
+490,일산화질소,Nitric monoxide,NO,25.0,,,,10102-43-9,[10102-43-9]
+491,일산화탄소,Carbon monoxide,CO,30.0,,200.0,,630-08-0,[630-08-0] 생식독성 1A
+492,자당,Sucrose,C12H22O11,,10.0,,,57-50-1,[57-50-1]
+493,자철광,Magnesite,MgCO3,,10.0,,,546-93-0,[546-93-0]
+494,전분,Starch,(C6H10O5)n,,10.0,,,9005-25-8,[9005-25-8]
+495,주석(금속),Tin(Metal),Sn,,2.0,,,7440-31-5,[7440-31-5]
+496,주석(유기화합물),"Tin(Organic compounds, as Sn)",(C4H9)2Sn(C8H15O2)/ [(C4H9)3Sn]2O/(C6H5)SnCl/ (C4H9)2SnCl2/(C4H9)4Sn,,0.1,,,7440-31-5,[7440-31-5] Skin
+497,지르코늄 및 그 화합물,"Zirconium and compounds, as Zr",ZrO2/ZrOCl2?8H2O/ ZrCl4/ZrH2/H2ZrO2(C2H3O2)2,,5.0,,10.0,7440-67-7,[7440-67-7]
+498,질산,Nitric acid,HNO3,2.0,,4.0,,7697-37-2,[7697-37-2]
+499,철바나듐 분진,Ferrovanadium dust,FeV,,1.0,,3.0,12604-58-9,[12604-58-9]
+500,철염(가용성),"Iron salts(Soluble, as Fe)",Fe,,1.0,,,7439-89-6,[7439-89-6]
+501,초산,Acetic acid,CH3COOH,10.0,,15.0,,64-19-7,[64-19-7]
+502,초산 이차-부틸,sec-Butyl acetate,CH3COOCHCH3CH2CH3,200.0,,,,105-46-4,[105-46-4]
+503,초산 삼차-부틸,tert-Butyl acetate,CH3COOC(CH3)3,200.0,,,,540-88-5,[540-88-5]
+504,초산 이차-아밀,sec-Amyl acetate,CH3COOCH(CH3)(CH2)CH3,50.0,,100.0,,626-38-0,[626-38-0]
+505,초산 이차-헥실,sec-Hexyl acetate,CH3COOCH(CH3)CH2CH(CH3)2,50.0,,,,108-84-9,[108-84-9]
+506,초산 메틸,Methyl acetate,CH3COOCH3,200.0,,250.0,,79-20-9,[79-20-9]
+507,초산 에틸,Ethyl acetate,CH3COOC2H5,400.0,,,,141-78-6,[141-78-6]
+508,초산 이소부틸,Isobutyl acetate,CH3COOCH2CH(CH3)2,150.0,,187.0,,110-19-0,[110-19-0]
+509,초산 이소아밀,Isoamyl acetate,CH3COOCH2CH2CH(CH3)2,50.0,,100.0,,123-92-2,[123-92-2]
+510,초산 이소프로필,Isopropyl acetate,CH3COOCH(CH3)2,100.0,,200.0,,108-21-4,[108-21-4]
+511,초산 프로필,n-Propyl acetate,CH3COOCH2CH2CH3,200.0,,250.0,,109-60-4,[109-60-4]
+512,카드뮴 및 그 화합물,"Cadmium and compounds, as Cd(Respirable fraction)",Cd/CdO,,,,,7440-43-9,"[7440-43-9] 발암성 1A, 생식세포 변이원성 2, 생식독성 2, 호흡성"
+514,카바릴,Carbaryl,C12H11NO2,,5.0,,,63-25-2,"[63-25-2] 발암성 2, Skin"
+515,카보푸란,Carbofuran(Inhalable fraction andvapor),C12H15NO3,,0.1,,,1563-66-2,[1563-66-2] 흡입성 및 증기
+516,카보닐 플루오라이드,Carbonyl fluoride,COF2,2.0,,5.0,,353-50-4,[353-50-4]
+517,카본블랙,Carbon black(Inhalable fraction),C,,3.5,,,1333-86-4,"[1333-86-4] 발암성 2, 흡입성"
+518,카올린,Kaoline(Respirable fraction),H2Al2Si2O8?H2O,,2.0,,,1332-58-7,[1332-58-7] 호흡성
+519,카프로락탐(분진),Caprolactum(Dust)(Inhalablefraction),CH2CH2CH2NHCH2CH2CO,,1.0,,3.0,105-60-2,[105-60-2] 흡입성
+520,카프로락탐(증기),Caprolactum(Vapor),CH2CH2CH2NHCH2CH2CO,,20.0,,40.0,105-60-2,[105-60-2]
+521,카테콜,Catechol,C6H4(OH)2,5.0,,,,120-80-9,"[120-80-9] 발암성 2, Skin"
+522,칼슘 시안아미드,Calcium cyanamide,CaCN,,0.5,,,156-62-7,[156-62-7]
+523,칼슘 크로메이트,Calcium chromate,CaCrO4,,0.001,,,13765-19-0,[13765-19-0]
+524,캄파(인조),Camphor(Synthetic),C10H16O,2.0,,3.0,,76-22-2,[76-22-2]
+525,캡타폴,Captafol(Inhalable fraction andvapor),C10H9Cl4NO2S,,0.1,,,2425-06-1,"[2425-06-1] 발암성 1B, Skin, 흡입성 및 증기"
+526,캡탄,Captan(Inhalable fraction),C9H8Cl3NO2S,,5.0,,,133-06-2,"[133-06-2] 발암성 2, 흡입성"
+527,케로젠,Kerosene,-,,200.0,,,8008-20-6,"[8008-20-6] 발암성 2, Skin"
+528,케텐,Ketene,CH2CO,0.5,,1.5,,463-51-4,[463-51-4]
+529,코발트 및그  무기화합물,Cobalt and inorganic compounds,Co/CoO/Co2O3/Co3O4,,0.02,,,7440-48-4,[7440-48-4] 발암성 2
+530,코발트 하이드로카르보닐,"Cobalt hydrocarbonyl, as Co",HCO(Co)4,,0.1,,,16842-03-8,[16842-03-8]
+532,큐멘,Cumene,C6H5C3H7,50.0,,,,98-82-8,"[98-82-8] 발암성 2, Skin"
+533,코발트 카르보닐,"Cobalt carbonyl, as Co",CO2(Co)4,,0.1,,,10210-68-1,[10210-68-1]
+534,크레졸(모든 이성체),Cresol(all isomers)(Inhalable fraction and vapor),CH3C6H4OH,,22.0,,,95-48-7|106-44-5|108-39-4|1319-77-3,"[95-48-7][106-44-5][108-39-4][1319-77-3] Skin, 흡입성 및 증기"
+535,크로밀 클로라이드,Chromyl chloride,CrO2Cl,0.025,,,,14977-61-8,"[14977-61-8] 발암성 1A, 생식세포 변이원성 1B"
+536,크로톤알데히드,Crotonaldehyde,CH3CHCHCHO,2.0,,,,4170-30-3,"[4170-30-3] 발암성 2, 생식세포 변이원성 2, Skin"
+537,크롬광 가공(크롬산),"Chromite ore processing(Chromate), as Cr",Cr,,0.05,,,7440-47-3,[7440-47-3] 발암성 1A
+538,크롬(금속),Chromium(Metal),Cr,,0.5,,,7440-47-3,[7440-47-3]
+539,크롬(6가)화합물(불용성무기화합물),Chromium(Ⅵ)compounds(Waterinsoluble inorganic compounds),Cr,,0.01,,,18540-29-9,[18540-29-9] 발암성 1A
+540,크롬(6가)화합물(수용성),Chromium(Ⅵ)compounds(Water soluble),Cr,,0.05,,,18540-29-9,[18540-29-9] 발암성 1A
+541,크롬산 연,"Lead chromate, as Cr",PbCrO4,,0.012,,,7758-97-6,"[7758-97-6] 발암성 1A, 생식독성 1A"
+542,크롬산 연,"Lead chromate, as Pb",PbCrO4,,0.05,,,7758-97-6,"[7758-97-6] 발암성 1A, 생식독성 1A"
+543,크롬산 아연,"Zinc chromates, as Cr",ZnCrO4/ZnCr2O4/ZnCr2O7,,0.01,,,13530-65-9|11103-86-9|37300-23-5,[13530-65-9][11103-86-9][37300-23-5] 발암성 1A
+544,크롬(2가)화합물,"Chromium(Ⅱ)compounds, as Cr",Cr,,0.5,,,7440-47-3,[7440-47-3]
+545,크롬(3가)화합물,"Chromium(Ⅲ)compounds, as Cr",Cr,,0.5,,,7440-47-3,[7440-47-3]
+546,크루포메이트,Crufomate,C12H19CINO3P,,5.0,,20.0,299-86-5,[299-86-5]
+547,크리센,Chrysene,C18H12,,,,,218-01-9,"[218-01-9] 발암성 1B, 생식세포 변이원성 2"
+548,크실렌(모든 이성체),Xylene(all isomers),C6H4(CH3)2,100.0,,150.0,,1330-20-7|95-47-6|108-38-3|106-42-3,[1330-20-7][95-47-6][108-38-3][106-42-3]
+550,1-클로로-1-니트로프로판,1-Chloro-1-nitropropane,C2H5ClNO2,2.0,,,,600-25-9,[600-25-9]
+551,클로로디페닐(42% 염소),Chlorodiphenyl(42% Chlorine),C12H7Cl3,,1.0,,,53469-21-9,[53469-21-9] Skin
+552,클로로디페닐(54% 염소),Chlorodiphenyl(54% Chlorine),C12H5Cl5,,0.5,,,11097-69-1,"[11097-69-1] 발암성 2, Skin"
+553,클로로디플루오로메탄,Chlorodifluoromethane,CHClF2,1000.0,,1250.0,,75-45-6,[75-45-6]
+554,클로로메틸 메틸에테르,Chloromethyl methylether,C2H5ClO,,,,,107-30-2,[107-30-2] 발암성 1A
+555,2-메틸-3(2H)-이소시아졸론과5-클로로-2-메틸-3(2H)-이소시아졸론의 혼합물,"5-Chloro-2-methyl-3(2H)-isothiazolone,mixt. with 2-methyl-3(2H)-isothiazolone(Inhalable fraction)",C4H4ClNOS·C4H5NOS,,0.1,,,55965-84-9,[55965-84-9] 흡입성
+556,클로로벤젠,Chlorobenzene,C6H5Cl,10.0,,20.0,,108-90-7,[108-90-7] 발암성 2
+557,"2-클로로-1,3-부타디엔","2-Chloro-1,3-butadiene",CH2CClCHCH2,10.0,,,,126-99-8,"[126-99-8] 발암성 1B, Skin"
+559,클로로아세트알데히드,Chloroacetaldehyde,ClCH2CHO,,,,,107-20-0,[107-20-0] 발암성 2
+560,클로로아세틱액시드,Chloroacetic acid(Inhalable fraction and vapor),CH2ClCOOH,,2.0,,4.0,79-11-8,[79-11-8] 흡입성 및 증기
+561,클로로아세틸 클로라이드,Chloroacetyl chloride,ClCH2COCl,0.05,,,,79-04-9,[79-04-9] Skin
+563,클로로에틸렌,Chloroethylene,CH2CHCl,1.0,,,,75-01-4,[75-01-4] 발암성 1A
+565,2-클로로-6-(트리클로로메틸)피리딘,2-Chloro-6-(trichloromethyl)pyridine,C6H3Cl4N,,10.0,,20.0,1929-82-4,[1929-82-4]
+566,클로로펜타플루오로에탄,Chloropentafluoro ethane,ClCF2CF3,1000.0,,,,76-15-3,[76-15-3]
+568,클로로피크린,Chloropicrin,CCl3NO2,0.1,,0.3,,76-06-2,[76-06-2]
+569,클로르단,Chlordane,C10H6Cl8,,0.5,,,57-74-9,"[57-74-9] 발암성 2, Skin"
+570,클로르피리포스,Chlorpyrifos(Inhalable fraction and vapor),C9H11Cl3NO3PS,,0.1,,,2921-88-2,"[2921-88-2] Skin, 흡입성 및 증기"
+571,클로피돌,Clopidol,C7H7Cl2NO,,10.0,,,2971-90-6,[2971-90-6]
+572,탄산칼슘,Calcium carbonate,CaCO3,,10.0,,,471-34-1,[471-34-1]
+573,탄탈륨(금속 및 산화흄),Tantalum(Metal & oxide fume),Ta/Ta2O5,,5.0,,,1314-61-0,[1314-61-0]
+574,탈륨(가용성화합물),"Thallium(Soluble compounds, as Tl)",Tl2SO4/TlC2H3O2/TlNO3,,0.1,,,7440-28-0,[7440-28-0] Skin
+575,"터페닐(오쏘,메타,파라이성체)","Terphenyls(o,m,p-isomers)",C18H14,,,,,26140-60-3,[26140-60-3]
+576,테레빈유,Turpentine,C10H16,20.0,,,,8006-64-2,[8006-64-2]
+577,텅스텐(가용성화합물),Tungsten(Solublecompounds)(Respirable fraction),W,,1.0,,3.0,7440-33-7,[7440-33-7] 호흡성
+578,텅스텐 및 불용성화합물,Tungsten metal and Insolublecompounds(Respirable fraction),W,,5.0,,10.0,7440-33-7,[7440-33-7] 호흡성
+579,테트라니트로메탄,Tetranitromethane,C(NO2)4,1.0,,,,509-14-8,[509-14-8] 발암성 2
+580,테트라메틸 숙시노니트릴,Tetramethyl succinonitrile,C8H12N2,0.5,,,,3333-52-6,[3333-52-6] Skin
+581,테트라메틸 연,"Tetramethyl lead, as Pb",(CH3)4Pb,,0.075,,,75-74-1,"[75-74-1] 발암성 2, Skin"
+582,테트라소디움피로포스페이트,Tetrasodium pyrophosphate,Na4P2O7,,5.0,,,7722-88-5,[7722-88-5]
+583,테트라에틸 연,"Tetraethyl lead, as Pb",Pb(C2H5)4,,0.075,,,78-00-2,"[78-00-2] 발암성 2 , Skin"
+584,테트라클로로나프탈렌,Tetrachloronaphthalene,C10H4Cl4,,2.0,,,1335-88-2,[1335-88-2]
+585,"1,1,1,2-테트라클로로-2,2-디플로로에탄","1,1,1,2-Tetrachloro-2,2-difluoroethane",CCl3?CClF2,500.0,,,,76-11-9,[76-11-9]
+586,"1,1,2,2-테트라클로로-1,2-디플로로에탄","1,1,2,2-Tetrachloro-1,2-difluoroethane",CCl2F?CCl2F,500.0,,,,76-12-0,[76-12-0]
+588,"1,1,2,2-테트라클로로에탄","1,1,2,2-Tetrachloroethane",CHCl2CHCl2,1.0,,,,79-34-5,"[79-34-5] 발암성 2, Skin"
+590,테트라하이드로퓨란,Tetrahydrofuran,C4H8O,50.0,,100.0,,109-99-9,"[109-99-9] 발암성 2, Skin"
+591,테트릴,Tetryl,(NO2)3C6H2N(NO2)CH3,,1.5,,,479-45-8,[479-45-8]
+592,텔레늄과 그 화합물,"Tellurium & compounds, as Te",Te/H2Te/K2TeO3/Na2H4TeO6,,0.1,,,13494-80-9,[13494-80-9]
+593,텔루르화 비스무스,Bismuth telluride,Bi2Te2,,10.0,,,1304-82-1,[1304-82-1]
+594,템포스,Temephos,S[C?H₄OP(S)(OCH₃)₂] ₂,,10.0,,,3383-96-8,[3383-96-8] Skin
+596,톨루엔,Toluene,C6H5CH3,50.0,,150.0,,108-88-3,[108-88-3] 생식독성 2
+597,"톨루엔-2,4-디이소시아네이트","Toluene-2,4-diisocyanate(TDI)",CH3C6H3(NCO)2,0.005,,0.02,,584-84-9,[584-84-9] 발암성 2
+598,"톨루엔-2,6-디이소시아네이트","Toluene-2,6-diisocyanate(TDI)",CH3C6H3(NCO)2,0.005,,0.02,,91-08-7,[91-08-7] 발암성 2
+600,트리글리시딜이소시아누레이트,Triglycidylisocyanurate,C12H15N3O6,,0.1,,,2451-62-9,[2451-62-9]
+601,"2,4,6-트리니트로 톨루엔","2,4,6-Trinitrotoluene(TNT)",CH3C6H2(NO2)3,,0.1,,,118-96-7,[118-96-7] Skin
+603,트리메틸 벤젠(혼합 이성체),Trimethyl benzene(mixed isomers),(CH3)3C6H3,25.0,,,,25551-13-7,[25551-13-7]
+604,트리메틸아민,Trimethylamine,(CH3)3N,5.0,,15.0,,75-50-3,[75-50-3]
+605,트리메틸 포스파이트,Trimethyl phosphite,(CH3O)3P,2.0,,,,121-45-9,[121-45-9]
+606,트리멜리틱 안하이드리드,Trimellitic anhydride(Inhalablefraction and vapor),C9H4O5,,0.0005,,0.002,552-30-7,"[552-30-7] Skin, 흡입성 및 증기"
+607,트리부틸 포스페이트,Tributyl phosphatee(Inhalable fraction and vapor),(C4H9O)3PO,,2.5,,,126-73-8,"[126-73-8] 발암성 2, 흡입성 및 증기"
+608,트리에틸아민,Triethylamine,(C2H5)3N,2.0,,4.0,,121-44-8,[121-44-8] Skin
+609,트리오르토크레실 포스페이트,Triorthocresyl phosphate,(CH3C6H4O)3PO,,0.1,,,78-30-8,[78-30-8] Skin
+610,트리클로로나프탈렌,Trichloronaphthalene,C10H5Cl6,,5.0,,,1321-65-9,[1321-65-9] Skin
+612,트리클로로메탄,Trichloromethane,CHCl3,10.0,,,,67-66-3,"[67-66-3] 발암성 2, 생식독성 2"
+613,"1,2,4-트리클로로벤젠","1,2,4-Trichlorobenzene",C6H3Cl3,,,,,120-82-1,[120-82-1]
+614,트리클로로아세트산,Trichloroacetic acid,CCl3COOH,1.0,,,,76-03-9,[76-03-9] 발암성 2
+616,"1,1,2-트리클로로에탄","1,1,2-Trichloroethane",CHCl2CH2Cl,10.0,,,,79-00-5,"[79-00-5] 발암성 2, Skin"
+617,트리클로로에틸렌,Trichloroethylene,CCl2CHCl,10.0,,25.0,,79-01-6,"[79-01-6] 발암성 1A, 생식세포 변이원성 2"
+618,"1,1,2-트리클로로-1,2,2-트리플루오로에탄","1,1,2-Trichloro-1,2,2-trifluoroethane",CCl2F?CClF2,1000.0,,1250.0,,76-13-1,[76-13-1]
+619,"1,2,3-트리클로로프로판","1,2,3-Trichloropropane",CH2ClCHClCH2Cl,10.0,,,,96-18-4,"[96-18-4] 발암성 1B, 생식독성 1B, Skin"
+622,트리클로폰,Trichlorfon(Inhalable fraction),C4H8Cl3O4P,,0.3,,,52-68-6,[52-68-6] 흡입성
+623,트리페닐 아민,Triphenyl amine,(C6H5)3N,,5.0,,,603-34-9,[603-34-9]
+624,트리페닐 포스페이트,Triphenyl phosphate,(C6H5O)3PO,,3.0,,,115-86-6,[115-86-6]
+625,트리플루오로 브로모메탄,Trifluoro bromomethane,CBrF3,1000.0,,,,75-63-8,[75-63-8]
+626,입자상다환식방향족탄화수소(벤젠에 가용성),Particulate polycyclicaromatichydrocarbons(as benzene solubles),C14H10/C16H10/C12H9N/ C20H12,,0.2,,,,발암성 1A~2 (믈질의 종류에 따라 발암성 등급 차이가 있음)
+627,"2,4,5-티","2,4,5-T(2,4,5-Trichlorophenoxy acetic acid)",Cl3C6H2OCH2COOH,,10.0,,,93-76-5,[93-76-5]
+628,티오글리콜산,Thioglicolic acid,C2H4O2S,1.0,,,,68-11-1,[68-11-1] Skin
+629,티람,Thiram,C6H12N2S4,,1.0,,,137-26-8,[137-26-8] Skin
+630,"4,4'-티오비스(6-삼차-부틸-메타-크레졸)","4,4'-Thiobis(6-tert-butyl-m-cresol)",C22H30O2S,,10.0,,,96-69-5,[96-69-5]
+632,티이피피,Tetraethyl pyrophosphate (TEPP)(Inhalable fraction and vapor),(C2H5)4P2O7,,0.01,,,107-49-3,"[107-49-3] Skin, 흡입성 및 증기"
+633,파라-니트로아닐린,p-Nitroaniline,C6H6N2O2,,3.0,,,100-01-6,[100-01-6] Skin
+634,파라-니트로클로로벤젠,p-Nitrochlorobenzene,ClC6H4NO2,0.1,,,,100-00-5,"[100-00-5] 발암성 2, 생식세포 변이원성 2, Skin"
+635,파라-디클로로벤젠,p-Dichlorobenzene,C6H4Cl2,10.0,,20.0,,106-46-7,[106-46-7] 발암성 2
+636,파라-벤조퀴논,p-Benzoquinone,OC6H4O,0.1,,,,106-51-4,[106-51-4]
+637,파라-삼차-부틸톨루엔,p-tert-Butyltoluene,CH3C6H4C(CH3)3,10.0,,15.0,,98-51-1,[98-51-1]
+638,파라치온,Parathion(Inhalable fraction andvapor),(C2H5O)2PSOC6H4NO2,,0.05,,,56-38-2,"[56-38-2] 발암성 2, Skin, 흡입성 및 증기"
+639,파라쿼트,Paraquat(Respirable fraction),C12H14Cl2/C12H14N2(CH3SO4)2,,0.1,,,4685-14-7,[4685-14-7] 호흡성
+640,파라-페닐렌디아민,p-Phenylene diamine,C6H8N2,,0.1,,,106-50-3,[106-50-3] Skin
+641,파라-톨루이딘,p-Toluidine,CH3C6H3NH2,2.0,,,,106-49-0,"[106-49-0] 발암성 2, Skin"
+642,퍼라이트,Perlite,-,,10.0,,,93763-70-3,[93763-70-3]
+643,퍼밤,Ferbam(Respirable fraction),[(CCH3)2NCS2]3Fe,,10.0,,,14484-64-1,[14484-64-1] 흡입성
+644,퍼클로로메틸 멀캡탄,Perchloromethyl mercaptan,CCl3SCl,0.1,,,,594-42-3,[594-42-3]
+645,퍼클로로에틸렌,Perchloroethylene,CCl2CCl2,25.0,,100.0,,127-18-4,[127-18-4] 발암성 1B
+646,퍼클로릴 플루오라이드,Perchloryl fluoride,ClO3F,3.0,,6.0,,7616-94-6,[7616-94-6]
+647,페나미포스,Fenamiphos(Inhalable fraction and vapor),-,,0.1,,,22224-92-6,"[22224-92-6] Skin, 흡입성 및 증기"
+648,페노티아진,Phenothiazine,S(C6H14)2 NH,,5.0,,,92-84-2,[92-84-2] Skin
+649,페놀,Phenol,C6H5OH,5.0,,,,108-95-2,"[108-95-2] 생식세포 변이원성 2, Skin"
+650,페닐 글리시딜 에테르,Phenyl glycidyl ether(PGE),C6H5OCH2CHOCH2,0.8,,,,122-60-1,"[122-60-1] 발암성 1B, 생식세포 변이원성 2, Skin"
+651,페닐 멀캡탄,Phenyl mercaptan,C6H5SH,0.1,,,,108-98-5,[108-98-5] Skin
+652,페닐 에테르(증기),Phenyl ether(Vapor),(C6H5)2O,1.0,,2.0,,101-84-8,[101-84-8]
+654,페닐 포스핀,Phenyl phosphine,C6H5PH2,,,,,638-21-1,[638-21-1]
+655,페닐 하이드라진,Phenyl hydrazine,C6H5NHNH2,5.0,,10.0,,100-63-0,"[100-63-0] 발암성 1B, 생식세포 변이원성 2, Skin"
+656,펜설포티온,Fensulfothion(Inhalable fraction and vapor),C4H17O4PS,,0.1,,,115-90-2,"[115-90-2] Skin, 흡입성 및 증기"
+659,펜타보레인,Pentaborane,B5H9,0.005,,0.015,,19624-22-7,[19624-22-7]
+660,펜타에리트리톨,Pentaerythritol,C(CH2OH)4,,10.0,,,115-77-5,[115-77-5]
+661,펜타클로로나프탈렌,Pentachloronaphthalene,C10H3Cl5,,0.5,,,1321-64-8,[1321-64-8]
+662,펜타클로로페놀,Pentachlorophenol(Inhalablefraction and vapor),C6Cl5OH,,0.5,,,87-86-5,"[87-86-5] 발암성 1B, Skin, 흡입성 및 증기"
+663,펜탄(모든 이성체),"Pentane, all isomers",C5H12,600.0,,750.0,,109-66-0|78-78-4|463-82-1,[109-66-0][78-78-4][463-82-1]
+664,펜티온,Fenthion,C10H15O3PS,,0.2,,,55-38-9,"[55-38-9] 생식세포 변이원성 2, Skin"
+665,포노포스,Fonofos(Inhalable fraction andvapor),C10H15OPS2,,0.1,,,944-22-9,"[944-22-9] Skin, 흡입성 및 증기"
+666,포레이트,Phorate(Inhalable fraction and vapor),C7H17O2PS3,,0.05,,,298-02-2,"[298-02-2] Skin, 흡입성 및 증기"
+667,포름산 에틸,Ethyl formate,HCOOC2H5,100.0,,,,109-94-4,[109-94-4]
+668,포름아미드,Formamide,HCONH2,10.0,,,,75-12-7,"[75-12-7] 생식독성 1B, Skin"
+669,포름알데히드,Formaldehyde,HCHO,0.3,,,,50-00-0,"[50-00-0] 발암성 1A, 생식세포 변이원성 2"
+670,포스겐,Phosgene,COCl2,0.1,,,,75-44-5,[75-44-5]
+672,포스포러스 옥시클로라이드,Phosphorus oxychloride,POC13,0.1,,0.5,,10025-87-3,[10025-87-3]
+673,포스포러스 트리클로라이드,Phosphorus trichloride,PC13,0.2,,0.5,,7719-12-2,[7719-12-2]
+674,포스포러스 펜타설파이드,Phosphorus pentasulfide,P2S5/P4S10,,1.0,,3.0,1314-80-3,[1314-80-3]
+675,포스포러스 펜타클로라이드,Phosphorus pentachloride,PCl5,0.1,,,,10026-13-8,[10026-13-8]
+676,포스핀,Phosphine,PH3,0.3,,1.0,,7803-51-2,[7803-51-2]
+677,포틀랜드 시멘트,Portland cement,-,,10.0,,,65997-15-1,[65997-15-1]
+678,푸르푸랄,Furfural,C4H3OCHO,2.0,,,,98-01-1,"[98-01-1] 발암성 2, Skin"
+679,푸르푸릴 알코올,Furfuryl alcohol,C4H3OCH2OH,10.0,,15.0,,98-00-0,"[98-00-0] 발암성 2, Skin"
+680,프로파르길 알코올,Propargyl alcohol,HCCCH2OH,1.0,,,,107-19-7,[107-19-7] Skin
+681,프로판 설톤,Propane sultone,C3H6O3S,,,,,1120-71-4,[1120-71-4] 발암성 1B
+682,프로폭서,Propoxur(Inhalable fraction andvapor),C11H15NO3,,0.5,,,114-26-1,"[114-26-1] 발암성 2, 흡입성 및 증기"
+683,프로피온산,Propionic acid,CH3CH2COOH,10.0,,15.0,,79-09-4,[79-09-4]
+685,프로필렌 글리콜 디니트레이트,Propylene glycoldinitrate,C3H6N2O6,0.05,,,,6423-43-4,[6423-43-4] Skin
+686,프로필렌 글리콜 모노메틸에테르,Propylene glycolmonomethylether,CH3OCH2CHOHCH3,100.0,,150.0,,107-98-2,[107-98-2]
+688,프로필렌 이민,Propylene imine,C6H7N,2.0,,,,75-55-8,"[75-55-8] 발암성 1B, Skin"
+689,플루오로트리클로로메탄,Fluorotrichloromethane,CCl3F,,,,,75-69-4,[75-69-4]
+690,플루오라이드,"Fluorides, as F",-,,2.5,,,7681-49-4,[7681-49-4]
+691,피레트럼,Pyrethrum,C21H28O3/C22H28O5/ C20H28O3,,5.0,,,8003-34-7,[8003-34-7]
+693,피리딘,Pyridine,C5H5N,2.0,,,,110-86-1,[110-86-1] 발암성 2
+694,피크린산,Picric acid,HOC6H12(NO2)3,,0.1,,,88-89-1,[88-89-1] Skin
+695,피클로람,Picloram,C6H3Cl3N2O2,,10.0,,,1918-02-1,[1918-02-1]
+696,피페라진디하이드로클로라이드,Piperazine dihydrochloride,C4H10N2?2HCl,,5.0,,,142-64-3,[142-64-3] 생식독성 2
+697,핀돈,Pindone(Pival),C14H14O3,,0.1,,,83-26-1,[83-26-1]
+698,하이드라진,Hydrazine,(NH2)2,0.05,,,,302-01-2,"[302-01-2] 발암성 1B, Skin"
+699,하이드로겐 셀레늄,"Hydrogen selenide, as Se",H2Se,0.05,,,,7783-07-5,[7783-07-5]
+700,하이드로게네이티드 터페닐,Hydrogenated terphenyls,C6H5C6H4C6H5,0.5,,,,61788-32-7,[61788-32-7]
+703,2-하이드록시 프로필아크릴레이트,2-Hydroxypropyl acrylate,CH2CHCOOCH2CHOHCH3,0.5,,,,999-61-1,[999-61-1] Skin
+704,하프니움,Hafnium,Hf,,0.5,,,7440-58-6,[7440-58-6]
+706,헥사메틸 포스포르아미드,Hexamethyl phosphoramide,[(CH3)2N]3PO,,,,,680-31-9,"[680-31-9] 발암성 1B, 생식세포 변이원성 1B, Skin"
+707,헥사메틸렌디이소시아네이트,Hexamethylene diisocyanate,C15H22N2O2,0.005,,,,822-06-0,[822-06-0]
+708,헥사클로로나프탈렌,Hexachloronaphthalene,C10H2Cl6,,0.2,,,1335-87-1,[1335-87-1] Skin
+709,헥사클로로부타디엔,Hexachlorobutadiene,CCl2CClCClCCl2,0.02,,,,87-68-3,"[87-68-3] 발암성 2, Skin"
+710,헥사클로로시클로펜타디엔,Hexachlorocyclopentadiene,C5Cl6,0.01,,,,77-47-4,[77-47-4]
+711,헥사클로로에탄,Hexachloroethane,CCl3CCl3,1.0,,,,67-72-1,[67-72-1] 발암성 2
+712,헥사플루오로아세톤,Hexafluoroacetone,F3CCOCF3,0.1,,,,684-16-2,[684-16-2] Skin
+713,헥산(다른 이성체),Hexane(other isomer),(CH3)3C3H5/n(CH3)4C2H2,500.0,,1000.0,,75-83-2|79-29-8|96-14-0|107-83-5,[75-83-2][79-29-8][96-14-0][107-83-5]
+714,헥손,Hexone,CH3COCH2CH(CH3)2,50.0,,75.0,,108-10-1,[108-10-1] 발암성 2
+715,헥실렌글리콜,Hexylene glycol,(CH3)2COHCH2CHOHCH3,,,,,107-41-5,[107-41-5]
+718,헵타클로르,Heptachlor ＆ Heptachlor epoxide,C10H5Cl7/C10H5Cl7O,,0.05,,,76-44-8|1024-57-3,"[76-44-8], [1024-57-3] 발암성 2, Skin"
+719,헵탄,Heptane,CH3(CH2)5CH3,400.0,,500.0,,142-82-5,[142-82-5]
+720,활석(석면 불포함),Talc(Containing no asbestos fibers),-,,2.0,,,14807-96-6,[14807-96-6] 호흡성
+722,활성탄,Activated carbon,-,,5.0,,,,
+723,황산,Sulfuric acid(Thoracic fraction),H2SO4,,0.2,,0.6,7664-93-9,"[7664-93-9] 발암성 1A(강산 Mist에 한정함), 흉곽 성"
+724,황산 디메틸,Dimethyl sulfate,(CH3)2SO4,0.1,,,,77-78-1,"[77-78-1] 발암성 1B, 생식세포 변이원성 2, Skin"
+725,황산암모늄,Ammonium Sulfate,NH4SO4NH4,,10.0,,20.0,7783-20-2,[7783-20-2]
+726,황화광,Sulfide ore,-,,2.0,,,,
+727,황화니켈(흄 및 분진),"Nickel sulfide roasting(Fume & dust, as Ni)",NiS,,1.0,,,16812-54-7,"[16812-54-7] 발암성 1A, 생식세포 변이원성 2"
+728,황화수소,Hydrogen sulfide,H2S,10.0,,15.0,,7783-06-4,[7783-06-4]
+729,휘발성 콜타르피치(벤젠에 가용물),Coal tar pitch volatiles(Benzene solubles),C14H10/C16H10/C12H9N/C20H12,,0.2,,,65996-93-2,"[65996-93-2] 발암성 1A, 생식독성 1B"
+730,"흑연(천연 및 합성,Graphite 섬유제외)","Graphite(Natural＆ Synthetic,Except Graphite fibers,  Respirablefraction)",C,,2.0,,,7782-42-5,[7782-42-5] 호흡성
+731,기타 분진(산화규소 결정체 1% 이하),Particulates not otherwiseregulated(no more than 1%crystalline silica),-,,10.0,,,,발암성 1A (산화규소 결정체 0.1% 이상에 한함)

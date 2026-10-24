@@ -1,0 +1,67 @@
+{
+  "population": {
+    "documents": 270,
+    "composition_unique": 249,
+    "with_UVCB_surrogates": 216,
+    "range_repaired": 3
+  },
+  "RQ1": {
+    "comparison_groups_with_2plus": 20,
+    "rankable_products": 116,
+    "held_for_OEL_gap": 12,
+    "fold_range_median": 3.42,
+    "fold_range_IQR": [
+      2.3,
+      9.94
+    ],
+    "fold_range_max": 212.27,
+    "robust_pair_share_overall": 0.881,
+    "products_with_robust_lower_alternative": 89,
+    "median_reduction_factor_if_switched": 3.26
+  },
+  "RQ2": {
+    "products": 249,
+    "UNIFAC_computable": 214,
+    "UNIFAC_missing_reason_counts": {
+      "OK": 214,
+      "UNIFAC 상호작용 파라미터 결측(주그룹쌍)": 35
+    },
+    "HANNA/Raoult_median": 1.083,
+    "HANNA/Raoult_P5_P95": [
+      0.994,
+      1.653
+    ],
+    "HANNA/Raoult_max": 3.113,
+    "share_HANNA/Raoult_gt_1.2": 0.293,
+    "HANNA/UNIFAC_median": 0.999,
+    "HANNA/UNIFAC_P5_P95": [
+      0.922,
+      1.052
+    ],
+    "spearman_HANNA/Raoult_vs_alcohol_x": 0.586,
+    "within_group_pairs": 1811,
+    "raoult_vs_hanna_order_reversals": 62
+  },
+  "RQ3": {
+    "relative_width_median": 1.107,
+    "relative_width_P90": 1.348
+  },
+  "RQ4": {
+    "products": 249,
+    "coverageA_median": 0.992,
+    "n_coverageA_lt_0.9": 66,
+    "n_coverageA_lt_0.5": 18,
+    "coverageB_median": 1.0,
+    "n_coverageB_lt_0.9": 33,
+    "n_products_rank_worse_under_B_by_ge2": 6,
+    "IB_over_IA_median": 1.015,
+    "IB_over_IA_max": 5.256
+  },
+  "RQ5": {
+    "ratio_median": 1.67,
+    "ratio_range": [
+      1.512,
+      3.031
+    ]
+  }
+}

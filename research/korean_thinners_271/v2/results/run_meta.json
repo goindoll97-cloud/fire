@@ -1,0 +1,17 @@
+{
+  "samples_per_product": 100,
+  "seed": 20261024,
+  "temperatures_K": {
+    "25C": 298.15,
+    "35C": 308.15
+  },
+  "models": [
+    "Raoult",
+    "UNIFAC",
+    "HANNA"
+  ],
+  "P_atm_kPa": 101.325,
+  "hanna_home": "/home/claude/hanna2",
+  "runtime_s": 365.6,
+  "products": 270
+}
