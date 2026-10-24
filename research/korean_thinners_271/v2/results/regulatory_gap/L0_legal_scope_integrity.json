@@ -1,11 +1,14 @@
 {
   "source_documents": 270,
   "source_CAS_total": 54,
-  "source_CAS_with_at_least_one_verified_clause": 7,
-  "source_CAS_not_yet_reviewed": 47,
+  "source_CAS_with_at_least_one_verified_clause": 10,
+  "source_CAS_not_yet_reviewed": 44,
   "source_MSDS_with_any_nonreviewed_CAS": 262,
   "complete_regulation_clearances": 0,
-  "verified_rule_rows_including_CAS_not_in_source": 9,
-  "full_annex_2026_5_status": "Official XLSX found, but full row-level annex not ingested or verified",
+  "verified_rule_rows_including_CAS_not_in_source": 12,
+  "full_annex_2026_5_status": "Full official 2026-5 XLSX downloaded, hash-pinned; 54 source CAS searched by exact text; six exact designation rows source-reviewed. Aliases/group entries and other laws NOT cleared.",
+  "full_annex_2026_5_exact_CAS_matches": 6,
+  "full_annex_2026_5_SHA256": "a79fef57b5c935d5bd25b64d8b41d5eba0dcb4e44b473bd0892e9ba3e5cd7585",
+  "source_CAS_not_exactly_found_in_2026_5_annex": 48,
   "future_effective_2026_16_status": "Not in force on 2026-10-24; do not merge into present baseline"
 }
