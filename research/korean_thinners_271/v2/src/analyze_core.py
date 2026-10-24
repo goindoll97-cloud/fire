@@ -52,7 +52,7 @@ def model_table(summ, fs, prod, model):
 
 
 def universe(b):
-    b = b[~b['중복여부'] & ~b['용도군'].isin(a2.EXCLUDE_GROUPS)].sort_values('문서키')
+    b = b[(~b['중복여부']) & b['탐색비교허용'] & ~b['용도군'].isin(a2.EXCLUDE_GROUPS)].sort_values('문서키')
     b = b.drop_duplicates(['제조사', '제품명']).copy()
     b['순위가능'] = b['OELcov_TierB'] >= a2.MIN_COVERAGE
     b['석유류'] = b['Tfp_Liaw_C'].map(af.petroleum_class)
@@ -60,10 +60,19 @@ def universe(b):
 
 
 def quadrant(d, fire_col):
-    mi, mf = d['I_mix_TierB'].median(), d[fire_col].median()
-    lo_h = d['I_mix_TierB'] <= mi
-    hi_f = d[fire_col] >= mf
-    return np.where(lo_h & hi_f, '둘 다 낮음', np.where(lo_h, '노출만 낮음', np.where(hi_f, '화재만 낮음', '둘 다 높음')))
+    """Do not classify missing MSDS flash points using an imputed value."""
+    valid = d[fire_col].notna() & d['I_mix_TierB'].notna()
+    result = pd.Series(index=d.index, dtype='object')
+    if not valid.any():
+        return result
+    subset = d.loc[valid]
+    mi, mf = subset['I_mix_TierB'].median(), subset[fire_col].median()
+    lo_h = subset['I_mix_TierB'] <= mi
+    hi_f = subset[fire_col] >= mf
+    result.loc[valid] = np.where(lo_h & hi_f, '둘 다 낮음',
+                                 np.where(lo_h, '노출만 낮음',
+                                          np.where(hi_f, '화재만 낮음', '둘 다 높음')))
+    return result
 
 
 def c1_c2(b):
@@ -79,9 +88,11 @@ def c1_c2(b):
         rows.append({'비교군': g, 'n': len(d), 'Spearman(logI, 예측 인화점)': round(rho, 3),
                      'Spearman(logI, MSDS 인화점)': round(rho_m, 3)})
         d['사분면(예측 인화점)'] = quadrant(d, 'Tfp_Liaw_C')
-        d['사분면(MSDS 인화점)'] = quadrant(d.fillna({'FP_MSDS': d['FP_MSDS'].median()}), 'FP_MSDS')
+        d['사분면(MSDS 인화점)'] = quadrant(d, 'FP_MSDS')
         quads.append(d)
     wg = pd.DataFrame(rows)
+    if not quads:
+        raise RuntimeError('감사된 동일 용도 비교군(3개 이상)이 없습니다. 용도감사 및 그룹을 검토하세요.')
     q = pd.concat(quads)
     wg.to_csv(OUT / 'C1_group_relation.csv', index=False, encoding='utf-8-sig')
     q[['비교군', '제조사', '제품명', 'I_mix_TierB', 'Tfp_Liaw_C', 'FP_MSDS', 'F25', '석유류',
@@ -181,18 +192,28 @@ def main():
     prod = refined_groups(prod, sp).merge(msds, on='기존제품ID', how='left')
     b = universe(model_table(summ, fs, prod, 'HANNA'))
     r, wg, q = c1_c2(b)
+    pd.DataFrame({
+        '용도군': prod['용도군'], '비교세부군': prod['비교세부군'],
+        '용도감사상태': prod['용도감사상태'], '탐색비교허용': prod['탐색비교허용']
+    }).groupby(['용도군', '비교세부군', '용도감사상태', '탐색비교허용'], dropna=False).size().rename('문서수').reset_index().to_csv(
+        OUT / 'use_audit_comparison_group_counts.csv', index=False, encoding='utf-8-sig')
     sw = c3_swaps(q)
     ai = c4_ai(summ, fs, prod, sp)
     figures(r, q)
     b.to_csv(OUT / 'core_product_table_HANNA.csv', index=False, encoding='utf-8-sig')
     same = (q['사분면(예측 인화점)'].isin(['둘 다 낮음', '둘 다 높음'])).mean()
-    same_m = (q['사분면(MSDS 인화점)'].isin(['둘 다 낮음', '둘 다 높음'])).mean()
+    msds_quadrants = q['사분면(MSDS 인화점)'].dropna()
+    same_m = msds_quadrants.isin(['둘 다 낮음', '둘 다 높음']).mean() if len(msds_quadrants) else float('nan')
     res = {'products_in_universe': int(len(b)), 'rankable_in_groups_ge3': int(len(q)),
            'groups_ge3': int(len(wg)),
            'spearman_median_model_fp': round(float(wg['Spearman(logI, 예측 인화점)'].median()), 3),
            'spearman_median_msds_fp': round(float(wg['Spearman(logI, MSDS 인화점)'].median()), 3),
            'share_same_direction_model_fp': round(float(same), 3),
            'share_same_direction_msds_fp': round(float(same_m), 3),
+           'n_msds_quadrant_evaluable': int(len(msds_quadrants)),
+           'n_model_quadrant_evaluable': int(q['사분면(예측 인화점)'].notna().sum()),
+           'use_audit_excluded_documents': int((~prod['탐색비교허용']).sum()),
+           'use_audit_policy': 'exploratory_only_not_confirmed_substitution',
            'quadrants_model_fp': q['사분면(예측 인화점)'].value_counts().to_dict(),
            'quadrants_msds_fp': q['사분면(MSDS 인화점)'].value_counts().to_dict(),
            'swap_products': int(len(sw)),
