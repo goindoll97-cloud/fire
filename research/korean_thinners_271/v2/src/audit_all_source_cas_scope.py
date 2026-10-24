@@ -21,6 +21,13 @@ def main():
     src=pd.read_csv(COMP,encoding='utf-8-sig',dtype={'CAS':str})
     doc=pd.read_csv(V2/'results'/'products_270.csv',encoding='utf-8-sig')
     rules=pd.read_csv(RULES,encoding='utf-8-sig',dtype={'CAS':str})
+    official_rows_path=OUT/'L3_official_2026_5_annex_matched_CAS_rows.csv'
+    official_meta_path=OUT/'L5_official_NICS_2026_5_xlsx_provenance.json'
+    official_rows=(pd.read_csv(official_rows_path,encoding='utf-8-sig',dtype={'source_CAS':str})
+                   if official_rows_path.is_file() else None)
+    official_cas=set(official_rows['source_CAS']) if official_rows is not None else set()
+    official_meta=(json.loads(official_meta_path.read_text(encoding='utf-8'))
+                   if official_meta_path.is_file() else {})
     source=src.groupby('CAS').agg(source_MSDS_rows=('문서키','size'),
                                   source_documents=('문서키','nunique'),
                                   source_lower_min=('함량하한_pct','min'),
@@ -37,6 +44,8 @@ def main():
     audit['cas_regulation_verification_status']=audit['verified_clause_count'].apply(
         lambda x: 'selected_CAS_clause_verified' if pd.notna(x)
         else 'NOT_YET_REVIEWED_DO_NOT_INFER_NONREGULATION')
+    audit['exact_CAS_in_official_2026_5_full_annex'] = audit['CAS'].isin(official_cas)
+    audit['not_exactly_matched_2026_5_is_not_exemption'] = True
     audit['legal_non_applicability_approved']=False
     audit['needs_full_current_annex_review']=True
     audit= audit.sort_values('source_documents',ascending=False)
@@ -50,6 +59,9 @@ def main():
         not_reviewed_CAS_list=('CAS',lambda s:'|'.join(sorted(set(s)-known)))
     ).reset_index().merge(doc[['문서키','기존제품ID','제품명','제조사']],
                           on='문서키',validate='one_to_one')
+    perdoc['exact_CAS_in_official_2026_5'] = perdoc['문서키'].map(
+        src.groupby('문서키')['CAS'].agg(
+            lambda s: '|'.join(sorted(set(s)&official_cas))))
     perdoc['complete_legal_applicability_established']=False
     perdoc.to_csv(OUT/'L2_270_MSDS_unreviewed_CAS.csv',
                   index=False,encoding='utf-8-sig')
@@ -63,7 +75,13 @@ def main():
             perdoc.not_reviewed_CAS_count.gt(0).sum()),
         'complete_regulation_clearances':0,
         'verified_rule_rows_including_CAS_not_in_source':len(rules),
-        'full_annex_2026_5_status':'Official XLSX found, but full row-level annex not ingested or verified',
+        'full_annex_2026_5_status':('Full official 2026-5 XLSX downloaded, hash-pinned; '
+            '54 source CAS searched by exact text; six exact designation rows source-reviewed. '
+            'Aliases/group entries and other laws NOT cleared.'
+            if official_meta else 'Official XLSX not ingested; no legal exemptions established'),
+        'full_annex_2026_5_exact_CAS_matches':len(official_cas),
+        'full_annex_2026_5_SHA256':official_meta.get('file_sha256',''),
+        'source_CAS_not_exactly_found_in_2026_5_annex':len(set(source.CAS)-official_cas),
         'future_effective_2026_16_status':'Not in force on 2026-10-24; do not merge into present baseline'
     }
     (OUT/'L0_legal_scope_integrity.json').write_text(
