@@ -22,6 +22,50 @@
   },
   "composition_unique_in_total": 249,
   "documents_flagged_unique_composition": 155,
+  "vapor_only_crossing_documents_unique_not_legal": 38,
+  "vapor_only_crossing_compositions_unique_not_legal": 34,
+  "vapor_only_mass_pct_hypothetical_crossing_count_not_legal": 38,
+  "vapor_only_numeric_boundary_crossings_by_CAS": [
+    {
+      "CAS_원문": "108-88-3",
+      "규정범주": "accident_preparedness",
+      "기상_가상질량분율경계교차_법적비해당": 7
+    },
+    {
+      "CAS_원문": "1330-20-7",
+      "규정범주": "accident_preparedness",
+      "기상_가상질량분율경계교차_법적비해당": 0
+    },
+    {
+      "CAS_원문": "141-78-6",
+      "규정범주": "accident_preparedness",
+      "기상_가상질량분율경계교차_법적비해당": 14
+    },
+    {
+      "CAS_원문": "67-56-1",
+      "규정범주": "accident_preparedness",
+      "기상_가상질량분율경계교차_법적비해당": 0
+    },
+    {
+      "CAS_원문": "67-56-1",
+      "규정범주": "human_acute",
+      "기상_가상질량분율경계교차_법적비해당": 2
+    },
+    {
+      "CAS_원문": "78-93-3",
+      "규정범주": "accident_preparedness",
+      "기상_가상질량분율경계교차_법적비해당": 15
+    }
+  ],
+  "phase_mass_fraction_model_crosscheck_not_legal": {
+    "common_three_model_eligible_cases": 245,
+    "HANNA_cross": 31,
+    "Raoult_cross": 29,
+    "UNIFAC_cross": 31,
+    "all_three_cross": 28,
+    "any_three_cross": 32,
+    "legal_note": "All are solvent-vapor-only mass fractions, not legal mixture classification."
+  },
   "model_crosscheck": {
     "eligible_common_three_model_cases": 245,
     "all_three_over_10x": 229,
