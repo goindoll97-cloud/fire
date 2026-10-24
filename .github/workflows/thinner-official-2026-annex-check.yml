@@ -1,0 +1,26 @@
+name: Official 2026-5 chemical designation annex CAS audit
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'research/korean_thinners_271/v2/src/inspect_official_2026_5_annex.py'
+      - '.github/workflows/thinner-official-2026-annex-check.yml'
+  workflow_dispatch:
+jobs:
+  annex_official:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download exactly official NICS July-2026 annex and match 54 source CAS
+        run: python research/korean_thinners_271/v2/src/inspect_official_2026_5_annex.py
+      - name: Export exact source text matches (NOT legal approvals)
+        uses: actions/upload-artifact@v4
+        with:
+          name: NICS-2026-5-unverified-CAS-rows
+          path: research/korean_thinners_271/v2/results/regulatory_gap/official_2026_5/*
+          if-no-files-found: error
