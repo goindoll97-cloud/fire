@@ -10,7 +10,7 @@
 ## 추가한 계산 (코드: `src/build_flammability.py`, `run_flammability.py`, `analyze_flammability.py`, `extract_msds_flash.py`)
 - 성분별 인화점·폭발하한 63종 (`data/pure_flammability.csv`). 출처는 행마다 기록. 미확인 값은 `estimated=True`.
 - 혼합물 인화점: Liaw 모델 `Σ x_i γ_i Psat_i(T)/Psat_i(Tfp_i) = 1`. γ는 25°C 값을 고정.
-- 화재지수 `F = (Ptot/P)/LEL_mix` (LEL_mix는 Le Chatelier). F≥1이면 그 온도에서 포화 상부공간이 폭발범위 안.
+- 화재지수 `F = (Ptot/P)/LEL_mix` (LEL_mix는 Le Chatelier). F≥1이면 그 온도에서 포화 상부공간이 폭발하한에 도달(상한은 미확인).
 - MSDS 제9항 인화점 270건 추출 (`data/msds_flash.csv`).
 
 ## 결과 (HANNA, 중앙조성, seed 20261024, 제품당 100 시나리오)
