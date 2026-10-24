@@ -204,23 +204,23 @@
   "CAS_specific_summary": [
     {
       "scenario_name": "large_surface_low_vent_4h",
-      "eligible_rule_CAS_rows": 300,
-      "single_CAS_hypo_8h_index_ge1": 145,
+      "eligible_rule_CAS_rows": 305,
+      "single_CAS_hypo_8h_index_ge1": 146,
       "single_CAS_hypo_8h_ge1_documents": 120,
       "single_CAS_hypo_8h_ge10": 2,
       "interpretation": "not real 8h measured exposure; source and room assumptions hypothetical"
     },
     {
       "scenario_name": "large_surface_very_low_vent_4h",
-      "eligible_rule_CAS_rows": 300,
-      "single_CAS_hypo_8h_index_ge1": 255,
-      "single_CAS_hypo_8h_ge1_documents": 161,
+      "eligible_rule_CAS_rows": 305,
+      "single_CAS_hypo_8h_index_ge1": 257,
+      "single_CAS_hypo_8h_ge1_documents": 162,
       "single_CAS_hypo_8h_ge10": 79,
       "interpretation": "not real 8h measured exposure; source and room assumptions hypothetical"
     },
     {
       "scenario_name": "medium_surface_moderate_vent_1h",
-      "eligible_rule_CAS_rows": 300,
+      "eligible_rule_CAS_rows": 305,
       "single_CAS_hypo_8h_index_ge1": 0,
       "single_CAS_hypo_8h_ge1_documents": 0,
       "single_CAS_hypo_8h_ge10": 0,
@@ -228,7 +228,7 @@
     },
     {
       "scenario_name": "small_surface_high_vent_15min",
-      "eligible_rule_CAS_rows": 300,
+      "eligible_rule_CAS_rows": 305,
       "single_CAS_hypo_8h_index_ge1": 0,
       "single_CAS_hypo_8h_ge1_documents": 0,
       "single_CAS_hypo_8h_ge10": 0,
@@ -236,7 +236,7 @@
     },
     {
       "scenario_name": "small_surface_moderate_vent_1h",
-      "eligible_rule_CAS_rows": 300,
+      "eligible_rule_CAS_rows": 305,
       "single_CAS_hypo_8h_index_ge1": 0,
       "single_CAS_hypo_8h_ge1_documents": 0,
       "single_CAS_hypo_8h_ge10": 0,
