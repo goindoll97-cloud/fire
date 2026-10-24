@@ -1,0 +1,8 @@
+﻿CAS,name_en,regulation_category,item_number,threshold_mass_pct,source_authority,source_url,rule_note
+108-88-3,toluene,accident_preparedness,28,85,KREACH,https://kreach.me.go.kr/repwrt/mttr/kr/mttrDetail.do?MTTR_ID=35074,톨루엔 및 이를 85% 이상 함유한 혼합물
+1330-20-7,xylene mixed isomers,accident_preparedness,98,85,KREACH,https://kreach.me.go.kr/repwrt/mttr/kr/mttrDetail.do?MTTR_ID=36561,자일렌 및 이를 85% 이상 함유한 혼합물
+78-93-3,methyl ethyl ketone,accident_preparedness,15,25,KREACH,https://kreach.me.go.kr/repwrt/mttr/kr/mttrDetail.do?MTTR_ID=25248,메틸 에틸 케톤 및 이를 25% 이상 함유한 혼합물
+141-78-6,ethyl acetate,accident_preparedness,32,25,KREACH,https://kreach.me.go.kr/repwrt/mttr/kr/mttrDetail.do?MTTR_ID=1247,아세트산 에틸 및 이를 25% 이상 함유한 혼합물
+67-56-1,methanol,accident_preparedness,4,85,KREACH,https://kreach.me.go.kr/repwrt/mttr/kr/mttrDetail.do?MTTR_ID=24352,메틸알코올 및 이를 85% 이상 함유한 혼합물
+67-56-1,methanol,human_acute,97-1-80,10,KREACH,https://kreach.me.go.kr/repwrt/mttr/kr/mttrDetail.do?MTTR_ID=24352,인체급성유해성물질 지정 함량 10%
+71-43-2,benzene,human_chronic,97-1-99,0.1,KREACH,https://kreach.me.go.kr/repwrt/mttr/kr/mttrDetail.do?MTTR_ID=44597,인체만성 0.1% 기준; 0.1~1% 혼합물은 2028-01-01 시행 특례. 2026-10-24 기준 해당 구간을 확정 적용으로 판단 금지
