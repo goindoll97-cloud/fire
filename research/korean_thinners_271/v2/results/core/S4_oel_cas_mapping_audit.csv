@@ -1,0 +1,64 @@
+﻿CAS,name,OEL_basis,TierA_TWA_ppm,TierB_TWA_ppm,TierA_source,TierB_source,source_status
+100-41-4,ethylbenzene,official_exact_CAS,100.0,100.0,Korean MoEL notice 별표1 No.407 에틸 벤젠 (Ethyl benzene),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+103-65-1,propylbenzene,foreign_or_analogue_TierB,,25.0,,Analogue: Korean TWA of trimethylbenzene (mixed isomers) 25 ppm (C9 alkylbenzene),2020-48 in official current rule list; rows not independently re-extracted
+104-51-8,butylbenzene,foreign_or_analogue_TierB,,25.0,,Analogue: Korean TWA of trimethylbenzene (mixed isomers) 25 ppm (C10 alkylbenzene),2020-48 in official current rule list; rows not independently re-extracted
+106-42-3,p-xylene,official_exact_CAS,100.0,100.0,Korean MoEL notice 별표1 No.548 크실렌(모든 이성체) (Xylene(all isomers)),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+106-65-0,dimethyl succinate,uncovered,,,,,2020-48 in official current rule list; rows not independently re-extracted
+107-83-5,2-Methylpentane,official_exact_CAS,500.0,500.0,Korean MoEL notice 별표1 No.713 헥산(다른 이성체) (Hexane(other isomer)),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+107-98-2,1-methoxy-2-propanol,official_exact_CAS,100.0,100.0,Korean MoEL notice 별표1 No.686 프로필렌 글리콜 모노메틸에테르 (Propylene glycolmonomethylether),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+108-08-7,"2,4-dimethylpentane",foreign_or_analogue_TierB,,400.0,,Analogue: Korean TWA of heptane 400 ppm (C7 isoparaffin),2020-48 in official current rule list; rows not independently re-extracted
+108-10-1,4-methyl-2-pentanone,official_exact_CAS,50.0,50.0,Korean MoEL notice 별표1 No.194 메틸 이소부틸 케톤 (Methyl isobutyl ketone),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+108-38-3,m-xylene,official_exact_CAS,100.0,100.0,Korean MoEL notice 별표1 No.548 크실렌(모든 이성체) (Xylene(all isomers)),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+108-65-6,1-methoxy-2-propyl acetate,foreign_or_analogue_TierB,,50.0,,"EU IOELV, Commission Directive 2000/39/EC Annex (8 h TWA): 2-methoxy-1-methylethyl acetate 50 ppm",2020-48 in official current rule list; rows not independently re-extracted
+108-67-8,mesitylene,official_isomer_group,25.0,25.0,Korean MoEL notice 별표1 No.603 트리메틸 벤젠(혼합 이성체) (Trimethyl benzene(mixed isomers)) - isomer-group entry,Tier A,2020-48 in official current rule list; rows not independently re-extracted
+108-83-8,"2,6-dimethyl-4-heptanone",official_exact_CAS,25.0,25.0,Korean MoEL notice 별표1 No.108 디이소부틸케톤 (Diisobutyl ketone),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+108-87-2,methylcyclohexane,official_exact_CAS,400.0,400.0,Korean MoEL notice 별표1 No.182 메틸시클로헥산 (Methylcyclohexane),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+108-88-3,toluene,official_exact_CAS,50.0,50.0,Korean MoEL notice 별표1 No.596 톨루엔 (Toluene),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+108-94-1,cyclohexanone,official_exact_CAS,25.0,25.0,Korean MoEL notice 별표1 No.342 시클로헥사논 (Cyclohexanone),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+110-19-0,isobutyl acetate,official_exact_CAS,150.0,150.0,Korean MoEL notice 별표1 No.508 초산 이소부틸 (Isobutyl acetate),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+110-43-0,2-heptanone,official_exact_CAS,50.0,50.0,Korean MoEL notice 별표1 No.170 메틸 노말-아밀케톤 (Methyl n-amylketone),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+110-54-3,hexane,official_exact_CAS,50.0,50.0,Korean MoEL notice 별표1 No.42 노말-헥산 (n-Hexane),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+110-82-7,cyclohexane,official_exact_CAS,200.0,200.0,Korean MoEL notice 별표1 No.344 시클로헥산 (Cyclohexane),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+111-15-9,2-ethoxyethyl acetate,official_exact_CAS,5.0,5.0,Korean MoEL notice 별표1 No.396 2-에톡시에틸아세테이트 (2-Ethoxyethyl acetate),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+111-65-9,octane,official_exact_CAS,300.0,300.0,Korean MoEL notice 별표1 No.450 옥탄 (Octane),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+111-76-2,2-butoxyethanol,official_exact_CAS,20.0,20.0,Korean MoEL notice 별표1 No.236 2-부톡시에탄올 (2-Butoxyethanol),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+111-84-2,nonane,official_exact_CAS,200.0,200.0,Korean MoEL notice 별표1 No.24 노난 (Nonane),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+1119-40-0,dimethyl glutarate,uncovered,,,,,2020-48 in official current rule list; rows not independently re-extracted
+112-07-2,2-butoxyethyl acetate,official_exact_CAS,20.0,20.0,Korean MoEL notice 별표1 No.399 에틸렌글리콜모노부틸에테르아세테이트 (Ethyleneglycol monobutyletheracetate),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+112-15-2,2-(2-ethoxyethoxy)ethyl acetate,uncovered,,,,,2020-48 in official current rule list; rows not independently re-extracted
+112-34-5,2-(2-butoxyethoxy)ethanol,official_exact_CAS,10.0,10.0,Korean MoEL notice 별표1 No.96 디에틸렌 글리콜 모노부틸에테르 (Diethylene glycol monobutyl ether),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+112-40-3,dodecane,foreign_or_analogue_TierB,,100.0,,Analogue: Korean TWA of Stoddard solvent 100 ppm (C9-C13 paraffin),2020-48 in official current rule list; rows not independently re-extracted
+1120-21-4,undecane,foreign_or_analogue_TierB,,100.0,,Analogue: Korean TWA of Stoddard solvent 100 ppm (C9-C13 paraffin),2020-48 in official current rule list; rows not independently re-extracted
+123-42-2,diacetone alcohol,official_exact_CAS,50.0,50.0,Korean MoEL notice 별표1 No.92 디아세톤 알코올 (Diaceton alcohol),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+123-86-4,butyl acetate,official_exact_CAS,150.0,150.0,Korean MoEL notice 별표1 No.36 노말-초산 부틸 (n-Butyl acetate),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+124-18-5,decane,foreign_or_analogue_TierB,,100.0,,Analogue: Korean TWA of Stoddard solvent 100 ppm (C9-C13 paraffin),2020-48 in official current rule list; rows not independently re-extracted
+141-78-6,ethyl acetate,official_exact_CAS,400.0,400.0,Korean MoEL notice 별표1 No.507 초산 에틸 (Ethyl acetate),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+142-82-5,heptane,official_exact_CAS,400.0,400.0,Korean MoEL notice 별표1 No.719 헵탄 (Heptane),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+2110-78-3,methyl 2-hydroxyisobutyrate,uncovered,,,,,2020-48 in official current rule list; rows not independently re-extracted
+526-73-8,"1,2,3-trimethylbenzene",official_isomer_group,25.0,25.0,Korean MoEL notice 별표1 No.603 트리메틸 벤젠(혼합 이성체) (Trimethyl benzene(mixed isomers)) - isomer-group entry,Tier A,2020-48 in official current rule list; rows not independently re-extracted
+527-53-7,isodurene,foreign_or_analogue_TierB,,25.0,,Analogue: Korean TWA of trimethylbenzene (mixed isomers) 25 ppm (C10 alkylbenzene),2020-48 in official current rule list; rows not independently re-extracted
+540-88-5,tert-butyl acetate,official_exact_CAS,200.0,200.0,Korean MoEL notice 별표1 No.503 초산 삼차-부틸 (tert-Butyl acetate),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+589-34-4,3-methylhexane,foreign_or_analogue_TierB,,400.0,,Analogue: Korean TWA of heptane 400 ppm (C7 isoparaffin),2020-48 in official current rule list; rows not independently re-extracted
+591-76-4,2-methylhexane,foreign_or_analogue_TierB,,400.0,,Analogue: Korean TWA of heptane 400 ppm (C7 isoparaffin),2020-48 in official current rule list; rows not independently re-extracted
+611-14-3,2-ethyltoluene,foreign_or_analogue_TierB,,25.0,,Analogue: Korean TWA of trimethylbenzene (mixed isomers) 25 ppm (C9 alkylbenzene),2020-48 in official current rule list; rows not independently re-extracted
+616-38-6,dimethyl carbonate,uncovered,,,,,2020-48 in official current rule list; rows not independently re-extracted
+620-14-4,3-ethyltoluene,foreign_or_analogue_TierB,,25.0,,Analogue: Korean TWA of trimethylbenzene (mixed isomers) 25 ppm (C9 alkylbenzene),2020-48 in official current rule list; rows not independently re-extracted
+622-96-8,4-ethyltoluene,foreign_or_analogue_TierB,,25.0,,Analogue: Korean TWA of trimethylbenzene (mixed isomers) 25 ppm (C9 alkylbenzene),2020-48 in official current rule list; rows not independently re-extracted
+627-93-0,dimethyl adipate,uncovered,,,,,2020-48 in official current rule list; rows not independently re-extracted
+629-50-5,tridecane,foreign_or_analogue_TierB,,100.0,,Analogue: Korean TWA of Stoddard solvent 100 ppm (C9-C13 paraffin),2020-48 in official current rule list; rows not independently re-extracted
+64-17-5,ethanol,official_exact_CAS,1000.0,1000.0,Korean MoEL notice 별표1 No.413 에틸 알코올 (Ethyl alcohol),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+67-56-1,methanol,official_exact_CAS,200.0,200.0,Korean MoEL notice 별표1 No.191 메틸 알코올 (Methanol),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+67-63-0,isopropanol,official_exact_CAS,200.0,200.0,Korean MoEL notice 별표1 No.479 이소프로필 알코올 (Isopropyl alcohol),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+67-64-1,acetone,official_exact_CAS,500.0,500.0,Korean MoEL notice 별표1 No.360 아세톤 (Acetone),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+71-36-3,1-butanol,official_exact_CAS,20.0,20.0,Korean MoEL notice 별표1 No.32 노말-부틸알코올 (n-Butyl alcohol(1-Butanol)),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+763-69-9,ethyl 3-ethoxypropionate,uncovered,,,,,2020-48 in official current rule list; rows not independently re-extracted
+78-83-1,2-methyl-1-propanol,official_exact_CAS,50.0,50.0,Korean MoEL notice 별표1 No.471 이소부틸 알코올 (Isobutyl alcohol),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+78-93-3,2-butanone,official_exact_CAS,200.0,200.0,Korean MoEL notice 별표1 No.192 메틸 에틸 케톤 (Methyl ethyl ketone(M.E.K)),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+80-62-6,methyl methacrylate,official_exact_CAS,50.0,50.0,Korean MoEL notice 별표1 No.176 메틸메타크릴레이트 (Methyl methacrylate),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+90-12-0,1-methylnaphthalene,foreign_or_analogue_TierB,,10.0,,Analogue: Korean TWA of naphthalene 10 ppm,2020-48 in official current rule list; rows not independently re-extracted
+91-20-3,naphthalene,official_exact_CAS,10.0,10.0,Korean MoEL notice 별표1 No.19 나프탈렌 (Naphthalene),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+95-47-6,o-xylene,official_exact_CAS,100.0,100.0,Korean MoEL notice 별표1 No.548 크실렌(모든 이성체) (Xylene(all isomers)),Tier A,2020-48 in official current rule list; rows not independently re-extracted
+95-63-6,"1,2,4-trimethylbenzene",official_isomer_group,25.0,25.0,Korean MoEL notice 별표1 No.603 트리메틸 벤젠(혼합 이성체) (Trimethyl benzene(mixed isomers)) - isomer-group entry,Tier A,2020-48 in official current rule list; rows not independently re-extracted
+97-64-3,ethyl lactate,uncovered,,,,,2020-48 in official current rule list; rows not independently re-extracted
+98-56-6,4-chlorobenzotrifluoride,uncovered,,,,,2020-48 in official current rule list; rows not independently re-extracted
+98-82-8,cumene,official_exact_CAS,50.0,50.0,Korean MoEL notice 별표1 No.532 큐멘 (Cumene),Tier A,2020-48 in official current rule list; rows not independently re-extracted
