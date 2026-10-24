@@ -1,0 +1,7 @@
+﻿CAS_원문,물질명,규정범주,규정_액상함량기준_mass_pct,문서수,기준미만문서수,기준이상문서수,기준경계문서수,출처겹침문서수,기준미만_포화10이상_추적확인,기준미만_포화100이상_추적확인
+108-88-3,toluene,accident_preparedness,85,122,117,0,5,0,117,98
+1330-20-7,xylene mixed isomers,accident_preparedness,85,181,181,0,0,87,79,0
+141-78-6,ethyl acetate,accident_preparedness,25,39,27,2,10,0,27,0
+67-56-1,methanol,accident_preparedness,85,15,15,0,0,0,15,14
+67-56-1,methanol,human_acute,10,15,3,6,6,0,3,2
+78-93-3,methyl ethyl ketone,accident_preparedness,25,60,40,9,11,0,40,8
