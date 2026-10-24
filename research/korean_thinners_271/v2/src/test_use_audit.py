@@ -47,7 +47,7 @@ class UseAuditTests(unittest.TestCase):
 
     def test_conflict_items_held(self):
         byid = self.audit.set_index('기존제품ID')
-        for pid in ['NR002', 'NR024', 'NR025', 'NR071', 'NR095', 'NR096', 'NR097', 'NR138']:
+        for pid in ['NR002', 'NR024', 'NR025', 'NR071', 'NR095', 'NR096', 'NR097', 'NR138', 'NR072', 'NR098', 'NR139']:
             self.assertEqual(byid.loc[pid, '탐색비교허용'], '0')
         for pid in ['NR027', 'NR036', 'NR115', 'NR133']:
             self.assertEqual(byid.loc[pid, '탐색비교허용'], '0')
@@ -75,7 +75,7 @@ class UseAuditTests(unittest.TestCase):
         prod['비교군'] = 'OLD_UNVERIFIED_GROUP'
         after = analysis.apply_use_audit(prod)
         self.assertEqual(len(after), 270)
-        self.assertEqual(int(after['탐색비교허용'].sum()), 165)
+        self.assertEqual(int(after['탐색비교허용'].sum()), 162)
         self.assertFalse(after['현장대체검증'].any())
         self.assertFalse((after['비교군'] == 'OLD_UNVERIFIED_GROUP').any())
 
