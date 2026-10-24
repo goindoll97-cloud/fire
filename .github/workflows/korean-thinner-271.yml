@@ -39,6 +39,8 @@ jobs:
         run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/analyze_nonexperimental_validation.py
       - name: Audit alternative MSDS revision selection without changing primary sample
         run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/audit_revision_sensitivity.py
+      - name: Test reliance on UVCB surrogate components and OEL coverage cutoff
+        run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/analyze_coverage_surrogate_sensitivity.py
       - name: Audit CAS-TWA assignment against parsed Korean OEL table
         run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/audit_oel_assignment.py
       - name: Upload manuscript nonexperimental sensitivity outputs
@@ -53,6 +55,7 @@ jobs:
             research/korean_thinners_271/v2/results/core/S3_document_version_audit.csv
             research/korean_thinners_271/v2/results/core/S3_revision_sensitivity.csv
             research/korean_thinners_271/v2/results/core/S4_oel_cas_mapping_audit.csv
+            research/korean_thinners_271/v2/results/core/S5_coverage_uvcb_sensitivity.csv
           if-no-files-found: error
       - name: Full 270-source reproducibility pipeline (offline, no approved data)
         run: python research/korean_thinners_271/src/run_full_pipeline.py --offline
