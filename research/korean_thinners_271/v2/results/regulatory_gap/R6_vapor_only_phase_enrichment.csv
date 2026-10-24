@@ -1,6 +1,9 @@
 ﻿CAS_원문,물질명,규정범주,규정_액상함량기준_mass_pct,액상기준미만문서수,기상_가상질량분율경계교차_법적비해당,기상성분추적불확실_문서수,액상기상_몰분율농축배율_중앙값
+108-87-2,methylcyclohexane,ecological,25,12,0,8,1.2750613605150962
 108-88-3,toluene,accident_preparedness,85,117,7,0,0.9134739705798387
 108-94-1,cyclohexanone,human_acute,25,4,0,0,0.21908548052638888
+110-82-7,cyclohexane,ecological,25,1,1,0,4.2300657058075455
+111-15-9,ethylene glycol monoethyl ether acetate,human_chronic,0.3,0,0,0,0.15889994901013146
 1330-20-7,xylene mixed isomers,accident_preparedness,85,181,0,87,0.3581792990042328
 141-78-6,ethyl acetate,accident_preparedness,25,27,14,0,2.3377381874515883
 67-56-1,methanol,accident_preparedness,85,15,0,0,2.384991759373712
