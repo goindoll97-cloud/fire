@@ -195,6 +195,15 @@ def main():
         ).reset_index()
     vgroups.to_csv(OUT / 'R6_vapor_only_phase_enrichment.csv',
                    index=False, encoding='utf-8-sig')
+    phase_cases = vapor_main[vapor_main['가상경계교차_예비']].copy()
+    phase_cases[['문서키', '기존제품ID', '제품명', 'CAS_원문', '규정범주',
+                 'MSDS_액상하한_mass_pct', 'MSDS_액상상한_mass_pct',
+                 '규정_액상함량기준_mass_pct', '기상용제내_질량분율_pct',
+                 '액상대비기상_몰분율농축배율',
+                 '모형_개별성분_TierA_OEL지수']].to_csv(
+        OUT / 'R7_hypothetical_phase_fraction_cases_not_legal.csv',
+        index=False, encoding='utf-8-sig')
+
 
     # Three activity-coefficient baselines are compared on the SAME source
     # CAS / document / regulation clause, not on different model populations.
@@ -261,6 +270,10 @@ def main():
         'documents_flagged_unique_composition': int(
             bydoc.loc[bydoc['일부규정_함량미만포화10이상_존재'],
                       '조성지문'].nunique()),
+        'vapor_only_crossing_documents_unique_not_legal':
+            int(phase_cases['문서키'].nunique()),
+        'vapor_only_crossing_compositions_unique_not_legal':
+            int(phase_cases['조성지문'].nunique()),
         'vapor_only_mass_pct_hypothetical_crossing_count_not_legal':
             int(vapor_main['가상경계교차_예비'].sum()),
         'vapor_only_numeric_boundary_crossings_by_CAS': vgroups[
@@ -277,6 +290,14 @@ def main():
     }
     (OUT / 'headline_regulatory_vapor_gap.json').write_text(
         json.dumps(counts, ensure_ascii=False, indent=2), encoding='utf-8')
+    phase_samples = phase_cases.sort_values('기상용제내_질량분율_pct', ascending=False)
+    phase_samples = phase_samples.drop_duplicates(['CAS_원문', '규정범주']).head(7)
+    print('REGULATORY_VAPOR_PHASE_CASES ' +
+          json.dumps(phase_samples[[
+              '기존제품ID', '제품명', 'CAS_원문', '규정범주',
+              'MSDS_액상하한_mass_pct', 'MSDS_액상상한_mass_pct',
+              '규정_액상함량기준_mass_pct', '기상용제내_질량분율_pct',
+              '액상대비기상_몰분율농축배율']].to_dict(orient='records'), ensure_ascii=False))
     print('REGULATORY_VAPOR_ENRICHMENT ' +
           json.dumps(vgroups.to_dict(orient='records'), ensure_ascii=False))
     print('REGULATORY_VAPOR_RULE_GROUPS ' +
