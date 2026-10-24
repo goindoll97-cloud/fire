@@ -68,8 +68,12 @@ def rq6(fs, prod, msds):
 
 
 def rq6_bounds(prod, msds, sp):
-    """모델과 무관한 일관성 검사: 이상용액에서 혼합물 인화점은 성분 인화점의 최솟값과 최댓값 사이에 있다.
-    MSDS 인화점이 이 범위를 벗어나면 조성과 모순된다. 또 몰분율 5% 이상인 가장 낮은 인화점 성분보다 25°C 넘게 높은 값도 센다."""
+    """Screen large reported-flash-point deviations for manual review only.
+
+    Non-ideal mixtures can have minimum/maximum flash points outside the pure-
+    component interval. These flags do NOT establish an erroneous MSDS value;
+    neither are all MSDS Section 3 constituents or exact proportions known.
+    """
     fl = pd.read_csv(V2 / 'data' / 'pure_flammability.csv').set_index('CAS')['FP_C']
     s = sp[(sp.model == 'Raoult') & (sp['T'] == '25C')].copy()
     s['fp'] = s['CAS'].map(fl)
@@ -83,7 +87,9 @@ def rq6_bounds(prod, msds, sp):
     d['above_max'] = d['FP_MSDS'] > d['FP_max']
     d['over_lowest_5mol_by_25C'] = d['FP_MSDS'] > d['FP_min_5mol'] + 25
     d.to_csv(OUT / 'RQ6_msds_flash_consistency.csv', index=False, encoding='utf-8-sig')
-    return {'consistency_n': int(len(d)), 'msds_below_lowest_component_fp': int(d['below_min'].sum()),
+    return {'consistency_n': int(len(d)),
+            'msds_deviation_flags_are_not_proof_of_error': True,
+            'msds_below_lowest_component_fp': int(d['below_min'].sum()),
             'msds_above_highest_component_fp': int(d['above_max'].sum()),
             'msds_over_lowest_5mol_component_by_25C': int(d['over_lowest_5mol_by_25C'].sum()),
             'msds_top_values': msds['인화점_C'].value_counts().head(5).to_dict()}
@@ -94,7 +100,7 @@ def rq7_rq8(fs, summ, prod):
         ['문서키', 'I_mix_TierB', 'I_mix_TierB_P5', 'I_mix_TierB_P95', 'OELcov_TierB']]
     fire = fs[fs.model == 'HANNA'].drop(columns='model')
     b = prod.merge(health, on='문서키').merge(fire, on='문서키')
-    b = b[~b['중복여부'] & ~b['용도군'].isin(a2.EXCLUDE_GROUPS)].sort_values('문서키').drop_duplicates(['제조사', '제품명'])
+    b = b[(~b['중복여부']) & b['탐색비교허용'] & ~b['용도군'].isin(a2.EXCLUDE_GROUPS)].sort_values('문서키').drop_duplicates(['제조사', '제품명'])
     b['순위가능'] = b['OELcov_TierB'] >= a2.MIN_COVERAGE
     b['석유류'] = b['Tfp_Liaw_C'].map(petroleum_class)
     r = b[b['순위가능']].dropna(subset=['Tfp_Liaw_C'])
