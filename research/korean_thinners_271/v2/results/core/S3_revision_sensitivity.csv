@@ -1,0 +1,4 @@
+﻿selection_rule,pooled_n,pooled_spearman,same_use_products,groups,same_use_pairs,same_direction_share,interpretation
+existing_fingerprint_first,195,-0.848,68,21,117,0.795,"same-name latest-version sensitivity, NOT approved formulation interchangeability"
+latest_same_name,209,-0.852,74,23,128,0.805,"same-name latest-version sensitivity, NOT approved formulation interchangeability"
+latest_then_fingerprint,195,-0.847,66,20,123,0.805,"same-name latest-version sensitivity, NOT approved formulation interchangeability"
