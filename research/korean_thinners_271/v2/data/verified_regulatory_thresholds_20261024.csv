@@ -6,3 +6,5 @@
 67-56-1,methanol,accident_preparedness,4,85,KREACH,https://kreach.me.go.kr/repwrt/mttr/kr/mttrDetail.do?MTTR_ID=24352,메틸알코올 및 이를 85% 이상 함유한 혼합물
 67-56-1,methanol,human_acute,97-1-80,10,KREACH,https://kreach.me.go.kr/repwrt/mttr/kr/mttrDetail.do?MTTR_ID=24352,인체급성유해성물질 지정 함량 10%
 71-43-2,benzene,human_chronic,97-1-99,0.1,KREACH,https://kreach.me.go.kr/repwrt/mttr/kr/mttrDetail.do?MTTR_ID=44597,인체만성 0.1% 기준; 0.1~1% 혼합물은 2028-01-01 시행 특례. 2026-10-24 기준 해당 구간을 확정 적용으로 판단 금지
+108-94-1,cyclohexanone,human_acute,2023-1-1131,25,KREACH,https://kreach.me.go.kr/repwrt/mttr/kr/mttrDetail.do?MTTR_ID=10364,인체급성 25 percent; official portal identifies the 2023-1-1131 designation; mixture threshold is from official source
+98-82-8,cumene,human_chronic,2025-1-1257,0.1,MOLEG,https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000276378,2025-1-1257 chronic criterion 0.1 mass percent in official annex on regulated quantities; verify all transition requirements
