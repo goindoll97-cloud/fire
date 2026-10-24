@@ -1,0 +1,7 @@
+﻿기존제품ID,제품명,CAS_원문,규정범주,MSDS_액상하한_mass_pct,MSDS_액상상한_mass_pct,규정_액상함량기준_mass_pct,모형_포화기상농도_ppm_in_air,모형_개별성분_TierA_OEL지수,UVCB대리물질사용
+SW011,MA 정전기용 신나(하절기용),67-56-1,accident_preparedness,10,15,85,147744.88625709352,738.72443,true
+SW074,슈퍼신나 1350 속건형,108-88-3,accident_preparedness,70,80,85,31977.161608684924,639.54324,false
+NR017,락카 신나 DR-170L,67-56-1,human_acute,1,5,10,70519.98618307427,352.59993,true
+NR068,우레탄 상도용 신나 DR-3000T (동절용),78-93-3,accident_preparedness,12,20,25,33401.720207253886,167.0086,true
+NR077,우레탄 신나 DR-451W (동절용),141-78-6,accident_preparedness,15,24,25,32159.56970145571,80.39893,true
+NR020,무기질 징크프라이머 신나 DR-610(동절용),1330-20-7,accident_preparedness,67,75,85,7678.876881322476,76.78877,true
