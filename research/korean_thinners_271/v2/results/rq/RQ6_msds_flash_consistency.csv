@@ -1,0 +1,250 @@
+﻿문서키,기존제품ID,제품명,FP_MSDS,FP_min,FP_max,FP_min_5mol,below_min,above_max,over_lowest_5mol_by_25C
+D71389c9882fe27008fa8,NR048,신나4713(지건) BTX_F.,25.0,-20.0,58.0,-20.0,False,False,True
+D21cf1daf7cd9a4cf3967,NR120,CT-101 일반 페인트 신나,33.0,-7.0,30.0,-7.0,False,True,True
+D4869c70fc41c005b3042,NR035,슈퍼 탈렌트 신나(다용도) ST-0567,7.0,-20.0,61.0,-20.0,False,False,True
+Dc770f79c492b4ca5cb05,NR118,CT-105 골드 에폭시 신나,7.0,-20.0,61.0,-20.0,False,False,True
+D87b64cb327e29f6a81e4,NR119,CT-106 골드 우레탄 신나,22.0,-20.0,58.0,-20.0,False,False,True
+De9b4f21eaa8e7e65338c,NR085,우레탄 신나(N) 하절용,15.0,-10.0,42.9,-10.0,False,False,False
+D6e3af60b1a5c2cee263f,NR044,CHW010101,15.0,-4.0,42.9,-4.0,False,False,False
+D8057774b1669102f0176,NR046,스마탄 신나 (하절용),15.0,-10.0,42.9,-10.0,False,False,False
+Dca7c79bc06c29e01296d,NR083,우레탄 신나(N) 동절용,15.0,-10.0,42.9,-10.0,False,False,False
+Df122136a498ee7dce4c6,NR038,스마탄 상도 신나 (동절용),15.0,-10.0,42.9,-4.0,False,False,False
+D34019a7d5934b7f343bd,NR045,스마탄 신나 (동절용),15.0,-10.0,42.9,-10.0,False,False,False
+D37cfd3f4f092eea7057e,NR050,슬레이트 및 기와용 도료 신나 DR-1100,27.0,15.0,58.0,15.0,False,False,False
+D16ac22eec294fedb6383,NR091,전진 우레탄 초지건 신나,63.0,42.9,94.0,42.9,False,False,False
+Dca6c95cdac2ce2672030,NR094,전진 우레탄 표준 신나,30.0,15.0,58.0,15.0,False,False,False
+D2a4d482257b567f126fc,NR090,전진 우레탄 지건 신나,40.0,15.0,58.0,22.0,False,False,False
+D8ab9de58af6561e8b8d1,NR059,에폭시 신나 DR-100R,7.0,-10.0,55.7,-10.0,False,False,False
+Ddbcbed34dc52a5fe6ac9,NR082,우레탄 신나 DR-700R,22.0,-20.0,42.9,-20.0,False,False,True
+D4374f7f33ab1e4d40daf,NR053,에나멜 신나 DR-306L,33.0,13.0,65.9,13.0,False,False,False
+De9ad91fb2f704ccfc893,NR017,락카 신나 DR-170L,15.0,-20.0,42.9,-20.0,False,False,True
+Deaf619f44a55a79468ed,NR033,속건에나멜 신나S (L),33.0,-7.0,30.0,-7.0,False,True,True
+D99b8bdb65348aa10d080,NR031,속건에나멜 신나W (L),33.0,-7.0,30.0,-7.0,False,True,True
+D20ab8b91ef8ef9112d1e,NR056,에나멜 신나 DR-306W,33.0,-7.0,65.9,-7.0,False,False,True
+D244a30ae5b9953adb995,NR137,DR-170 락카신나 (하절용),15.0,-20.0,61.0,-20.0,False,False,True
+Dcb8814fc3642afdd1ae6,NR140,DR-170 락카신나 (동절용),15.0,-20.0,61.0,-20.0,False,False,True
+De80f7e6403ab8334eb93,NR022,방충망 상도신나,23.0,15.0,58.0,15.0,False,False,False
+De54ff69a1ca6180e0960,NR098,페인트용 락카 신나,20.0,-10.0,61.0,4.0,False,False,False
+D12a2058722c4b2913f9d,NR077,우레탄 신나 DR-451W (동절용),7.0,-10.0,30.0,-10.0,False,False,False
+Db9f5593698a8b2b61549,NR089,우레탄 HW 신나,16.5,-10.0,42.9,-10.0,False,False,True
+Da48ed8b4cf4cf119869d,NR072,우레탄 신나 DR-421W (동절용),5.0,-10.0,58.0,-10.0,False,False,False
+Ddcf530a2476a20878542,NR075,우레탄 신나 DR-421WS (춘추용),19.0,-10.0,58.0,-10.0,False,False,True
+D45197b014e5b805ba20a,NR102,하이큐 LV신나 DR-950WS,22.2,-20.0,61.0,-20.0,False,False,True
+Da63fa9fc7f0539ede67b,NR103,하이큐 LV신나 DR-950W,0.0,-20.0,58.0,-20.0,False,False,False
+D6a0dbfe8506aca3ffa75,NR139,DR-2590 락카 리타다 신나,45.0,25.0,95.0,30.0,False,False,False
+D7fe674e7d7b093a6bc25,NR080,우레탄 신나 DR-700L,22.0,4.0,94.0,4.0,False,False,False
+D72a862d6902a796a8641,NR060,에폭시 신나 DR-100L,7.0,4.0,61.0,4.0,False,False,False
+D29b7b2b26517e9857165,NR030,소부신나 DR-500L,7.0,4.0,58.0,4.0,False,False,False
+D6f14d65e813ec04b5d56,NR049,아크릭 우레탄 신나 DR-700(S),22.0,15.0,94.0,15.0,False,False,False
+D2a7077cf07c5046d901a,NR006,내화도료 신나,33.0,15.0,94.0,15.0,False,False,False
+Dd1623026c74319e1334b,NR052,아크릭 우레탄 신나 DR-700(W),22.0,4.0,30.0,4.0,False,False,False
+D312bd1caeb727b82beaf,NR004,내열 페인트 신나 DR-630,5.0,4.0,30.0,4.0,False,False,False
+D1578adc3cddfd68d10f5,NR066,에폭시 페인트 신나 DR-100,7.0,4.0,61.0,4.0,False,False,False
+D16ebf34fe4bea14fd809,NR020,무기질 징크프라이머 신나 DR-610(동절용),27.0,12.0,61.0,12.0,False,False,False
+Dc469ab19a5b47ec76a98,NR009,노면표지용 페인트 신나 DR-5322,5.0,4.0,30.0,4.0,False,False,False
+Dbe999c44a1c424700f78,NR061,에폭시 징크 프라이머 신나 DR-620,7.0,4.0,61.0,4.0,False,False,False
+Da2eb4f6c066d72d03929,NR010,다용도용 에폭시 신나 DR-100A,27.0,15.0,58.0,25.0,False,False,False
+D296e4d69bd2939cd942f,NR021,무기질 징크 프라이머 신나 DR-610(하절용),27.0,12.0,61.0,12.0,False,False,False
+D48a7fe035ccfd4908325,NR068,우레탄 상도용 신나 DR-3000T (동절용),27.0,-10.0,42.9,-10.0,False,False,True
+D4be444ade167b3541c20,NR112,C_C용 TOP&PRIMER 신나,84.0,25.0,110.0,35.0,False,False,True
+D39d4488d8c75588ac8e5,NR107,하이큐 LV신나 DR-960WS,20.4,-20.0,61.0,-20.0,False,False,True
+D6da218090186feaba360,NR105,하이큐 LV신나 DR-960,25.2,18.0,94.0,18.0,False,False,False
+D1a510048c0dd0a3467a8,NR101,하이큐 동광 FRP 신나,54.8,25.0,61.0,42.9,False,False,False
+D2286d7f63171bae30596,NR037,스마탄 64 HG 신나 (하이트상사),15.0,15.0,42.9,15.0,False,False,False
+Dc7a95ae77a62afbb211c,NR029,속건에나멜 신나S (L),33.0,-7.0,30.0,-7.0,False,True,True
+D735bd3e3bbacfcc3f5ad,NR032,속건에나멜 신나W (L),33.0,-7.0,30.0,-7.0,False,True,True
+D030363aae63c1912b306,NR054,에나멜 신나 DR-306L(수출용),33.0,13.0,65.9,13.0,False,False,False
+D5a7a6618c6fdcb7a5e3e,NR016,락카신나 DR-170(골드),15.0,-20.0,61.0,-20.0,False,False,True
+Df256e30da720ac4139cc,NR024,세척용신나(C.B),7.0,-20.0,9.0,-20.0,False,False,True
+D7e3d8a522065229d4037,NR055,에나멜 신나 DR-306W,33.0,-7.0,65.9,-7.0,False,False,True
+Df63724258679974daabd,NR136,DR-170 락카신나 (하절용),15.0,-20.0,61.0,-20.0,False,False,True
+D41e211bb0c3999d24966,NR135,DR-170 락카신나 (동절용),15.0,-20.0,61.0,-20.0,False,False,True
+D54390762e39d80c303b8,NR005,내화도료 신나,33.0,15.0,58.0,15.0,False,False,False
+D9f409d8c9690b63c7771,NR116,CT-101 일반페인트신나,33.0,13.0,65.9,13.0,False,False,False
+D58d2d3b38d117e7a1149,NR115,"CT-0204 울트라 신나(소부,기와용)",27.0,-20.0,65.9,-20.0,False,False,True
+D44e3dec19954be3bdae2,NR088,울트라 스페이스 MIL-T-81772 신나 (TYPE3),11.5,-10.0,42.9,-10.0,False,False,False
+D85542aff846056606bec,NR117,CT-105 골드 에폭시 신나,7.0,-20.0,61.0,-20.0,False,False,True
+D25d487f28cd943711b8c,NR121,CT-106 골드 우레탄 신나,22.0,-20.0,58.0,-20.0,False,False,True
+D7ceb4b8f0035522f27cc,NR122,CT-107 골드 락카 신나,15.0,-20.0,61.0,-20.0,False,False,True
+D2a2fc14c4b23d9c667ea,NR123,CT-107W 락카신나 1급,15.0,-20.0,42.9,-20.0,False,False,True
+D526421e1a49c74d3c6c9,NR086,우레탄 합성 신나 CT-530 UV 세척용 신나,-4.0,-20.0,9.0,-20.0,False,False,False
+Dc70f8c35d007b01d150c,NR144,DR-500 소부 신나 동절용,23.0,4.0,30.0,4.0,False,False,False
+D6d6472ed91af32a0904f,NR133,DR-1100 세라민 신나,27.0,15.0,58.0,15.0,False,False,False
+D37da456eabd162091241,NR034,슈퍼 탈렌트 신나(다용도) ST-0567,7.0,-20.0,61.0,-20.0,False,False,True
+Db480671f622f7d2173e0,NR087,워시 프라이머 신나(CA),4.0,4.0,100.0,4.0,False,False,False
+D89472b10734e954acd78,NR156,HJ 신나,22.0,-20.0,4.0,-20.0,False,True,True
+D3d64ec89de101dee31b3,NR124,CT-141 속건 에나멜 신나,27.0,-7.0,30.0,-7.0,False,False,True
+Df00f0edba29281b7ae57,NR132,DR-100 에폭시 신나(이디테크),23.0,4.0,61.0,4.0,False,False,False
+D9fb3c9740f4d521530df,NR150,DUF-300 신나(4M),27.0,4.0,61.0,4.0,False,False,False
+Dd33034c4b1fedbdd8489,NR163,NSS-80(준동계용) 신나,4.0,-10.0,100.0,-10.0,False,False,False
+De8d6daf93cbc8c882c09,NR018,루프랙 액상하도 M_GRAY신나 (개선),23.0,15.0,94.0,15.0,False,False,False
+De2c5a4c7ac34308c2cb6,NR157,HS-201 신나 (지건 ),78.0,61.0,100.0,61.0,False,False,False
+Db95f26087be3b39e0fa5,NR147,DR-705 (DH) 상하도 공용 신나(하절용),23.0,16.0,61.0,16.0,False,False,False
+D96960865152d0b8be798,NR146,DR-705 (DH) 상하도 공용 신나(동절용),23.0,4.0,58.0,4.0,False,False,False
+Dcf1890ef6a29840ebdb6,NR027,세정신나(YM),11.0,12.0,35.0,12.0,True,False,False
+D4e9210adc2b75c95d640,NR148,DUF-300 신나(1M),27.0,4.0,55.7,4.0,False,False,False
+Dc9d813a8e79003599788,NR151,DUF-300 신나(하절용),27.0,4.0,61.0,4.0,False,False,False
+Dd53bca9e59039523cfe5,NR179,T-1201 신나,15.0,28.0,35.0,28.0,True,False,False
+D76255dca35ff7bc637a8,NR126,DMS-200 신나,21.0,-4.0,42.9,-4.0,False,False,False
+Da42f99218197a4083088,NR174,UT#A(I) 하도신나,30.0,-20.0,58.0,-20.0,False,False,True
+D4eadc723894d2e2baec7,NR172,UT#A(I) 상도신나,30.0,-4.0,71.0,16.0,False,False,False
+Db21b63ac711ce8ba9335,NR173,UT#A(I) 상도지건신나,40.0,61.0,61.0,61.0,True,False,False
+Dca8abaa6b969517ae2d7,NR130,DR (SS) 세척신나 NO.5,23.0,-10.0,30.0,4.0,False,False,False
+D6db1b277c3f29179a8db,NR175,UT#A(I) 하도신나 1500,30.0,-17.0,61.0,-17.0,False,False,True
+D3ee144f6be964c0b6f17,NR111,AnyQ-700 신나,30.0,18.0,61.0,42.9,False,False,False
+De251e11b77129d37c1fe,NR166,PLSCOAT KBK(L) 프라모델 락카 신나,23.0,12.0,61.0,12.0,False,False,False
+D03ec519b58a9af76f54d,NR131,DR (SS) 세척신나 NO.5 (개선),23.0,-22.0,4.0,-22.0,False,True,True
+D676226e5f5c8cd0012aa,NR127,DP#500(P) 신나,23.0,4.0,42.9,4.0,False,False,False
+Dd68e732046afbe6d7c51,NR143,DR-70 아크릭 소부신나(SA)-삼안,25.0,15.0,94.0,15.0,False,False,False
+Db90d0d9b5ac4254d54f5,NR092,지건신나(WT),78.0,100.0,100.0,100.0,True,False,False
+Dca3807f2d12112da1d12,NR129,DQC 700 정전신나,23.0,9.0,30.0,9.0,False,False,False
+D722d67dec4b7d4742013,NR113,C_C용 TOP&PRIMER 신나,43.0,25.0,110.0,35.0,False,False,False
+D733d9233fdbc1d67250b,NR036,슈퍼크릴 BASE COAT 신나,23.0,15.0,94.0,15.0,False,False,False
+Dd28848a8e407a90f289f,NR141,DR-70 아크릭 소부신나(정전용),23.0,15.0,94.0,16.0,False,False,False
+Dc2ed3b5887a05184363c,NR142,DR-70 아크릭 소부신나(SA),23.0,15.0,94.0,15.0,False,False,False
+D09fee712f0ff3522b9fe,NR026,브랜딩 신나(DR-600),33.2,18.0,58.0,18.0,False,False,False
+D18ed0f21a8fea131af82,NR096,페인트용 락카 신나,20.0,-10.0,61.0,4.0,False,False,False
+D73f275337ef004e56167,NR076,우레탄 신나 DR-451W (동절용),7.0,-10.0,30.0,-4.0,False,False,False
+Df39d83f2f5583a30c1fb,NR074,우레탄 신나 DR-451S (하절용),31.5,-10.0,58.0,-10.0,False,False,True
+Dd2954ed64fd17308ed2b,NR078,우레탄 신나 DR-451WS (춘추용),22.0,4.0,58.0,4.0,False,False,False
+D3c4faa381ce40537f7bc,NR023,무기질 징크프라이머 신나 DR-610(동절용),27.0,12.0,61.0,12.0,False,False,False
+D9646f724ff7cd0772e13,NR008,노면표지용 페인트 신나 DR-5322,5.0,4.0,30.0,4.0,False,False,False
+Ded500ad8891fc17bf6d8,NR015,무기질 숍 프라이마 신나 DR-660,5.0,12.0,30.0,12.0,True,False,False
+D42a83c9986150ae47d52,NR110,ACRYLIC ALKYD 신나(서울),4.0,4.0,94.0,4.0,False,False,False
+D5f0ca73e0e91df7e2707,NR063,오래플론 상도용 신나 DR-4000,14.0,15.0,58.0,16.0,True,False,False
+D48d2924be871e26cef79,NR184,YC 잉크 희석용 신나,15.0,-10.0,100.0,-10.0,False,False,False
+Df243338baf390891c6dd,NR128,DQC-100 속건에나멜 신나(삼화),4.0,4.0,30.0,4.0,False,False,False
+Dc6f2b8d7021f10d5a4dc,NR012,대진특수종합건설용 세척용신나(속건형),7.0,-20.0,30.0,-20.0,False,False,True
+Da72e01dfe11080df5aa8,NR014,대진특수종합건설용 A.T 세정용 신나,-17.0,-20.0,-20.0,-20.0,False,True,False
+Db741c6ddc3cd2027fe99,NR058,에폭시 신나 DR-100L,7.0,4.0,61.0,4.0,False,False,False
+D34810b82c3ff300de2b7,NR028,소부신나 DR-500L,7.0,4.0,58.0,4.0,False,False,False
+D4052f34ded7493ce84a0,NR013,대진특수종합건설용 세척용신나(지건형),7.0,-20.0,65.9,-20.0,False,False,True
+D4afb2c2fdb5d25022122,NR081,우레탄 신나 DR-700L(S),22.0,15.0,58.0,15.0,False,False,False
+D59d41974e5173a2544b4,NR002,내열 세척신나,22.0,12.0,61.0,12.0,False,False,False
+Dde0777f261ccca9bb128,NR062,에폭시 징크 프라이머 신나 DR-620,7.0,4.0,61.0,4.0,False,False,False
+D9b2d23a486c79f5b1ab3,NR011,TH0610001,27.0,15.0,58.0,15.0,False,False,False
+D3c7d2fce3626fcb3e59a,NR057,에폭시 신나 DR-100 (하절용),7.0,4.0,61.0,4.0,False,False,False
+De37c096c194cfc34144d,NR071,우레탄 신나 DR-421W (동절용),5.0,-10.0,58.0,-10.0,False,False,False
+D3c002f1651211148330b,NR138,DR-2590 락카 리타다 신나,45.0,25.0,95.0,30.0,False,False,False
+D71f7579a830e398975a7,NR155,H_P TOP & PRIMER 신나,42.0,43.0,110.0,43.0,True,False,False
+D7a1f91641d620c6e9ce8,NR170,T2 THN05(영상가전용 신나),42.0,43.0,110.0,43.0,True,False,False
+Da3d9f13d4d37995ab9e4,NR169,T2 THN04(가전통합 신나),42.0,15.0,110.0,25.0,False,False,False
+Dd56913611b835ebda671,NR095,특수용 세척신나,43.0,-10.0,43.0,-10.0,False,False,True
+Dce882274149569760cd0,NR097,프린트 INK 용 세척 신나,43.0,-10.0,43.0,-10.0,False,False,True
+Df82d6735530f9fbea3f1,NR153,EPOXY신나(삼양),43.0,15.0,58.0,25.0,False,False,False
+D530bf83c2162616d7502,NR171,TPO 전용신나 (유니코),42.0,43.0,43.0,43.0,True,False,False
+D6fec93b5508626552d9e,NR001,가전용 신나 (KG),42.0,25.0,110.0,42.9,False,False,False
+D81339c1587d4634c0ed9,NR162,NSS-90(0522) 신나,4.0,-10.0,4.0,-10.0,False,False,False
+D3a69dd09344ebd66f6f4,NR161,NSS-70(0231) 신나,23.0,15.0,100.0,15.0,False,False,False
+D99fceacd7944d9aa3ba4,NR158,NSS-100(혹한기용) 신나,4.0,-10.0,4.0,-10.0,False,False,False
+D5095419da6f3c1559a36,NR164,NSS-95(동계용) 신나,4.0,-10.0,4.0,-10.0,False,False,False
+D6954d7acc096d65b6d6c,NR160,NSS-50(0231 하) 신나,25.0,4.0,100.0,25.0,False,False,False
+D3e24beab496a9205bac2,NR159,NSS-30(혹서기용) 신나,25.0,4.0,100.0,44.5,False,False,False
+D427ae50646b4b80920d6,NR104,하이큐 LV신나 DR-960,25.2,18.0,94.0,18.0,False,False,False
+De29125d0b79f8723c6ac,NR100,하이큐 신나 DR-980Z(Zero VOC),11.0,1.0,18.0,1.0,False,False,False
+Dccca241b46ab4d8c5144,NR099,하이큐 동광 FRP 신나,54.8,25.0,61.0,42.9,False,False,False
+D0f38975cb23bcb9e4a1c,NR106,A_U 신나 (춘추용 상.하도 겸용),27.0,15.0,58.0,16.0,False,False,False
+D58e8401f9b65ab03ec08,NR019,무기질 징크 프라이머 신나 DR-610(하절용),27.0,12.0,61.0,12.0,False,False,False
+D916a199033c96b787605,NR183,V-CURE 신나(하절용),21.0,15.0,58.0,22.0,False,False,False
+D2749766a741ba0ffa28b,NR182,V-CURE 신나(동절용),21.0,4.0,58.0,4.0,False,False,False
+Da8c3d632dc6bfa540f69,NR051,아크릭 우레탄 신나 DR-700(W),19.0,4.0,30.0,4.0,False,False,False
+Dc1dae31679dbcb5a8531,NR084,우레탄 신나(N) 동절용,15.0,-10.0,42.9,-10.0,False,False,False
+Dd325ab7024a6affc4b08,NR125,CT-356 우레탄 신나 (SK),15.0,-4.0,30.0,-4.0,False,False,False
+D1943c2037251eeeebcc6,NR064,우레탄 리타다 신나,15.0,15.0,42.9,25.0,False,False,False
+D45782131ebaf1cf8ee6a,NR040,스마탄 상도 신나 (하절용),15.0,-4.0,42.9,-4.0,False,False,False
+Db73762f72da8c10121a3,NR039,스마탄 상도 신나 (동절용),15.0,-10.0,42.9,-10.0,False,False,False
+D3e13d0e9afb400fc99f8,NR043,스마탄 신나 (동절용),15.0,-10.0,42.9,-4.0,False,False,False
+Ded5ebc548677d09ef7be,NR152,DVS-3107 콘덴서 신나 (동절용),23.0,4.0,58.0,4.0,False,False,False
+D140d9c7d9af0d8fbe6bb,NR067,우레탄 상도용 신나 DR-3000T (동절용),15.0,-10.0,42.9,-10.0,False,False,False
+D27f0b9b28116e93b9699,NR069,우레탄 상도용 신나 DR-3000T (하절용),15.0,4.0,42.9,4.0,False,False,False
+D2fa957e1306eabee0cb9,NR165,P_U 함마톤 신나,21.0,4.0,61.0,4.0,False,False,False
+De22daf9be832f59451d3,NR149,DR-705 아크릭 우레탄 신나,23.0,4.0,42.9,4.0,False,False,False
+D74861a209887cd072b48,NR109,A_U W.S신나 (동절용),5.0,-4.0,42.9,-4.0,False,False,False
+D0f8a588e07f442164dab,NR168,P_U 함마톤 연녹색 신나,23.0,-4.0,42.9,-4.0,False,False,True
+Db5debee9845d32e83750,NR108,A_U 신나(춘추용),23.0,4.0,61.0,4.0,False,False,False
+Dd7a6c531f72d504c75ce,NR167,P_U 함마톤 신나(속건),5.0,-4.0,16.0,-4.0,False,False,False
+Dbe64de88f371bed5a253,NR093,켐유비 아이소레이타 신나(BM),15.0,-20.0,42.9,-20.0,False,False,True
+D763f62866c6a3338d2d9,NR041,스마탄 상도신나 323,-10.0,-20.0,110.0,-20.0,False,False,False
+D70bc3f79234b927fcfa9,NR178,UVICOAT 신나,5.0,-10.0,22.0,-10.0,False,False,False
+D20d87c8a1613a95acdca,NR181,UVICOAT 신나(하),5.0,-10.0,43.0,-10.0,False,False,False
+D64823042f27d31b656aa,NR180,UVICOAT 신나(여름용),5.0,-10.0,43.0,-10.0,False,False,False
+Dcf4f55b8de9aa4c70cfd,NR176,UV 세척신나 (ENT),15.0,-20.0,-10.0,-20.0,False,True,True
+D7a708b854ae728b8d1c1,NR177,UV 신나(WR),15.0,-20.0,9.0,-20.0,False,True,True
+Dddd1d5090c43f27ce4e5,SW001,KSM 6060 1종 에나멜용 신나,34.0,13.0,65.9,13.0,False,False,False
+De13aa5b1db80bcf7f983,SW002,KSM 6060 2종 조합페인트용 신나,38.0,46.0,90.0,46.0,True,False,False
+Daea50cae787d3892934b,SW003,락카 신나(7-A급),7.0,-20.0,61.0,-20.0,False,False,True
+D21a2aa74c90dc3b2dfbc,SW004,리타다 신나,12.0,4.0,110.0,4.0,False,False,False
+Dfa36ec51952a9ac37cfa,SW005,아크론 신나,27.0,15.0,58.0,15.0,False,False,False
+D6cb3e275d14c963c5eba,SW006,신나 032,4.0,4.0,58.0,4.0,False,False,False
+D3a922d6bbd1c9fc8044e,SW007,MA 정전기용 신나(동절기용),6.0,-4.0,35.0,-4.0,False,False,False
+Dc08766db5e451a64ac97,SW008,하이온 신나,30.0,15.0,61.0,15.0,False,False,False
+D02bca5c5b0956f8f4cfe,SW009,신나280,17.0,12.0,61.0,12.0,False,False,False
+D5fccd1bef17eb934721c,SW010,신나295,12.0,4.0,61.0,12.0,False,False,False
+Dc9ab01b824f7a6eef469,SW011,MA 정전기용 신나(하절기용),7.0,-4.0,58.0,-4.0,False,False,False
+D14f0cd6747e3324a7ff4,SW012,우레탄 1000 신나,27.0,15.0,42.9,15.0,False,False,False
+D2c3c3c848320b0d80a23,SW013,유니올 신나 하절기용,28.0,15.0,42.9,15.0,False,False,False
+D58e7923f2afc004df893,SW014,유니올 신나 춘추용,18.0,4.0,42.9,4.0,False,False,False
+D777c814ea81adc6bc1fe,SW015,유니올 신나 동절기용,13.0,-4.0,30.0,-4.0,False,False,False
+D73b812a8048e9f8da025,SW016,마일드폭시 신나,40.0,25.0,90.0,44.0,False,False,False
+Dfe164993bf83a4d30d14,SW017,하이온 슈퍼신나,35.0,15.0,61.0,15.0,False,False,False
+D4fdca1e77dba7c2dfb16,SW018,스피오토3000신나#(AIA),43.0,-10.0,61.0,-10.0,False,False,True
+D43753307d3ad23da22b9,SW020,코트멜신나,12.0,4.0,58.0,4.0,False,False,False
+D2152465692f224d3526d,SW021,코트멜신나 지건형,29.0,15.0,94.0,15.0,False,False,False
+Dd11afeb2cc351e8f8f2b,SW023,유니올신나604,18.0,-4.0,58.0,-4.0,False,False,False
+D38b371dca32416998405,SW024,화인잉크세척신나 #(매지선용),33.0,-10.0,43.0,-10.0,False,False,True
+D450cf3fc2f9bef8b3030,SW026,신나259,20.0,-10.0,61.0,9.0,False,False,False
+Db5235cb1e568b0b8d689,SW028,신나747 #(TS),57.0,15.0,94.0,15.0,False,False,True
+D6e231830684b7d91ed6c,SW029,신나737W #(우성),38.0,-10.0,61.0,-10.0,False,False,True
+Dcd23e0c06bf564ffe5b3,SW030,유니올신나538 하절기용,33.0,15.0,94.0,15.0,False,False,False
+Dc092859cf90728540db2,SW031,유니올정전용신나538 SUMMER,13.0,22.0,94.0,22.0,True,False,False
+Dce632a27234311fd8d98,SW032,신나231,18.5,-10.0,100.0,-10.0,False,False,True
+D385c835a96d83ee6ae31,SW033,스피쿨 S 상도 신나,40.0,25.0,65.9,30.0,False,False,False
+Dc116c545346ec524dd1c,SW034,신나 002,14.0,12.0,12.0,12.0,False,True,False
+D465ec9b9151006760103,SW035,코트멜UMA 신나,12.0,4.0,90.0,4.0,False,False,False
+D9816ebde3c778592f98a,SW036,슈퍼신나1220,17.3,-20.0,58.0,-20.0,False,False,True
+D7bec8cc0847a8a0ab008,SW037,슈퍼신나1320,39.1,18.0,61.0,18.0,False,False,False
+D18b3a9fb3d37a6b968f0,SW038,슈퍼신나1230,19.4,-20.0,61.0,-20.0,False,False,True
+D4f4d143d088b2ae93783,SW039,슈퍼신나1100W,19.9,-10.0,58.0,-10.0,False,False,True
+D20147aaca0ae12c4d372,SW040,신나150 #(SP),4.0,4.0,58.0,4.0,False,False,False
+D7c0192a440e0d628f8d8,SW041,BK크리스탈 신나#(ASSA),36.5,15.0,61.0,15.0,False,False,False
+D4f353953f41c8c794822,SW042,SEWM2400신나 #(M42),27.1,4.0,60.0,4.0,False,False,False
+D8de019e3c9e8276cfb77,SW043,SEWM2400신나 #(M32),27.1,18.0,28.0,18.0,False,False,False
+D93768e9b163ff7c85d89,SW044,HP2000 신나,30.0,22.0,60.0,22.0,False,False,False
+De4cf3bb7eb47fef67c66,SW045,SEWM2400신나 #(M42UT),28.0,28.0,28.0,28.0,False,False,False
+D24e75166991bcaad65e9,SW046,신나 483LV(표준),18.0,1.0,58.0,1.0,False,False,False
+D4db298164f7a2375eacb,SW047,신나 483LV(지건),26.6,1.0,94.0,1.0,False,False,True
+Def6c3e52584b7340a38b,SW048,MA100 신나#(BOBCAT),61.0,15.0,94.0,15.0,False,False,True
+D409b4ee1976a1fe99569,SW049,COILX9900 THZZ-0019-ZZ KG잉크신나,37.0,-10.0,43.0,-10.0,False,False,True
+D0280b250d6d9c7dccb88,SW050,코트멜신나 EB-free,12.0,4.0,58.0,4.0,False,False,False
+Da55c05350f2ff353efad,SW051,BI 507 신나,14.0,-4.0,60.0,-4.0,False,False,False
+Dc556e745efb820c3cb1c,SW053,프리미엄 신나,18.0,15.0,58.0,15.0,False,False,False
+D98f8e79e282f3bd2680c,SW054,신나 133,15.0,4.0,58.0,4.0,False,False,False
+D3645416134ee3b8f6971,SW055,신나 313,2.0,4.0,12.0,4.0,True,False,False
+D5d7ab3ec67c6cc1395e3,SW056,신나 395,10.0,4.0,61.0,4.0,False,False,False
+Dc0dbed01b50fedb0c4bf,SW057,에코우드우레탄 리타다신나,29.0,15.0,61.0,15.0,False,False,False
+D9aa9c3d3e4930f1d34c4,SW058,신나727,37.0,-10.0,100.0,-10.0,False,False,True
+D104c9d9142a4f8b74b0e,SW059,AC신나4000,16.0,-20.0,94.0,-20.0,False,False,True
+D09a48d31dd1e111b192e,SW060,AC신나3000,15.0,-20.0,58.0,-20.0,False,False,True
+D1c03eff1f6188e104e4b,SW061,EN신나3000,20.0,-20.0,90.0,-20.0,False,False,True
+D658e1b077db528f5c4fe,SW062,EN신나2000,20.0,-20.0,58.0,-20.0,False,False,True
+D6896dcf172ad3a2b2e78,SW063,슈퍼신나 123(S),37.0,16.0,58.0,36.1,False,False,False
+D081d49d1adffeee049ab,SW064,슈퍼신나 110H,12.0,-4.0,58.0,-4.0,False,False,False
+D804235f8a6d5ac2b1539,SW065,슈퍼신나 132,47.0,25.0,61.0,36.1,False,False,False
+Daa96e866a69d6e887f05,SW066,슈퍼신나110H(W),3.0,-10.0,16.0,-10.0,False,False,False
+De57830cb1207c218d031,SW067,슈퍼신나 200,24.0,4.0,58.0,4.0,False,False,False
+D29cff0eaf0c9403656f1,SW068,슈퍼신나 122,17.0,12.0,30.0,12.0,False,False,False
+Df42efc239b1ad84e3fcb,SW069,슈퍼신나 200(S),41.0,25.0,58.0,30.0,False,False,False
+Dbd8f9f45c6bb0bf7329e,SW071,T-110(W) 신나,15.0,4.0,58.0,4.0,False,False,False
+D4ba5dc25e593971be4ed,SW072,슈퍼신나 200(T),27.0,9.0,30.0,15.0,False,False,False
+D9520e360c17eb61a2d42,SW073,T-200(S) 신나,35.5,15.0,58.0,15.0,False,False,False
+D0b9bf2c943f7aa3fcab8,SW074,슈퍼신나 1350 속건형,3.0,4.0,36.1,4.0,True,False,False
+D7bc265391b0ca7370dac,SW078,SERACURE4800 신나,31.0,10.0,10.0,10.0,False,True,False
+Dd2cd75ee3361037ef1e6,SW079,T-1011 신나,18.0,4.0,42.9,4.0,False,False,False
+D867c9498280b7f09e247,SW080,T-0006 신나,17.0,-10.0,36.1,-10.0,False,False,True
+D4c46a9c16fb7381db56b,SW081,T-0091 신나,44.0,25.0,58.0,42.9,False,False,False
+D9556b19b5ea91283c7ed,SW082,T-1002 신나,8.0,4.0,42.9,4.0,False,False,False
+Dfe445bb9ca75add7eefd,SW083,신나 255,16.0,-20.0,61.0,-20.0,False,False,True
+Dbde92a6c030f85a787de,SW084,신나 483,4.0,-10.0,58.0,-10.0,False,False,False
+D8e858368a63339aaf154,SW085,신나 483S(지건형),25.0,15.0,58.0,15.0,False,False,False
+D198fa7366a1f5f065f1b,SW086,신나 501,20.0,-4.0,30.0,-4.0,False,False,False
+Dd2626d48ebfa5058e2e8,SW087,LOV신나030,13.0,1.0,94.0,1.0,False,False,False

@@ -1,0 +1,9 @@
+﻿지표,HANNA,Raoult,UNIFAC
+계산 가능 제품 수,142,142,130
+DMC 함유 제품 중 계산 가능,14,14,1
+HANNA vs Raoult: 21°C 석유류 구분이 달라지는 제품,7,공통 142종 중,
+HANNA vs Raoult: 같은 비교군 내 노출 순위가 뒤바뀐 쌍,12,396쌍 중,
+HANNA vs Raoult: 같은 비교군 내 인화점 순위가 뒤바뀐 쌍,10,396쌍 중,
+HANNA vs UNIFAC: 21°C 석유류 구분이 달라지는 제품,0,,공통 129종 중
+HANNA vs UNIFAC: 같은 비교군 내 노출 순위가 뒤바뀐 쌍,6,,384쌍 중
+HANNA vs UNIFAC: 같은 비교군 내 인화점 순위가 뒤바뀐 쌍,5,,384쌍 중
