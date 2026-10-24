@@ -28,9 +28,29 @@ jobs:
       - name: Model-free test suite (no HANNA checkpoints in CI)
         run: python -m unittest discover -s research/korean_thinners_271/src -p 'test_*.py' -v
       - name: Install model-free v2 audit dependencies
-        run: python -m pip install 'numpy>=1.26,<3' 'pandas>=2.0,<3'
+        run: python -m pip install 'numpy>=1.26,<3' 'pandas>=2.0,<3' 'matplotlib>=3.8,<4'
       - name: Validate 270-MSDS section-one use audit and fail-closed comparisons
         run: python -m unittest discover -s research/korean_thinners_271/v2/src -p 'test_use_audit.py' -v
+      - name: Test no-lab inference, Pareto screening and version rules
+        run: python -m unittest discover -s research/korean_thinners_271/v2/src -p 'test_nonexperimental.py' -v
+      - name: Recompute corrected pooled-pair uncertainty and Pareto categories
+        run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/analyze_pooled.py
+      - name: Recompute three-model versus official/supplementary OEL sensitivity
+        run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/analyze_nonexperimental_validation.py
+      - name: Audit alternative MSDS revision selection without changing primary sample
+        run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/audit_revision_sensitivity.py
+      - name: Upload manuscript nonexperimental sensitivity outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: manuscript-validation-no-lab
+          path: |
+            research/korean_thinners_271/v2/results/core/headline_pooled.json
+            research/korean_thinners_271/v2/results/core/P2_cluster_robustness.csv
+            research/korean_thinners_271/v2/results/core/P3_field_list.csv
+            research/korean_thinners_271/v2/results/core/S2_models_oel_sensitivity.csv
+            research/korean_thinners_271/v2/results/core/S3_document_version_audit.csv
+            research/korean_thinners_271/v2/results/core/S3_revision_sensitivity.csv
+          if-no-files-found: error
       - name: Full 270-source reproducibility pipeline (offline, no approved data)
         run: python research/korean_thinners_271/src/run_full_pipeline.py --offline
       - name: Validate no unapproved same-use rankings
