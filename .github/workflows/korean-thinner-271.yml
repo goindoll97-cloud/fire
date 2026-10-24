@@ -28,7 +28,7 @@ jobs:
       - name: Model-free test suite (no HANNA checkpoints in CI)
         run: python -m unittest discover -s research/korean_thinners_271/src -p 'test_*.py' -v
       - name: Install model-free v2 audit dependencies
-        run: python -m pip install 'numpy>=1.26,<3' 'pandas>=2.0,<3' 'matplotlib>=3.8,<4'
+        run: python -m pip install 'numpy>=1.26,<3' 'pandas>=2.0,<3' 'matplotlib>=3.8,<4' 'scipy>=1.13,<2'
       - name: Validate 270-MSDS section-one use audit and fail-closed comparisons
         run: python -m unittest discover -s research/korean_thinners_271/v2/src -p 'test_use_audit.py' -v
       - name: Test no-lab inference, Pareto screening and version rules
