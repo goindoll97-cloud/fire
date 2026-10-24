@@ -22,12 +22,12 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
 
-import analyze_v2 as a2
+V2 = Path(__file__).resolve().parents[1]
 
 SOURCE_URL = ('https://nics.mcee.go.kr/common/userCmmnFileDown.do'
               '?fileId=9321&fileSeq=1')
-OUT = a2.RES / 'regulatory_gap' / 'official_2026_5'
-COMPOSITION = (a2.V2.parent/'data'/'source_rebuild_20261023'
+OUT = V2 / 'results' / 'regulatory_gap' / 'official_2026_5'
+COMPOSITION = (V2.parent/'data'/'source_rebuild_20261023'
                /'MSDS_구성성분_1454.csv')
 NS = {'x':'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
 CAS_RE = re.compile(r'(?<!\d)\d{2,7}-\d{2}-\d(?!\d)')
