@@ -1,3 +1,5 @@
+> **2026-10-24 논문 본실험 확정: [RQ1 동일 용도 배수 · RQ2 Raoult/HANNA 순위·상대등급 역전 · RQ3 MSDS 하중상 불확실성](research/korean_thinners_271/docs/PAPER_RQ1_RQ2_RQ3_270.md).** 270개 MSDS 전체가 연구 모집단입니다. 오래된 271건 파일럿 안내 대신 이 문서와 `src/run_full_paper_experiment.py`, `src/run_paper_research_questions.py`를 우선 사용합니다. **법정 TWA·물성·TDS 미승인 항목을 임의 승인하지 않으며, 혼합물 지표는 성분별 합계 평형 잠재치입니다(작업장 실측 노출이 아님).**
+
 
 > **권장 연구 실행 방법:** [원본 신나 MSDS 270건 번호별 00–09 전체 파이프라인](research/korean_thinners_271/docs/PIPELINE_00_09_270.md). 원문 검증·54 CAS 물성 승인·국내 TWA·동일 용도 공정 호환성 조건을 단계별로 관리합니다. `.env`의 실제 LAW_OC/KOSHA_MSDS_SERVICE_KEY는 GitHub에 공개하지 않습니다.
 
