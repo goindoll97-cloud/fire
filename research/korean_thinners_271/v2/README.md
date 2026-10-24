@@ -8,6 +8,9 @@ v2는 **모든 입력값에 출처를 붙인 채** 270건 전부를 계산한다
 
 ## 실행 순서
 
+> **용도 분류 감사(2026-10-24):** [USE_CLASSIFICATION_AUDIT.md](USE_CLASSIFICATION_AUDIT.md), [270건 감사표](data/use_classification_audit_270.csv). 분석은 용도가 확인되지 않았거나 충돌하는 제품을 사전 제외하고, 세부 사용군·계절형으로 비교합니다. 기존 `results/core/`의 성능 수치는 감사표를 적용해 다시 분석하기 전 **과거 결과**입니다.
+
+
 ```bash
 cd research/korean_thinners_271/v2
 python src/parse_korean_oel.py      # 고시 JSON -> data/korean_oel_table.csv (659 물질)
@@ -58,3 +61,17 @@ Windows에서는 `--hanna-home D:\fire2\HANNA`처럼 지정한다.
 4. 증기압은 문헌 상관식이다. 상관식이 없는 5종(PGMEA, 젖산에틸, 숙신산디메틸, MHIB, 초산 t-부틸)은 단일 문헌값과 Clausius–Clapeyron 추정이다.
 5. 레포에 있는 고시 JSON은 2020년 개정 고시(별표 2018.7.30. 개정)다. 투고 전 법제처 현행본으로 `parse_korean_oel.py`를 다시 실행해야 한다.
 6. 같은 이름·같은 조성 범위의 문서는 `조성지문`으로 묶어 하나만 순위 비교에 쓴다.
+
+## 용도검증을 반영한 논문용 분석
+
+본래 `제품271건_용도재분류.csv`는 출처를 보존하고, `data/use_classification_audit_270.csv`를 `analyze_v2.load()`에서 문서키별 1:1 병합합니다. 감사표 누락, ID·원본 SHA256 불일치 시 분석을 중단합니다. `탐색비교허용=0`인 제품은 비교군 통계·탐색 후보 선정에서 제외합니다. `현장대체검증=0`은 해당 제품이 실제 대체 가능함을 승인하지 않았다는 뜻입니다.
+
+```bash
+cd research/korean_thinners_271/v2
+python -m unittest discover -s src -p "test_use_audit.py" -v
+python src/analyze_v2.py
+PYTHONPATH=src python src/analyze_flammability.py
+PYTHONPATH=src python src/analyze_core.py
+```
+
+기존 `results/core/` 출력은 재실행 전 결과이며 **최신 감사표가 자동으로 기존 CSV를 수정하지 않습니다**. 원본 MSDS 제1항의 권고용도 추출 필드가 비어 있는 경우, 실제 PDF/제조사 TDS 검수 없이 새로운 확정 용도를 생성하지 않습니다.
