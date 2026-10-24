@@ -115,25 +115,63 @@ def p2(bm, rng, save=True):
     pairs = pairs_table(bg)
     if save:
         pairs.to_csv(OUT / 'P2_pairs.csv', index=False, encoding='utf-8-sig')
-    share = lambda d: float(pairs_table(d)['일치(예측)'].mean()) if len(d) > 1 else np.nan
     by_g = pairs.groupby('비교군').agg(쌍수=('일치(예측)', 'size'), 일치비율=('일치(예측)', 'mean')).reset_index()
     by_g['일치비율'] = by_g['일치비율'].round(3)
     if save:
         by_g.to_csv(OUT / 'P2_pairwise_by_group.csv', index=False, encoding='utf-8-sig')
-    # 제품 단위 부트스트랩 (같은 군 안에서만 쌍을 만든다)
+    # Comparing all pairs sharing a product violates pairwise independence.
+    # Resample WHOLE same-use groups, including all their correlated pairs.
+    # Product-level observations are not duplicated within a resampled group.
+    group_counts = pairs.groupby('비교군')['일치(예측)'].agg(['sum', 'count'])
+    gnames = group_counts.index.to_numpy()
+    ng = len(gnames)
+    successes = group_counts['sum'].to_numpy(dtype=float)
+    n_pairs = group_counts['count'].to_numpy(dtype=float)
     vals = []
-    ids = bg.index.to_numpy()
-    for _ in range(N_BOOT // 4):
-        samp = bg.loc[rng.choice(ids, len(ids), replace=True)].reset_index(drop=True)
-        samp = samp.drop_duplicates() if False else samp
-        v = pairs_table(samp)['일치(예측)'].mean() if len(samp) > 1 else np.nan
-        if np.isfinite(v):
-            vals.append(v)
-    ci = [round(float(np.percentile(vals, 2.5)), 3), round(float(np.percentile(vals, 97.5)), 3)]
+    for _ in range(N_BOOT):
+        indices = rng.integers(0, ng, size=ng)
+        vals.append(float(successes[indices].sum() / n_pairs[indices].sum()))
+    ci = [round(float(np.percentile(vals, 2.5)), 3),
+          round(float(np.percentile(vals, 97.5)), 3)]
+    leave_one_out = []
+    for i in range(ng):
+        denom = n_pairs.sum() - n_pairs[i]
+        if denom > 0:
+            leave_one_out.append(float((successes.sum() - successes[i]) / denom))
+    group_equal_concordance = float((successes / n_pairs).mean())
+    # Null by independently permuting flash-point labels WITHIN each group,
+    # preserving each group's exposure distribution and product membership.
+    # This is exploratory, not proof of causal protection.
+    null = []
+    for _ in range(1000):
+        perm = bg.copy()
+        for _, ix in perm.groupby('비교군').groups.items():
+            v = perm.loc[ix, 'Tfp_Liaw_C'].to_numpy()
+            perm.loc[ix, 'Tfp_Liaw_C'] = rng.permutation(v)
+        outcomes = pairs_table(perm)
+        if len(outcomes):
+            null.append(float(outcomes['일치(예측)'].mean()))
+    perm_p = (1 + sum(v >= pairs['일치(예측)'].mean() for v in null)) / (len(null) + 1)
+    if save:
+        pd.DataFrame({
+            '비교군': group_counts.index,
+            '제품쌍수': n_pairs.astype(int),
+            '일치율': successes / n_pairs,
+            '해당군_제외후_전체일치율': [
+                (successes.sum() - successes[i]) / (n_pairs.sum() - n_pairs[i])
+                if n_pairs.sum() > n_pairs[i] else np.nan
+                for i in range(ng)
+            ],
+        }).to_csv(OUT / 'P2_cluster_robustness.csv', index=False, encoding='utf-8-sig')
     pm = pairs['일치(MSDS)'].dropna().astype(bool)
     rob = pairs[pairs['두 지표 모두 확실히 분리']]
     res = {'products': int(len(bg)), 'groups': int(bg['비교군'].nunique()), 'pairs': int(len(pairs)),
-           'concordance_model_fp': round(float(pairs['일치(예측)'].mean()), 3), 'concordance_model_fp_ci95': ci,
+           'concordance_model_fp': round(float(pairs['일치(예측)'].mean()), 3),
+           'concordance_model_fp_ci95': ci,
+           'ci_method': 'cluster bootstrap: resample the 21 same-use groups, not product pairs',
+           'group_equal_concordance': round(group_equal_concordance, 3),
+           'leave_one_group_out_range': [round(min(leave_one_out), 3), round(max(leave_one_out), 3)],
+           'within_group_flashpoint_permutation_p_exploratory': round(float(perm_p), 4),
            'concordance_msds_fp': round(float(pm.mean()), 3), 'pairs_msds_evaluable': int(len(pm)),
            'pairs_robust_n': int(len(rob)), 'concordance_robust': round(float(rob['일치(예측)'].mean()), 3) if len(rob) else None,
            'concordance_same_maker': round(float(pairs[pairs['같은 제조사']]['일치(예측)'].mean()), 3),
@@ -143,16 +181,36 @@ def p2(bm, rng, save=True):
 
 
 def p3(bg):
+    """Explicit strict Pareto screening; not certified use compatibility.
+
+    A product may be non-dominated while still having a trade-off with peers.
+    The previous label '두 지표 모두 우위' did not establish dominance over
+    EVERY product; replace it with mutually exclusive statuses.
+    """
     rows = []
     for g, d in bg.groupby('비교군'):
         for a in d.itertuples(index=False):
-            dominated = any(b.I_mix_TierB < a.I_mix_TierB and b.Tfp_Liaw_C > a.Tfp_Liaw_C for b in d.itertuples(index=False))
-            dominates = any(b.I_mix_TierB > a.I_mix_TierB and b.Tfp_Liaw_C < a.Tfp_Liaw_C for b in d.itertuples(index=False))
-            label = ('두 지표 모두 더 나은 제품이 있음' if dominated else
-                     '이 군에서 두 지표 모두 우위' if dominates else '다른 제품과 일장일단 (상충)')
-            rows.append({'비교군': g, '제품명': a.제품명, '제조사': a.제조사, '노출 지수 I': round(a.I_mix_TierB, 1),
-                         '예측 인화점_C': round(a.Tfp_Liaw_C, 1), 'MSDS 인화점_C': a.FP_MSDS, '석유류(모형)': a.석유류,
-                         '군 내 판정': label, '상태': '탐색적(대체 승인 아님)'})
+            peers = [b for b in d.itertuples(index=False)
+                     if b.문서키 != a.문서키]
+            better = [b for b in peers if b.I_mix_TierB < a.I_mix_TierB
+                      and b.Tfp_Liaw_C > a.Tfp_Liaw_C]
+            worse = [b for b in peers if b.I_mix_TierB > a.I_mix_TierB
+                     and b.Tfp_Liaw_C < a.Tfp_Liaw_C]
+            pareto = not bool(better)
+            if not pareto:
+                label = '비Pareto(두 지표 모두 개선되는 상대제품 존재)'
+            elif worse:
+                label = 'Pareto 비지배(일부 제품에 동시 우위)'
+            else:
+                label = 'Pareto 비지배(동시 우위 상대 없음·상충 가능)'
+            rows.append({'비교군': g, '제품명': a.제품명, '제조사': a.제조사,
+                         '노출 지수 I': round(a.I_mix_TierB, 1),
+                         '예측 인화점_C': round(a.Tfp_Liaw_C, 1),
+                         'MSDS 인화점_C': a.FP_MSDS, '석유류(모형)': a.석유류,
+                         'Pareto_비지배': bool(pareto),
+                         '동시개선_상대제품수': len(better),
+                         '동시우위_상대제품수': len(worse),
+                         '군 내 판정': label, '상태': '모형 기반 탐색(공정 호환성·대체 승인 아님)'})
     out = pd.DataFrame(rows).sort_values(['비교군', '노출 지수 I'])
     out.to_csv(OUT / 'P3_field_list.csv', index=False, encoding='utf-8-sig')
     return out
