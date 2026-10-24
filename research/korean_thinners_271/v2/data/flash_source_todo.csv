@@ -1,10 +1,2 @@
 ﻿CAS,name,현재_FP_C,현재_출처,등급,확인할 곳,확인 후 값,확인 출처·시험법
-106-65-0,dimethyl succinate,94.0,Sigma-Aldrich 112755 (closed cup),B,"GESTIS(DGUV), ECHA 등록자료, KOSHA MSDS, NITE-CHRIP 중 하나에서 밀폐식 인화점과 근거 확인",,
-107-83-5,2-Methylpentane,-7.0,Sigma-Aldrich 820818 (closed cup; 다른 문헌은 더 낮은 값),B,"GESTIS(DGUV), ECHA 등록자료, KOSHA MSDS, NITE-CHRIP 중 하나에서 밀폐식 인화점과 근거 확인",,
-108-08-7,"2,4-dimethylpentane",-7.0,ESTIMATE: 헵탄 이성질체(-7°C)와 동일 가정,C,"GESTIS(DGUV), ECHA 등록자료, KOSHA MSDS, NITE-CHRIP 중 하나에서 밀폐식 인화점과 근거 확인",,
-1119-40-0,dimethyl glutarate,110.0,TCI G0185 SDS,B,"GESTIS(DGUV), ECHA 등록자료, KOSHA MSDS, NITE-CHRIP 중 하나에서 밀폐식 인화점과 근거 확인",,
-112-40-3,dodecane,74.0,WIKIDATA,B,"GESTIS(DGUV), ECHA 등록자료, KOSHA MSDS, NITE-CHRIP 중 하나에서 밀폐식 인화점과 근거 확인",,
-2110-78-3,methyl 2-hydroxyisobutyrate,45.0,TCI H0256 SDS,B,"GESTIS(DGUV), ECHA 등록자료, KOSHA MSDS, NITE-CHRIP 중 하나에서 밀폐식 인화점과 근거 확인",,
-527-53-7,isodurene,54.0,ESTIMATE: 테트라메틸벤젠류 유추,C,"GESTIS(DGUV), ECHA 등록자료, KOSHA MSDS, NITE-CHRIP 중 하나에서 밀폐식 인화점과 근거 확인",,
-589-34-4,3-methylhexane,-1.0,Wikipedia 3-methylhexane,B,"GESTIS(DGUV), ECHA 등록자료, KOSHA MSDS, NITE-CHRIP 중 하나에서 밀폐식 인화점과 근거 확인",,
-627-93-0,dimethyl adipate,107.0,MIDSIS-TROCS dimethyl adipate,B,"GESTIS(DGUV), ECHA 등록자료, KOSHA MSDS, NITE-CHRIP 중 하나에서 밀폐식 인화점과 근거 확인",,
+2110-78-3,methyl 2-hydroxyisobutyrate,45.0,TCI H0256 SDS,B,"ECHA 등록자료, KOSHA MSDS 또는 NITE-CHRIP (GESTIS에는 없음)",,
