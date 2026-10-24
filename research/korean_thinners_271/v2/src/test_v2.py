@@ -82,5 +82,40 @@ class TestComposition(unittest.TestCase):
         self.assertIn(('108-38-3', '1330-20-7'), cols)
 
 
+class TestFlammability(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        import run_flammability as rf
+        import build_flammability as bf
+        cls.rf, cls.bf = rf, bf
+        cls.props = {r['CAS']: r for r in rows(V2 / 'data' / 'pure_properties.csv')}
+        cls.fl = {r['CAS']: r for r in rows(V2 / 'data' / 'pure_flammability.csv')}
+        cls.grids = rf.psat_grid({c: cls.props[c] for c in ('108-88-3', '67-64-1', '112-34-5')})
+
+    def _ratio(self, cas_list):
+        fp = np.array([float(self.fl[c]['FP_C']) + 273.15 for c in cas_list])
+        return np.array([np.exp(np.log(self.grids[c]) - self.rf.lnp_at(self.grids[c], fp[k]))
+                         for k, c in enumerate(cas_list)])
+
+    def test_pure_component_returns_its_own_flash_point(self):
+        r = self._ratio(['108-88-3'])
+        tf = self.rf.liaw_flash(np.array([[1.0]]), r)[0] - 273.15
+        self.assertAlmostEqual(tf, float(self.fl['108-88-3']['FP_C']), delta=1.5)
+
+    def test_ideal_mixture_flash_between_component_values(self):
+        cas = ['67-64-1', '112-34-5']          # acetone (-20 C) + 2-(2-butoxyethoxy)ethanol (100 C)
+        tf = self.rf.liaw_flash(np.array([[0.5, 0.5]]), self._ratio(cas))[0] - 273.15
+        self.assertGreater(tf, float(self.fl['67-64-1']['FP_C']))
+        self.assertLess(tf, float(self.fl['112-34-5']['FP_C']))
+
+    def test_crowl_louvar_hexane_close_to_literature(self):
+        self.assertAlmostEqual(self.bf.crowl_louvar_pct({'C': 6, 'H': 14}), 1.2, delta=0.15)
+
+    def test_flammability_table_complete(self):
+        self.assertEqual(set(self.fl), set(self.props))
+        for r in self.fl.values():
+            self.assertTrue(r['FP_C'] and r['LFL_pct'] and r['FP_source'], r['CAS'])
+
+
 if __name__ == '__main__':
     unittest.main()

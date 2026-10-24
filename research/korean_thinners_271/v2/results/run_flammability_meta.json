@@ -1,0 +1,12 @@
+{
+  "samples_per_product": 100,
+  "seed": 20261024,
+  "T_grid_C": [
+    -40,
+    130,
+    2.5
+  ],
+  "gamma_T_for_flash_K": 298.15,
+  "runtime_s": 341.1,
+  "products": 270
+}

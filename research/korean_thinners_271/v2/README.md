@@ -13,6 +13,10 @@ python src/build_properties.py      # 63 화학종 SMILES·MW·증기압(25/35°
 python src/build_oel.py             # Tier A(국내 공식) / Tier B(보충) 노출기준 배정
 python src/run_v2.py --samples 100 --seed 20261024 --hanna-home <HANNA 경로>
 python src/analyze_v2.py            # RQ1–RQ5 표·그림·headline_numbers.json
+python src/build_flammability.py    # 성분별 인화점·폭발하한 63종 (출처·추정 표시)
+python src/extract_msds_flash.py <MSDS PDF 폴더들>   # MSDS 제9항 인화점·폭발범위 -> data/msds_flash.csv (pdftotext 필요)
+python src/run_flammability.py --samples 100 --seed 20261024 --hanna-home <HANNA 경로>   # PYTHONPATH=src 필요
+python src/analyze_flammability.py  # RQ6–RQ8, results/rq/headline_flammability.json (결과 해석: PAPER_DIRECTION_fire_health.md)
 python -m unittest discover -s src -p "test_v2.py"
 ```
 

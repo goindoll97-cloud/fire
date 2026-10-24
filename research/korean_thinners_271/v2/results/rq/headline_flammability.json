@@ -1,0 +1,39 @@
+{
+  "rankable_n": 130,
+  "spearman_logI_vs_Tfp_all": -0.869,
+  "spearman_logI_vs_logF25_all": 0.854,
+  "groups_with_>=3_rankable": 16,
+  "within_group_spearman_median": -0.836,
+  "quadrant_counts": {
+    "둘 다 낮음": 47,
+    "둘 다 높음": 39,
+    "화재만 낮음": 11,
+    "노출만 낮음": 11
+  },
+  "products_with_dominating_alt": 78,
+  "dominating_I_reduction_median": 3.31,
+  "dominating_Tfp_gain_median_C": 19.1,
+  "dominating_class_change_n": 28,
+  "petroleum_class_counts_all": {
+    "제1석유류": 96,
+    "제2석유류": 44,
+    "제3석유류 이상": 2
+  },
+  "all_unique_products": 142,
+  "unrankable_but_flammable": 12,
+  "unrankable_n": 12,
+  "low_exposure_but_class1_n": 8,
+  "consistency_n": 249,
+  "msds_below_lowest_component_fp": 13,
+  "msds_above_highest_component_fp": 12,
+  "msds_over_lowest_5mol_component_by_25C": 64,
+  "msds_top_values": {
+    "15.0": 31,
+    "23.0": 21,
+    "7.0": 20,
+    "27.0": 18,
+    "33.0": 14
+  },
+  "Tfp_HANNA_minus_Raoult_median_C": -1.5,
+  "Tfp_HANNA_minus_UNIFAC_median_C": 0.05
+}
