@@ -70,10 +70,15 @@ Windows에서는 `--hanna-home D:\fire2\HANNA`처럼 지정한다.
 ```bash
 cd research/korean_thinners_271/v2
 python -m unittest discover -s src -p "test_use_audit.py" -v
+python -m unittest discover -s src -p "test_nonexperimental.py" -v
 python src/analyze_v2.py
 PYTHONPATH=src python src/analyze_flammability.py
 PYTHONPATH=src python src/analyze_core.py
+PYTHONPATH=src python src/analyze_pooled.py
+PYTHONPATH=src python src/analyze_nonexperimental_validation.py
+PYTHONPATH=src python src/audit_revision_sensitivity.py
+PYTHONPATH=src python src/audit_oel_assignment.py
 ```
 
-기존 `results/core/` 출력은 재실행 전 결과이며 **최신 감사표가 자동으로 기존 CSV를 수정하지 않습니다**. 원본 MSDS 제1항의 권고용도 추출 필드가 비어 있는 경우, 실제 PDF/제조사 TDS 검수 없이 새로운 확정 용도를 생성하지 않습니다.
+`results/core/`의 P1/P2/P3 및 S1–S4는 용도감사 기준과 비실험 민감도 분석 결과를 반영해 갱신하였습니다. 계산 스크립트를 변경한 경우에는 아래 명령으로 다시 재실행해야 합니다. 원본 MSDS 제1항의 권고용도 추출 필드가 비어 있는 경우, 실제 PDF/제조사 TDS 검수 없이 새로운 확정 용도를 생성하지 않습니다.
 
