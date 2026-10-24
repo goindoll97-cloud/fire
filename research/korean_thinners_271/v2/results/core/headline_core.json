@@ -1,0 +1,32 @@
+{
+  "products_in_universe": 142,
+  "rankable_in_groups_ge3": 106,
+  "groups_ge3": 16,
+  "spearman_median_model_fp": -0.833,
+  "spearman_median_msds_fp": -0.502,
+  "share_same_direction_model_fp": 0.811,
+  "share_same_direction_msds_fp": 0.594,
+  "quadrants_model_fp": {
+    "둘 다 낮음": 47,
+    "둘 다 높음": 39,
+    "화재만 낮음": 10,
+    "노출만 낮음": 10
+  },
+  "quadrants_msds_fp": {
+    "둘 다 낮음": 42,
+    "화재만 낮음": 28,
+    "둘 다 높음": 21,
+    "노출만 낮음": 15
+  },
+  "swap_products": 75,
+  "swap_I_reduction_median": 3.26,
+  "swap_fp_gain_median_C": 18.1,
+  "swap_class_change": 26,
+  "unrankable_n": 12,
+  "unrankable_F25_ge_1": 12,
+  "class_counts": {
+    "제1석유류": 96,
+    "제2석유류": 44,
+    "제3석유류 이상": 2
+  }
+}

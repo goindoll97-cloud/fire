@@ -117,5 +117,22 @@ class TestFlammability(unittest.TestCase):
             self.assertTrue(r['FP_C'] and r['LFL_pct'] and r['FP_source'], r['CAS'])
 
 
+class TestCore(unittest.TestCase):
+    def test_rank_flip_share(self):
+        import pandas as pd
+        import analyze_core as ac
+        g = pd.Series({'a': 'g', 'b': 'g', 'c': 'g'})
+        flips, total = ac.rank_flip_share({'a': 1, 'b': 2, 'c': 3}, {'a': 3, 'b': 2, 'c': 1}, g)
+        self.assertEqual((flips, total), (3, 3))
+        flips, total = ac.rank_flip_share({'a': 1, 'b': 2, 'c': 3}, {'a': 1, 'b': 2, 'c': 3}, g)
+        self.assertEqual((flips, total), (0, 3))
+
+    def test_petroleum_class(self):
+        import analyze_flammability as af
+        self.assertEqual(af.petroleum_class(20.9), '제1석유류')
+        self.assertEqual(af.petroleum_class(21.0), '제2석유류')
+        self.assertEqual(af.petroleum_class(70.0), '제3석유류 이상')
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -1,3 +1,5 @@
+> **논문 본문 범위는 `CORE_PAPER.md`, 후속 연구 후보는 `FOLLOW_UP_PAPERS.md`를 먼저 읽는다.**
+
 # v2 — 270개 전수 계산 파이프라인 (대리물질·2단계 노출기준·3모델 비교)
 
 v1 파이프라인은 이성질체 혼합물·석유계 혼합물(UVCB)이 하나라도 들어 있으면 제품 전체를 보류했다(270건 중 216건).
@@ -17,6 +19,7 @@ python src/build_flammability.py    # 성분별 인화점·폭발하한 63종 (�
 python src/extract_msds_flash.py <MSDS PDF 폴더들>   # MSDS 제9항 인화점·폭발범위 -> data/msds_flash.csv (pdftotext 필요)
 python src/run_flammability.py --samples 100 --seed 20261024 --hanna-home <HANNA 경로>   # PYTHONPATH=src 필요
 python src/analyze_flammability.py  # RQ6–RQ8, results/rq/headline_flammability.json (결과 해석: PAPER_DIRECTION_fire_health.md)
+python src/analyze_core.py       # 본문(core) 표·그림: results/core/ (PYTHONPATH=src). 범위는 CORE_PAPER.md, 확장은 FOLLOW_UP_PAPERS.md
 python -m unittest discover -s src -p "test_v2.py"
 ```
 
