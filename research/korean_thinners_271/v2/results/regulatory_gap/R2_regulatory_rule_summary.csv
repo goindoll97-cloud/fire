@@ -1,6 +1,9 @@
 ﻿CAS_원문,물질명,규정범주,규정_액상함량기준_mass_pct,문서수,기준미만문서수,기준이상문서수,기준경계문서수,출처겹침문서수,기준미만_포화10이상_추적확인,기준미만_포화100이상_추적확인
+108-87-2,methylcyclohexane,ecological,25,12,12,0,0,8,2,0
 108-88-3,toluene,accident_preparedness,85,122,117,0,5,0,117,98
 108-94-1,cyclohexanone,human_acute,25,13,4,6,3,0,4,0
+110-82-7,cyclohexane,ecological,25,1,1,0,0,0,1,1
+111-15-9,ethylene glycol monoethyl ether acetate,human_chronic,0.3,1,0,1,0,0,0,0
 1330-20-7,xylene mixed isomers,accident_preparedness,85,181,181,0,0,87,79,0
 141-78-6,ethyl acetate,accident_preparedness,25,39,27,2,10,0,27,0
 67-56-1,methanol,accident_preparedness,85,15,15,0,0,0,15,14
