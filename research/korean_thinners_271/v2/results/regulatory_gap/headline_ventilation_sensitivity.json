@@ -1,0 +1,246 @@
+{
+  "basis_documents": 270,
+  "temperatures": [
+    "25C",
+    "35C"
+  ],
+  "scenario_count": 5,
+  "numerical_crosswalk_note": "A threshold in product liquid mass % is NOT a TWA in air.",
+  "main_caveat": "Hypothetical finite-source 8h average model, NOT actual exposure or a compliance determination.",
+  "parameters": [
+    {
+      "scenario_name": "small_surface_high_vent_15min",
+      "room_volume_m3": 100,
+      "source_surface_m2": 0.1,
+      "mass_transfer_m_per_h": 0.1,
+      "air_exchange_per_h": 8,
+      "source_duration_h": 0.25,
+      "observation_h": 8,
+      "end_of_use_to_saturation": 0.00001080821614858785,
+      "eight_hour_mean_to_saturation": 3.906222282018641e-7,
+      "assumption_scope": "well-mixed, constant composition, replenished liquid, zero initial background"
+    },
+    {
+      "scenario_name": "small_surface_moderate_vent_1h",
+      "room_volume_m3": 100,
+      "source_surface_m2": 0.5,
+      "mass_transfer_m_per_h": 0.2,
+      "air_exchange_per_h": 5,
+      "source_duration_h": 1,
+      "observation_h": 8,
+      "end_of_use_to_saturation": 0.00019861403470907075,
+      "eight_hour_mean_to_saturation": 0.000024995993871399263,
+      "assumption_scope": "well-mixed, constant composition, replenished liquid, zero initial background"
+    },
+    {
+      "scenario_name": "medium_surface_moderate_vent_1h",
+      "room_volume_m3": 100,
+      "source_surface_m2": 1,
+      "mass_transfer_m_per_h": 0.5,
+      "air_exchange_per_h": 3,
+      "source_duration_h": 1,
+      "observation_h": 8,
+      "end_of_use_to_saturation": 0.0015814662989543362,
+      "eight_hour_mean_to_saturation": 0.00020809633011496543,
+      "assumption_scope": "well-mixed, constant composition, replenished liquid, zero initial background"
+    },
+    {
+      "scenario_name": "large_surface_low_vent_4h",
+      "room_volume_m3": 100,
+      "source_surface_m2": 3,
+      "mass_transfer_m_per_h": 1,
+      "air_exchange_per_h": 1,
+      "source_duration_h": 4,
+      "observation_h": 8,
+      "end_of_use_to_saturation": 0.02865307239489466,
+      "eight_hour_mean_to_saturation": 0.014601826318567724,
+      "assumption_scope": "well-mixed, constant composition, replenished liquid, zero initial background"
+    },
+    {
+      "scenario_name": "large_surface_very_low_vent_4h",
+      "room_volume_m3": 100,
+      "source_surface_m2": 5,
+      "mass_transfer_m_per_h": 1,
+      "air_exchange_per_h": 0.5,
+      "source_duration_h": 4,
+      "observation_h": 8,
+      "end_of_use_to_saturation": 0.0808360765125151,
+      "eight_hour_mean_to_saturation": 0.04455673568400864,
+      "assumption_scope": "well-mixed, constant composition, replenished liquid, zero initial background"
+    }
+  ],
+  "summary": [
+    {
+      "temperature": "25C",
+      "scenario_name": "large_surface_low_vent_4h",
+      "all_documents": 270,
+      "official_OEL_90pct_eligible": 198,
+      "official_OEL_insufficient": 72,
+      "hypo_8h_index_ge1_count": 193,
+      "hypo_8h_index_ge10_count": 24,
+      "hypo_8h_P5_ge1_count": 191,
+      "hypo_8h_P95_lt1_count": 5,
+      "index_ge1_unique_compositions": 178,
+      "ratio_is_illustrative": true
+    },
+    {
+      "temperature": "25C",
+      "scenario_name": "large_surface_very_low_vent_4h",
+      "all_documents": 270,
+      "official_OEL_90pct_eligible": 198,
+      "official_OEL_insufficient": 72,
+      "hypo_8h_index_ge1_count": 196,
+      "hypo_8h_index_ge10_count": 139,
+      "hypo_8h_P5_ge1_count": 194,
+      "hypo_8h_P95_lt1_count": 2,
+      "index_ge1_unique_compositions": 181,
+      "ratio_is_illustrative": true
+    },
+    {
+      "temperature": "25C",
+      "scenario_name": "medium_surface_moderate_vent_1h",
+      "all_documents": 270,
+      "official_OEL_90pct_eligible": 198,
+      "official_OEL_insufficient": 72,
+      "hypo_8h_index_ge1_count": 0,
+      "hypo_8h_index_ge10_count": 0,
+      "hypo_8h_P5_ge1_count": 0,
+      "hypo_8h_P95_lt1_count": 198,
+      "index_ge1_unique_compositions": 0,
+      "ratio_is_illustrative": true
+    },
+    {
+      "temperature": "25C",
+      "scenario_name": "small_surface_high_vent_15min",
+      "all_documents": 270,
+      "official_OEL_90pct_eligible": 198,
+      "official_OEL_insufficient": 72,
+      "hypo_8h_index_ge1_count": 0,
+      "hypo_8h_index_ge10_count": 0,
+      "hypo_8h_P5_ge1_count": 0,
+      "hypo_8h_P95_lt1_count": 198,
+      "index_ge1_unique_compositions": 0,
+      "ratio_is_illustrative": true
+    },
+    {
+      "temperature": "25C",
+      "scenario_name": "small_surface_moderate_vent_1h",
+      "all_documents": 270,
+      "official_OEL_90pct_eligible": 198,
+      "official_OEL_insufficient": 72,
+      "hypo_8h_index_ge1_count": 0,
+      "hypo_8h_index_ge10_count": 0,
+      "hypo_8h_P5_ge1_count": 0,
+      "hypo_8h_P95_lt1_count": 198,
+      "index_ge1_unique_compositions": 0,
+      "ratio_is_illustrative": true
+    },
+    {
+      "temperature": "35C",
+      "scenario_name": "large_surface_low_vent_4h",
+      "all_documents": 270,
+      "official_OEL_90pct_eligible": 198,
+      "official_OEL_insufficient": 72,
+      "hypo_8h_index_ge1_count": 194,
+      "hypo_8h_index_ge10_count": 92,
+      "hypo_8h_P5_ge1_count": 194,
+      "hypo_8h_P95_lt1_count": 4,
+      "index_ge1_unique_compositions": 179,
+      "ratio_is_illustrative": true
+    },
+    {
+      "temperature": "35C",
+      "scenario_name": "large_surface_very_low_vent_4h",
+      "all_documents": 270,
+      "official_OEL_90pct_eligible": 198,
+      "official_OEL_insufficient": 72,
+      "hypo_8h_index_ge1_count": 196,
+      "hypo_8h_index_ge10_count": 174,
+      "hypo_8h_P5_ge1_count": 196,
+      "hypo_8h_P95_lt1_count": 2,
+      "index_ge1_unique_compositions": 181,
+      "ratio_is_illustrative": true
+    },
+    {
+      "temperature": "35C",
+      "scenario_name": "medium_surface_moderate_vent_1h",
+      "all_documents": 270,
+      "official_OEL_90pct_eligible": 198,
+      "official_OEL_insufficient": 72,
+      "hypo_8h_index_ge1_count": 0,
+      "hypo_8h_index_ge10_count": 0,
+      "hypo_8h_P5_ge1_count": 0,
+      "hypo_8h_P95_lt1_count": 197,
+      "index_ge1_unique_compositions": 0,
+      "ratio_is_illustrative": true
+    },
+    {
+      "temperature": "35C",
+      "scenario_name": "small_surface_high_vent_15min",
+      "all_documents": 270,
+      "official_OEL_90pct_eligible": 198,
+      "official_OEL_insufficient": 72,
+      "hypo_8h_index_ge1_count": 0,
+      "hypo_8h_index_ge10_count": 0,
+      "hypo_8h_P5_ge1_count": 0,
+      "hypo_8h_P95_lt1_count": 198,
+      "index_ge1_unique_compositions": 0,
+      "ratio_is_illustrative": true
+    },
+    {
+      "temperature": "35C",
+      "scenario_name": "small_surface_moderate_vent_1h",
+      "all_documents": 270,
+      "official_OEL_90pct_eligible": 198,
+      "official_OEL_insufficient": 72,
+      "hypo_8h_index_ge1_count": 0,
+      "hypo_8h_index_ge10_count": 0,
+      "hypo_8h_P5_ge1_count": 0,
+      "hypo_8h_P95_lt1_count": 198,
+      "index_ge1_unique_compositions": 0,
+      "ratio_is_illustrative": true
+    }
+  ],
+  "CAS_specific_summary": [
+    {
+      "scenario_name": "large_surface_low_vent_4h",
+      "eligible_rule_CAS_rows": 300,
+      "single_CAS_hypo_8h_index_ge1": 145,
+      "single_CAS_hypo_8h_ge1_documents": 120,
+      "single_CAS_hypo_8h_ge10": 2,
+      "interpretation": "not real 8h measured exposure; source and room assumptions hypothetical"
+    },
+    {
+      "scenario_name": "large_surface_very_low_vent_4h",
+      "eligible_rule_CAS_rows": 300,
+      "single_CAS_hypo_8h_index_ge1": 255,
+      "single_CAS_hypo_8h_ge1_documents": 161,
+      "single_CAS_hypo_8h_ge10": 79,
+      "interpretation": "not real 8h measured exposure; source and room assumptions hypothetical"
+    },
+    {
+      "scenario_name": "medium_surface_moderate_vent_1h",
+      "eligible_rule_CAS_rows": 300,
+      "single_CAS_hypo_8h_index_ge1": 0,
+      "single_CAS_hypo_8h_ge1_documents": 0,
+      "single_CAS_hypo_8h_ge10": 0,
+      "interpretation": "not real 8h measured exposure; source and room assumptions hypothetical"
+    },
+    {
+      "scenario_name": "small_surface_high_vent_15min",
+      "eligible_rule_CAS_rows": 300,
+      "single_CAS_hypo_8h_index_ge1": 0,
+      "single_CAS_hypo_8h_ge1_documents": 0,
+      "single_CAS_hypo_8h_ge10": 0,
+      "interpretation": "not real 8h measured exposure; source and room assumptions hypothetical"
+    },
+    {
+      "scenario_name": "small_surface_moderate_vent_1h",
+      "eligible_rule_CAS_rows": 300,
+      "single_CAS_hypo_8h_index_ge1": 0,
+      "single_CAS_hypo_8h_ge1_documents": 0,
+      "single_CAS_hypo_8h_ge10": 0,
+      "interpretation": "not real 8h measured exposure; source and room assumptions hypothetical"
+    }
+  ]
+}
