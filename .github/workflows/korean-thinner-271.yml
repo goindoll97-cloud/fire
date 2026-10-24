@@ -43,6 +43,16 @@ jobs:
         run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/analyze_coverage_surrogate_sensitivity.py
       - name: Audit CAS-TWA assignment against parsed Korean OEL table
         run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/audit_oel_assignment.py
+      - name: Test verified CAS threshold screening (no legal exemption claims)
+        run: python -m unittest discover -s research/korean_thinners_271/v2/src -p 'test_regulatory_vapor_gap.py' -v
+      - name: Cross-audit 270 MSDS constituent mass fractions against 25C saturated vapor and Korean TWA
+        run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/analyze_regulatory_vapor_gap.py
+      - name: Upload selected-regulation-vs-vapor crosswalk and full 270-document coverage
+        uses: actions/upload-artifact@v4
+        with:
+          name: thinner-regulatory-vapor-gap
+          path: research/korean_thinners_271/v2/results/regulatory_gap/*
+          if-no-files-found: error
       - name: Upload manuscript nonexperimental sensitivity outputs
         uses: actions/upload-artifact@v4
         with:
