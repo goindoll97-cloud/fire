@@ -1,0 +1,11 @@
+﻿temperature,scenario_name,all_documents,official_OEL_90pct_eligible,official_OEL_insufficient,hypo_8h_index_ge1_count,hypo_8h_index_ge10_count,hypo_8h_P5_ge1_count,hypo_8h_P95_lt1_count,index_ge1_unique_compositions,ratio_is_illustrative
+25C,large_surface_low_vent_4h,270,198,72,193,24,191,5,178,true
+25C,large_surface_very_low_vent_4h,270,198,72,196,139,194,2,181,true
+25C,medium_surface_moderate_vent_1h,270,198,72,0,0,0,198,0,true
+25C,small_surface_high_vent_15min,270,198,72,0,0,0,198,0,true
+25C,small_surface_moderate_vent_1h,270,198,72,0,0,0,198,0,true
+35C,large_surface_low_vent_4h,270,198,72,194,92,194,4,179,true
+35C,large_surface_very_low_vent_4h,270,198,72,196,174,196,2,181,true
+35C,medium_surface_moderate_vent_1h,270,198,72,0,0,0,197,0,true
+35C,small_surface_high_vent_15min,270,198,72,0,0,0,198,0,true
+35C,small_surface_moderate_vent_1h,270,198,72,0,0,0,198,0,true
