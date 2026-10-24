@@ -123,7 +123,8 @@ def run(args):
         smiles = [props[c]['SMILES'] for c in species]
         chemgroups = [uni.groups(s) for s in smiles]
         uni_ok = all(g is not None for g in chemgroups) and not uni.check(chemgroups)
-        fp = np.array([float(flam[c]['FP_C']) + 273.15 for c in species])
+        fp = np.array([float(flam[c]['FP_C']) + (args.fp_offset if flam[c].get('FP_grade', 'A') in ('B', 'C') else 0.0) + 273.15
+                       for c in species])
         lfl = np.array([float(flam[c]['LFL_pct']) / 100 for c in species])
         est_any = any(flam[c]['estimated'] == 'True' for c in species)
         # Psat_i(T)/Psat_i(Tfp_i)
@@ -163,7 +164,7 @@ def run(args):
                     'FP추정성분포함': est_any})
         if (di + 1) % 20 == 0:
             print(f'{di + 1}/{len(docs)} docs, {time.time() - t0:.0f}s', flush=True)
-    rv.write(rv.RES / 'flammability_scenarios_270.csv.gz', rows)
+    rv.write(rv.RES / f'flammability_scenarios_270{args.out_suffix}.csv.gz', rows)
     (rv.RES / 'run_flammability_meta.json').write_text(json.dumps(
         {'samples_per_product': args.samples, 'seed': args.seed, 'T_grid_C': [-40, 130, 2.5],
          'gamma_T_for_flash_K': 298.15, 'runtime_s': round(time.time() - t0, 1), 'products': len(docs)},
@@ -177,6 +178,8 @@ def cli(argv=None):
     ap.add_argument('--seed', type=int, default=20261024)
     ap.add_argument('--hanna-home', default=None)
     ap.add_argument('--limit', type=int, default=0)
+    ap.add_argument('--fp-offset', type=float, default=0.0, help='민감도: 출처 등급 B·C 성분 인화점에 더할 값(°C)')
+    ap.add_argument('--out-suffix', default='')
     run(ap.parse_args(argv))
 
 

@@ -115,6 +115,7 @@ class TestFlammability(unittest.TestCase):
         self.assertEqual(set(self.fl), set(self.props))
         for r in self.fl.values():
             self.assertTrue(r['FP_C'] and r['LFL_pct'] and r['FP_source'], r['CAS'])
+            self.assertIn(r['FP_grade'], ('A', 'B', 'C'))
 
 
 class TestCore(unittest.TestCase):

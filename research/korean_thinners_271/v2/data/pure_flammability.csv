@@ -1,64 +1,64 @@
-﻿CAS,name,FP_C,FP_source,LFL_pct,UFL_pct,LFL_source,estimated
-100-41-4,ethylbenzene,15.0,IEC 60079-20-1 (2010),0.8,7.8,chemicals.safety (NFPA/IEC/Serat),False
-103-65-1,propylbenzene,39.0,Serat DIPPR (2017),0.946,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-104-51-8,butylbenzene,58.0,"NITE-CHRIP (GESTIS cited), closed cup",0.843,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-106-42-3,p-xylene,25.0,IEC 60079-20-1 (2010),0.9,7.6,chemicals.safety (NFPA/IEC/Serat),False
-106-65-0,dimethyl succinate,94.0,Sigma-Aldrich 112755 (closed cup),1.722,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-107-83-5,2-Methylpentane,-7.0,Sigma-Aldrich 820818 (closed cup; 다른 문헌은 더 낮은 값),1.19,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-107-98-2,1-methoxy-2-propanol,36.1,OSHA Chemical Data 72 (97°F),1.6,13.8,OSHA Chemical Data 72,False
-108-08-7,"2,4-dimethylpentane",-7.0,ESTIMATE: 헵탄 이성질체(-7°C)와 동일 가정,1.031,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-108-10-1,4-methyl-2-pentanone,16.0,IEC 60079-20-1 (2010),1.2,8.0,chemicals.safety (NFPA/IEC/Serat),False
-108-38-3,m-xylene,25.0,IEC 60079-20-1 (2010),1.0,7.0,chemicals.safety (NFPA/IEC/Serat),False
-108-65-6,1-methoxy-2-propyl acetate,42.9,Serat DIPPR (2017),1.499,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-108-67-8,mesitylene,44.0,IEC 60079-20-1 (2010),0.8,7.3,chemicals.safety (NFPA/IEC/Serat),False
-108-83-8,"2,6-dimethyl-4-heptanone",60.0,NFPA 497 (2008),0.8,7.1,chemicals.safety (NFPA/IEC/Serat),False
-108-87-2,methylcyclohexane,-4.0,IEC 60079-20-1 (2010),1.0,6.7,chemicals.safety (NFPA/IEC/Serat),False
-108-88-3,toluene,4.0,IEC 60079-20-1 (2010),1.0,7.8,chemicals.safety (NFPA/IEC/Serat),False
-108-94-1,cyclohexanone,43.0,IEC 60079-20-1 (2010),1.3,9.4,chemicals.safety (NFPA/IEC/Serat),False
-110-19-0,isobutyl acetate,18.0,NFPA 497 (2008),2.4,10.5,chemicals.safety (NFPA/IEC/Serat),False
-110-43-0,2-heptanone,39.0,IEC 60079-20-1 (2010),1.1,7.9,chemicals.safety (NFPA/IEC/Serat),False
-110-54-3,hexane,-22.0,IEC 60079-20-1 (2010),1.0,8.9,chemicals.safety (NFPA/IEC/Serat),False
-110-82-7,cyclohexane,-17.0,IEC 60079-20-1 (2010),1.0,8.0,chemicals.safety (NFPA/IEC/Serat),False
-111-15-9,2-ethoxyethyl acetate,51.0,IEC 60079-20-1 (2010),1.2,12.7,chemicals.safety (NFPA/IEC/Serat),False
-111-65-9,octane,13.0,IEC 60079-20-1 (2010),0.8,6.5,chemicals.safety (NFPA/IEC/Serat),False
-111-76-2,2-butoxyethanol,61.0,IEC 60079-20-1 (2010),1.1,12.7,chemicals.safety (NFPA/IEC/Serat),False
-111-84-2,nonane,30.0,IEC 60079-20-1 (2010),0.7,5.6,chemicals.safety (NFPA/IEC/Serat),False
-1119-40-0,dimethyl glutarate,110.0,TCI G0185 SDS,1.407,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-112-07-2,2-butoxyethyl acetate,71.0,IEC 60079-20-1 (2010),0.9,8.9,chemicals.safety (NFPA/IEC/Serat),False
-112-15-2,2-(2-ethoxyethoxy)ethyl acetate,95.0,Serat DIPPR (2017),1.132,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-112-34-5,2-(2-butoxyethoxy)ethanol,100.0,IEC 60079-20-1 (2010),0.85,24.6,chemicals.safety (NFPA/IEC/Serat),False
-112-40-3,dodecane,74.0,WIKIDATA,0.618,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-1120-21-4,undecane,65.9,Serat DIPPR (2017),0.671,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-123-42-2,diacetone alcohol,58.0,IEC 60079-20-1 (2010),1.8,6.9,chemicals.safety (NFPA/IEC/Serat),False
-123-86-4,butyl acetate,22.0,IEC 60079-20-1 (2010),1.2,8.5,chemicals.safety (NFPA/IEC/Serat),False
-124-18-5,decane,46.0,IEC 60079-20-1 (2010),0.7,5.6,chemicals.safety (NFPA/IEC/Serat),False
-141-78-6,ethyl acetate,-4.0,IEC 60079-20-1 (2010),2.0,12.8,chemicals.safety (NFPA/IEC/Serat),False
-142-82-5,heptane,-7.0,IEC 60079-20-1 (2010),0.85,6.7,chemicals.safety (NFPA/IEC/Serat),False
-2110-78-3,methyl 2-hydroxyisobutyrate,45.0,TCI H0256 SDS,1.861,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-526-73-8,"1,2,3-trimethylbenzene",51.0,IEC 60079-20-1 (2010),0.8,7.0,chemicals.safety (NFPA/IEC/Serat),False
-527-53-7,isodurene,54.0,ESTIMATE: 테트라메틸벤젠류 유추,0.843,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-540-88-5,tert-butyl acetate,1.0,IEC 60079-20-1 (2010),1.3,7.3,chemicals.safety (NFPA/IEC/Serat),False
-589-34-4,3-methylhexane,-1.0,Wikipedia 3-methylhexane,1.031,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-591-76-4,2-methylhexane,-10.0,Serat DIPPR (2017),1.031,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-611-14-3,2-ethyltoluene,43.0,Serat DIPPR (2017),0.946,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-616-38-6,dimethyl carbonate,18.0,ICSC 1080 (open cup 18°C; closed cup 17°C 이하로 보고되나 개방식 값 사용),4.2,12.9,ICSC 1080,False
-620-14-4,3-ethyltoluene,38.0,Serat DIPPR (2017),0.946,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-622-96-8,4-ethyltoluene,39.0,Serat DIPPR (2017),0.946,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-627-93-0,dimethyl adipate,107.0,MIDSIS-TROCS dimethyl adipate,1.19,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-629-50-5,tridecane,90.0,Serat DIPPR (2017),0.572,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-64-17-5,ethanol,12.0,IEC 60079-20-1 (2010),3.1,19.0,chemicals.safety (NFPA/IEC/Serat),False
-67-56-1,methanol,9.0,IEC 60079-20-1 (2010),6.0,36.0,chemicals.safety (NFPA/IEC/Serat),False
-67-63-0,isopropanol,12.0,IEC 60079-20-1 (2010),2.0,12.7,chemicals.safety (NFPA/IEC/Serat),False
-67-64-1,acetone,-20.0,IEC 60079-20-1 (2010),2.5,14.3,chemicals.safety (NFPA/IEC/Serat),False
-71-36-3,1-butanol,35.0,IEC 60079-20-1 (2010),1.4,12.0,chemicals.safety (NFPA/IEC/Serat),False
-763-69-9,ethyl 3-ethoxypropionate,55.7,Serat DIPPR (2017),1.255,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-78-83-1,2-methyl-1-propanol,28.0,IEC 60079-20-1 (2010),1.4,11.0,chemicals.safety (NFPA/IEC/Serat),False
-78-93-3,2-butanone,-10.0,IEC 60079-20-1 (2010),1.5,13.4,chemicals.safety (NFPA/IEC/Serat),False
-80-62-6,methyl methacrylate,10.0,IEC 60079-20-1 (2010),1.7,12.5,chemicals.safety (NFPA/IEC/Serat),False
-90-12-0,1-methylnaphthalene,94.0,Serat DIPPR (2017),0.843,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-91-20-3,naphthalene,77.0,IEC 60079-20-1 (2010),0.6,5.9,chemicals.safety (NFPA/IEC/Serat),False
-95-47-6,o-xylene,30.0,IEC 60079-20-1 (2010),1.0,7.6,chemicals.safety (NFPA/IEC/Serat),False
-95-63-6,"1,2,4-trimethylbenzene",44.5,Serat DIPPR (2017),0.9,6.4,chemicals.safety (NFPA/IEC/Serat),False
-97-64-3,ethyl lactate,57.9,Serat DIPPR (2017),1.861,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-98-56-6,4-chlorobenzotrifluoride,41.5,Serat DIPPR (2017),1.603,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True
-98-82-8,cumene,31.0,IEC 60079-20-1 (2010),0.8,6.5,chemicals.safety (NFPA/IEC/Serat),False
+﻿CAS,name,FP_C,FP_source,LFL_pct,UFL_pct,LFL_source,estimated,FP_grade
+100-41-4,ethylbenzene,15.0,IEC 60079-20-1 (2010),0.8,7.8,chemicals.safety (NFPA/IEC/Serat),False,A
+103-65-1,propylbenzene,39.0,Serat DIPPR (2017),0.946,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+104-51-8,butylbenzene,58.0,"NITE-CHRIP (GESTIS cited), closed cup",0.843,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+106-42-3,p-xylene,25.0,IEC 60079-20-1 (2010),0.9,7.6,chemicals.safety (NFPA/IEC/Serat),False,A
+106-65-0,dimethyl succinate,94.0,"GESTIS (DGUV) 492698, closed cup",1.0,8.5,GESTIS (DGUV) 492698,False,A
+107-83-5,2-Methylpentane,-7.0,"GESTIS (DGUV) 037070, closed cup, 보고값 < -7°C (상한으로 사용)",1.2,,GESTIS (DGUV) 037070,False,A
+107-98-2,1-methoxy-2-propanol,36.1,OSHA Chemical Data 72 (97°F),1.6,13.8,OSHA Chemical Data 72,False,A
+108-08-7,"2,4-dimethylpentane",-20.0,"GESTIS (DGUV) 496176, closed cup, 보고값 < -20°C (상한으로 사용)",0.9,6.9,GESTIS (DGUV) 496176,False,A
+108-10-1,4-methyl-2-pentanone,16.0,IEC 60079-20-1 (2010),1.2,8.0,chemicals.safety (NFPA/IEC/Serat),False,A
+108-38-3,m-xylene,25.0,IEC 60079-20-1 (2010),1.0,7.0,chemicals.safety (NFPA/IEC/Serat),False,A
+108-65-6,1-methoxy-2-propyl acetate,42.9,Serat DIPPR (2017),1.499,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+108-67-8,mesitylene,44.0,IEC 60079-20-1 (2010),0.8,7.3,chemicals.safety (NFPA/IEC/Serat),False,A
+108-83-8,"2,6-dimethyl-4-heptanone",60.0,NFPA 497 (2008),0.8,7.1,chemicals.safety (NFPA/IEC/Serat),False,A
+108-87-2,methylcyclohexane,-4.0,IEC 60079-20-1 (2010),1.0,6.7,chemicals.safety (NFPA/IEC/Serat),False,A
+108-88-3,toluene,4.0,IEC 60079-20-1 (2010),1.0,7.8,chemicals.safety (NFPA/IEC/Serat),False,A
+108-94-1,cyclohexanone,43.0,IEC 60079-20-1 (2010),1.3,9.4,chemicals.safety (NFPA/IEC/Serat),False,A
+110-19-0,isobutyl acetate,18.0,NFPA 497 (2008),2.4,10.5,chemicals.safety (NFPA/IEC/Serat),False,A
+110-43-0,2-heptanone,39.0,IEC 60079-20-1 (2010),1.1,7.9,chemicals.safety (NFPA/IEC/Serat),False,A
+110-54-3,hexane,-22.0,IEC 60079-20-1 (2010),1.0,8.9,chemicals.safety (NFPA/IEC/Serat),False,A
+110-82-7,cyclohexane,-17.0,IEC 60079-20-1 (2010),1.0,8.0,chemicals.safety (NFPA/IEC/Serat),False,A
+111-15-9,2-ethoxyethyl acetate,51.0,IEC 60079-20-1 (2010),1.2,12.7,chemicals.safety (NFPA/IEC/Serat),False,A
+111-65-9,octane,13.0,IEC 60079-20-1 (2010),0.8,6.5,chemicals.safety (NFPA/IEC/Serat),False,A
+111-76-2,2-butoxyethanol,61.0,IEC 60079-20-1 (2010),1.1,12.7,chemicals.safety (NFPA/IEC/Serat),False,A
+111-84-2,nonane,30.0,IEC 60079-20-1 (2010),0.7,5.6,chemicals.safety (NFPA/IEC/Serat),False,A
+1119-40-0,dimethyl glutarate,97.0,"GESTIS (DGUV) 530305, closed cup",1.407,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+112-07-2,2-butoxyethyl acetate,71.0,IEC 60079-20-1 (2010),0.9,8.9,chemicals.safety (NFPA/IEC/Serat),False,A
+112-15-2,2-(2-ethoxyethoxy)ethyl acetate,95.0,Serat DIPPR (2017),1.132,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+112-34-5,2-(2-butoxyethoxy)ethanol,100.0,IEC 60079-20-1 (2010),0.85,24.6,chemicals.safety (NFPA/IEC/Serat),False,A
+112-40-3,dodecane,80.0,"GESTIS (DGUV) 013560, closed cup",0.6,,GESTIS (DGUV) 013560,False,A
+1120-21-4,undecane,65.9,Serat DIPPR (2017),0.671,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+123-42-2,diacetone alcohol,58.0,IEC 60079-20-1 (2010),1.8,6.9,chemicals.safety (NFPA/IEC/Serat),False,A
+123-86-4,butyl acetate,22.0,IEC 60079-20-1 (2010),1.2,8.5,chemicals.safety (NFPA/IEC/Serat),False,A
+124-18-5,decane,46.0,IEC 60079-20-1 (2010),0.7,5.6,chemicals.safety (NFPA/IEC/Serat),False,A
+141-78-6,ethyl acetate,-4.0,IEC 60079-20-1 (2010),2.0,12.8,chemicals.safety (NFPA/IEC/Serat),False,A
+142-82-5,heptane,-7.0,IEC 60079-20-1 (2010),0.85,6.7,chemicals.safety (NFPA/IEC/Serat),False,A
+2110-78-3,methyl 2-hydroxyisobutyrate,45.0,TCI H0256 SDS,1.861,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,B
+526-73-8,"1,2,3-trimethylbenzene",51.0,IEC 60079-20-1 (2010),0.8,7.0,chemicals.safety (NFPA/IEC/Serat),False,A
+527-53-7,isodurene,63.0,"GESTIS (DGUV) 570009 (1,2,3,5-tetramethylbenzene), closed cup",0.843,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+540-88-5,tert-butyl acetate,1.0,IEC 60079-20-1 (2010),1.3,7.3,chemicals.safety (NFPA/IEC/Serat),False,A
+589-34-4,3-methylhexane,-11.0,"GESTIS (DGUV) 490240, closed cup, ca. -11°C",1.0,7.0,GESTIS (DGUV) 490240,False,A
+591-76-4,2-methylhexane,-10.0,Serat DIPPR (2017),1.031,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+611-14-3,2-ethyltoluene,43.0,Serat DIPPR (2017),0.946,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+616-38-6,dimethyl carbonate,18.0,ICSC 1080 (open cup 18°C; closed cup 17°C 이하로 보고되나 개방식 값 사용),4.2,12.9,ICSC 1080,False,A
+620-14-4,3-ethyltoluene,38.0,Serat DIPPR (2017),0.946,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+622-96-8,4-ethyltoluene,39.0,Serat DIPPR (2017),0.946,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+627-93-0,dimethyl adipate,107.0,"GESTIS (DGUV) 032130, closed cup",0.8,8.1,GESTIS (DGUV) 032130,False,A
+629-50-5,tridecane,90.0,Serat DIPPR (2017),0.572,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+64-17-5,ethanol,12.0,IEC 60079-20-1 (2010),3.1,19.0,chemicals.safety (NFPA/IEC/Serat),False,A
+67-56-1,methanol,9.0,IEC 60079-20-1 (2010),6.0,36.0,chemicals.safety (NFPA/IEC/Serat),False,A
+67-63-0,isopropanol,12.0,IEC 60079-20-1 (2010),2.0,12.7,chemicals.safety (NFPA/IEC/Serat),False,A
+67-64-1,acetone,-20.0,IEC 60079-20-1 (2010),2.5,14.3,chemicals.safety (NFPA/IEC/Serat),False,A
+71-36-3,1-butanol,35.0,IEC 60079-20-1 (2010),1.4,12.0,chemicals.safety (NFPA/IEC/Serat),False,A
+763-69-9,ethyl 3-ethoxypropionate,55.7,Serat DIPPR (2017),1.255,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+78-83-1,2-methyl-1-propanol,28.0,IEC 60079-20-1 (2010),1.4,11.0,chemicals.safety (NFPA/IEC/Serat),False,A
+78-93-3,2-butanone,-10.0,IEC 60079-20-1 (2010),1.5,13.4,chemicals.safety (NFPA/IEC/Serat),False,A
+80-62-6,methyl methacrylate,10.0,IEC 60079-20-1 (2010),1.7,12.5,chemicals.safety (NFPA/IEC/Serat),False,A
+90-12-0,1-methylnaphthalene,94.0,Serat DIPPR (2017),0.843,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+91-20-3,naphthalene,77.0,IEC 60079-20-1 (2010),0.6,5.9,chemicals.safety (NFPA/IEC/Serat),False,A
+95-47-6,o-xylene,30.0,IEC 60079-20-1 (2010),1.0,7.6,chemicals.safety (NFPA/IEC/Serat),False,A
+95-63-6,"1,2,4-trimethylbenzene",44.5,Serat DIPPR (2017),0.9,6.4,chemicals.safety (NFPA/IEC/Serat),False,A
+97-64-3,ethyl lactate,57.9,Serat DIPPR (2017),1.861,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+98-56-6,4-chlorobenzotrifluoride,41.5,Serat DIPPR (2017),1.603,,ESTIMATE: Crowl-Louvar LFL=0.55*Cst (화학양론),True,A
+98-82-8,cumene,31.0,IEC 60079-20-1 (2010),0.8,6.5,chemicals.safety (NFPA/IEC/Serat),False,A
