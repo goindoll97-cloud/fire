@@ -1,6 +1,6 @@
 # 사업주의 화재 이익과 근로자의 흡입 보호는 같은 방향인가
 
-> **2026-10-24 용도 분류 감사 완료:** MSDS 270건을 문서키·원본 SHA256 기준으로 대조하여 **5건 분류 보완, 105건 탐색비교 유보, 165건 조건부 탐색비교**로 분리했습니다. 용도검수 결과와 판단 근거는 [USE_CLASSIFICATION_AUDIT.md](research/korean_thinners_271/v2/USE_CLASSIFICATION_AUDIT.md), 전체 270행은 [use_classification_audit_270.csv](research/korean_thinners_271/v2/data/use_classification_audit_270.csv)에 있습니다. **아래의 81%·75종 등 수치는 감사 이전 결과이며 변경된 비교군 기준 재실행 전에는 최종 논문 수치가 아닙니다.**
+> **2026-10-24 용도 분류 감사 완료:** MSDS 270건을 문서키·원본 SHA256 기준으로 대조하여 **5건 분류 보완, 108건 탐색비교 유보, 162건 조건부 탐색비교**로 분리했습니다. 용도검수 결과와 판단 근거는 [USE_CLASSIFICATION_AUDIT.md](research/korean_thinners_271/v2/USE_CLASSIFICATION_AUDIT.md), 전체 270행은 [use_classification_audit_270.csv](research/korean_thinners_271/v2/data/use_classification_audit_270.csv)에 있습니다. **아래의 81%·75종 등 수치는 감사 이전 결과이며 변경된 비교군 기준 재실행 전에는 최종 논문 수치가 아닙니다.**
 
 ### 국내 시판 신나 270종의 MSDS 조성 기반 화재·흡입 동시 평가 (AI 활동도계수 HANNA)
 
@@ -29,7 +29,7 @@
 
 ## 어디부터 읽을까
 
-- **[용도 분류 감사](research/korean_thinners_271/v2/USE_CLASSIFICATION_AUDIT.md)** — 270건 제1항 대조, 분류 보완·충돌·105건 비교 유보, 감사 기준 재실행 방법.
+- **[용도 분류 감사](research/korean_thinners_271/v2/USE_CLASSIFICATION_AUDIT.md)** — 270건 제1항 대조, 분류 보완·충돌·108건 비교 유보, 감사 기준 재실행 방법.
 - **[노벨티 및 검증 설계](research/korean_thinners_271/v2/MANUSCRIPT_NOVELTY_AND_VALIDATION.md)** — 선행연구 차별성, 가설, 심사 대응과 실측 검증 계획.
 | 문서 | 내용 |
 |---|---|
