@@ -63,6 +63,8 @@ Windows에서는 `--hanna-home D:\fire2\HANNA`처럼 지정한다.
 5. 법제처 2026-10-24 현행 행정규칙 목록상 노출기준은 고용노동부고시 제2020-48호(2020.1.16 시행)이다. 저장소의 고시 JSON도 2020년판이지만 **별표 CAS별 OEL 매핑과 UVCB·이성체 예외는 행 단위 확인을 완료한 것이 아니다**.
 6. 같은 이름·같은 조성 범위의 문서는 `조성지문`으로 묶어 하나만 순위 비교에 쓴다.
 
+**S5 추가:** `src/analyze_coverage_surrogate_sensitivity.py`는 Tier B 커버리지 기준(90%, 95%, 99%)과 UVCB 대리성분 의존성에 따른 결과 변화를 비교합니다. UVCB 미사용 제품만 남기면 동일용도 비교쌍이 4개이므로 100% 방향 일치를 일반화하지 않습니다.
+
 ## 용도검증을 반영한 논문용 분석
 
 본래 `제품271건_용도재분류.csv`는 출처를 보존하고, `data/use_classification_audit_270.csv`를 `analyze_v2.load()`에서 문서키별 1:1 병합합니다. 감사표 누락, ID·원본 SHA256 불일치 시 분석을 중단합니다. `탐색비교허용=0`인 제품은 비교군 통계·탐색 후보 선정에서 제외합니다. `현장대체검증=0`은 해당 제품이 실제 대체 가능함을 승인하지 않았다는 뜻입니다.
@@ -78,6 +80,7 @@ PYTHONPATH=src python src/analyze_pooled.py
 PYTHONPATH=src python src/analyze_nonexperimental_validation.py
 PYTHONPATH=src python src/audit_revision_sensitivity.py
 PYTHONPATH=src python src/audit_oel_assignment.py
+PYTHONPATH=src python src/analyze_coverage_surrogate_sensitivity.py
 ```
 
 `results/core/`의 P1/P2/P3 및 S1–S4는 용도감사 기준과 비실험 민감도 분석 결과를 반영해 갱신하였습니다. 계산 스크립트를 변경한 경우에는 아래 명령으로 다시 재실행해야 합니다. 원본 MSDS 제1항의 권고용도 추출 필드가 비어 있는 경우, 실제 PDF/제조사 TDS 검수 없이 새로운 확정 용도를 생성하지 않습니다.
