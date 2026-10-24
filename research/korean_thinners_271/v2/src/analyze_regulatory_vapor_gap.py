@@ -219,6 +219,34 @@ def main():
         common_models[model + '_over_TWA_10x'] = common_models[model].ge(10)
     common_models.to_csv(OUT / 'R4_common_case_model_sensitivity.csv',
                          encoding='utf-8-sig')
+    # Critical: the 38 apparent solvent-vapor 'numerical crossings' must be
+    # tested against conventional baselines on identical cases, since an
+    # activity-coefficient neural model can deviate for complex mixtures.
+    vap = df.pivot_table(index=mod_keys, columns='기상모델',
+                         values='기상용제내_질량분율_pct', aggfunc='first')
+    eligible_phase = primary[primary['해당규정_함량비교'].eq('below_rule_threshold') &
+                             primary['기상성분추적신뢰'].eq('central_model_value')]
+    vap = vap.join(eligible_phase.set_index(mod_keys)[
+        ['규정_액상함량기준_mass_pct']], how='inner')
+    vap = vap.dropna(subset=['HANNA', 'Raoult', 'UNIFAC'])
+    for model in ('HANNA', 'Raoult', 'UNIFAC'):
+        vap[model + '_same_numeric_boundary'] = (
+            vap[model] >= vap['규정_액상함량기준_mass_pct'])
+    vap.to_csv(OUT / 'R8_vapor_phase_cross_model_sensitivity.csv',
+               encoding='utf-8-sig')
+    phase_robustness = {
+        'common_three_model_eligible_cases': int(len(vap)),
+        'HANNA_cross': int(vap['HANNA_same_numeric_boundary'].sum()),
+        'Raoult_cross': int(vap['Raoult_same_numeric_boundary'].sum()),
+        'UNIFAC_cross': int(vap['UNIFAC_same_numeric_boundary'].sum()),
+        'all_three_cross': int(vap[[
+            'HANNA_same_numeric_boundary', 'Raoult_same_numeric_boundary',
+            'UNIFAC_same_numeric_boundary']].all(axis=1).sum()),
+        'any_three_cross': int(vap[[
+            'HANNA_same_numeric_boundary', 'Raoult_same_numeric_boundary',
+            'UNIFAC_same_numeric_boundary']].any(axis=1).sum()),
+        'legal_note': 'All are solvent-vapor-only mass fractions, not legal mixture classification.',
+    }
     model_robustness = {
         'eligible_common_three_model_cases': int(len(common_models)),
         'all_three_over_10x': int(common_models[[
@@ -279,6 +307,7 @@ def main():
         'vapor_only_numeric_boundary_crossings_by_CAS': vgroups[
             ['CAS_원문', '규정범주',
              '기상_가상질량분율경계교차_법적비해당']].to_dict(orient='records'),
+        'phase_mass_fraction_model_crosscheck_not_legal': phase_robustness,
         'model_crosscheck': model_robustness,
         'with_UVCB_origin_overlap_cases': int(
             primary['기상성분추적신뢰'].eq('surrogate_origin_overlap').sum()),
