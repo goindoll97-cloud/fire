@@ -32,6 +32,9 @@
 
 ## 어디부터 읽을까
 
+- **[법령 함량 기준과 포화증기 잠재지수 교차분석](research/korean_thinners_271/v2/REGULATORY_VAPOR_GAP_20261024.md)** — 270개 MSDS 중 공식 CAS 기준을 확인한 5개 물질을 우선 검토; 166개 문서에서 특정 성분의 포화기상 농도/TWA 지수 ≥10, 38개 문서에서 원액 기준 수치 대비 기상 용제 분율의 가상 교차(법적 기준 초과 아님).
+
+
 - **[비실험 연구 보완 결과](research/korean_thinners_271/v2/RESULTS_NONEXPERIMENTAL_20261024.md)** — 의존적 제품쌍 CI(67.2~88.1%), Pareto 정정, 3모델·TWA·최신 MSDS 선택 민감도.
 - **[비실험 논문 설계 및 한계](research/korean_thinners_271/v2/NONEXPERIMENTAL_MANUSCRIPT_READINESS.md)** — 실험 없이 가능한 검증과 해석 한계.
 
