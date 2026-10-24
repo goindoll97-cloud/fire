@@ -1,10 +1,13 @@
 {
   "documents_total": 270,
   "documents_with_any_verified_CAS_rule": 236,
-  "cas_rule_rows_HANNA": 495,
+  "cas_rule_rows_HANNA": 509,
   "unique_CAS_reviewed": [
+    "108-87-2",
     "108-88-3",
     "108-94-1",
+    "110-82-7",
+    "111-15-9",
     "1330-20-7",
     "141-78-6",
     "67-56-1",
@@ -12,22 +15,27 @@
     "98-82-8"
   ],
   "source_CAS_total": 54,
-  "CAS_with_reviewed_rules": 7,
-  "cases_below_clause_and_single_TierA_index_ge_10_traceable": 285,
-  "documents_with_at_least_one_case_ge_10": 168,
-  "cases_below_clause_and_single_TierA_index_ge_100_traceable": 122,
-  "documents_with_at_least_one_case_ge_100": 111,
+  "CAS_with_reviewed_rules": 10,
+  "cases_below_clause_and_single_TierA_index_ge_10_traceable": 288,
+  "documents_with_at_least_one_case_ge_10": 170,
+  "cases_below_clause_and_single_TierA_index_ge_100_traceable": 123,
+  "documents_with_at_least_one_case_ge_100": 112,
   "rule_status_distribution": {
-    "below_rule_threshold": 387,
-    "at_or_above_rule_threshold": 73,
+    "below_rule_threshold": 400,
+    "at_or_above_rule_threshold": 74,
     "straddles_threshold": 35
   },
   "composition_unique_in_total": 249,
-  "documents_flagged_unique_composition": 157,
-  "vapor_only_crossing_documents_unique_not_legal": 38,
-  "vapor_only_crossing_compositions_unique_not_legal": 34,
-  "vapor_only_mass_pct_hypothetical_crossing_count_not_legal": 38,
+  "documents_flagged_unique_composition": 159,
+  "vapor_only_crossing_documents_unique_not_legal": 39,
+  "vapor_only_crossing_compositions_unique_not_legal": 35,
+  "vapor_only_mass_pct_hypothetical_crossing_count_not_legal": 39,
   "vapor_only_numeric_boundary_crossings_by_CAS": [
+    {
+      "CAS_원문": "108-87-2",
+      "규정범주": "ecological",
+      "기상_가상질량분율경계교차_법적비해당": 0
+    },
     {
       "CAS_원문": "108-88-3",
       "규정범주": "accident_preparedness",
@@ -36,6 +44,16 @@
     {
       "CAS_원문": "108-94-1",
       "규정범주": "human_acute",
+      "기상_가상질량분율경계교차_법적비해당": 0
+    },
+    {
+      "CAS_원문": "110-82-7",
+      "규정범주": "ecological",
+      "기상_가상질량분율경계교차_법적비해당": 1
+    },
+    {
+      "CAS_원문": "111-15-9",
+      "규정범주": "human_chronic",
       "기상_가상질량분율경계교차_법적비해당": 0
     },
     {
@@ -70,20 +88,20 @@
     }
   ],
   "phase_mass_fraction_model_crosscheck_not_legal": {
-    "common_three_model_eligible_cases": 249,
-    "HANNA_cross": 31,
+    "common_three_model_eligible_cases": 254,
+    "HANNA_cross": 32,
     "Raoult_cross": 29,
-    "UNIFAC_cross": 31,
+    "UNIFAC_cross": 32,
     "all_three_cross": 28,
-    "any_three_cross": 32,
+    "any_three_cross": 33,
     "legal_note": "All are solvent-vapor-only mass fractions, not legal mixture classification."
   },
   "model_crosscheck": {
-    "eligible_common_three_model_cases": 249,
-    "all_three_over_10x": 233,
-    "any_three_models_over_10x": 238
+    "eligible_common_three_model_cases": 254,
+    "all_three_over_10x": 234,
+    "any_three_models_over_10x": 241
   },
-  "with_UVCB_origin_overlap_cases": 136,
+  "with_UVCB_origin_overlap_cases": 144,
   "note_1": "Excluded below-threshold flag does not determine other-acts legal applicability.",
   "note_2": "The numerator is saturated equilibrium ppm/OEL, not workplace exposure or TWA exceedance.",
   "note_3": "This is a SCREENING of selected verified CAS rules, not a complete 2026 designation annex.",
