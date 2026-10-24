@@ -167,6 +167,35 @@ def main():
     grouped.to_csv(OUT / 'R2_regulatory_rule_summary.csv', index=False,
                    encoding='utf-8-sig')
 
+    # Scientific phase-enrichment test: both sides are mass percent, but the
+    # *liquid product* legal cutoff MUST NOT be applied to a *solvent-only vapor*.
+    # This is a hypothetical numeric boundary crossing, not legal exceedance.
+    df['기상질량분율_가상경계교차_법적해당아님'] = (
+        df['해당규정_함량비교'].eq('below_rule_threshold') &
+        df['기상용제내_질량분율_pct'].ge(df['규정_액상함량기준_mass_pct']) &
+        df['기상성분추적신뢰'].eq('central_model_value'))
+    df['액상대비기상_몰분율농축배율'] = np.where(
+        df['액상분자몰분율_x_중앙조성'] > 0,
+        df['기상용제내_몰분율_y'] / df['액상분자몰분율_x_중앙조성'],
+        np.nan)
+    # Initial R1 includes source-trace audit, now with phase-specific flags.
+    df.to_csv(OUT / 'R1_constituent_rule_vapor_crosswalk.csv',
+              index=False, encoding='utf-8-sig')
+    vapor_main = df[df['기상모델'].eq('HANNA')].copy()
+    vapor_main['가상경계교차_예비'] = vapor_main['기상질량분율_가상경계교차_법적해당아님']
+    vgroups = vapor_main.groupby(
+        ['CAS_원문', '물질명', '규정범주',
+         '규정_액상함량기준_mass_pct'], dropna=False).agg(
+            액상기준미만문서수=('해당규정_함량비교',
+                             lambda s: int(s.eq('below_rule_threshold').sum())),
+            기상_가상질량분율경계교차_법적비해당=('가상경계교차_예비', 'sum'),
+            기상성분추적불확실_문서수=('기상성분추적신뢰',
+                                  lambda s: int(s.eq('surrogate_origin_overlap').sum())),
+            액상기상_몰분율농축배율_중앙값=('액상대비기상_몰분율농축배율', 'median')
+        ).reset_index()
+    vgroups.to_csv(OUT / 'R6_vapor_only_phase_enrichment.csv',
+                   index=False, encoding='utf-8-sig')
+
     # Three activity-coefficient baselines are compared on the SAME source
     # CAS / document / regulation clause, not on different model populations.
     mod_keys = ['문서키', 'CAS_원문', '규정범주', '고유번호']
@@ -232,6 +261,11 @@ def main():
         'documents_flagged_unique_composition': int(
             bydoc.loc[bydoc['일부규정_함량미만포화10이상_존재'],
                       '조성지문'].nunique()),
+        'vapor_only_mass_pct_hypothetical_crossing_count_not_legal':
+            int(vapor_main['가상경계교차_예비'].sum()),
+        'vapor_only_numeric_boundary_crossings_by_CAS': vgroups[
+            ['CAS_원문', '규정범주',
+             '기상_가상질량분율경계교차_법적비해당']].to_dict(orient='records'),
         'model_crosscheck': model_robustness,
         'with_UVCB_origin_overlap_cases': int(
             primary['기상성분추적신뢰'].eq('surrogate_origin_overlap').sum()),
@@ -243,6 +277,8 @@ def main():
     }
     (OUT / 'headline_regulatory_vapor_gap.json').write_text(
         json.dumps(counts, ensure_ascii=False, indent=2), encoding='utf-8')
+    print('REGULATORY_VAPOR_ENRICHMENT ' +
+          json.dumps(vgroups.to_dict(orient='records'), ensure_ascii=False))
     print('REGULATORY_VAPOR_RULE_GROUPS ' +
           json.dumps(grouped.to_dict(orient='records'), ensure_ascii=False))
     print('REGULATORY_VAPOR_EXAMPLES ' +
