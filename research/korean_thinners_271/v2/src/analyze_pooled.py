@@ -30,10 +30,10 @@ SEED = 20261024
 NOT_THINNER = {'검색 오탐·비신나'}
 
 
-def prepare(model='HANNA'):
+def prepare(model='HANNA', flam_file='flammability_scenarios_270.csv.gz'):
     s, prod, sp = a2.load()
     summ = a2.summarise(s)
-    fs = af.fire_summary(pd.read_csv(RES / 'flammability_scenarios_270.csv.gz'))
+    fs = af.fire_summary(pd.read_csv(RES / flam_file))
     msds = pd.read_csv(V2 / 'data' / 'msds_flash.csv')[['기존제품ID', '인화점_C']].rename(columns={'인화점_C': 'FP_MSDS'})
     prod = ac.refined_groups(prod, sp).merge(msds, on='기존제품ID', how='left')
     b = ac.model_table(summ, fs, prod, model)
@@ -109,15 +109,17 @@ def pairs_table(bg):
     return pd.DataFrame(rows)
 
 
-def p2(bm, rng):
+def p2(bm, rng, save=True):
     bg = bm[bm['탐색비교허용'] & bm['순위가능']].dropna(subset=['Tfp_Liaw_C'])
     bg = bg[bg.groupby('비교군')['문서키'].transform('size') >= 2]
     pairs = pairs_table(bg)
-    pairs.to_csv(OUT / 'P2_pairs.csv', index=False, encoding='utf-8-sig')
+    if save:
+        pairs.to_csv(OUT / 'P2_pairs.csv', index=False, encoding='utf-8-sig')
     share = lambda d: float(pairs_table(d)['일치(예측)'].mean()) if len(d) > 1 else np.nan
     by_g = pairs.groupby('비교군').agg(쌍수=('일치(예측)', 'size'), 일치비율=('일치(예측)', 'mean')).reset_index()
     by_g['일치비율'] = by_g['일치비율'].round(3)
-    by_g.to_csv(OUT / 'P2_pairwise_by_group.csv', index=False, encoding='utf-8-sig')
+    if save:
+        by_g.to_csv(OUT / 'P2_pairwise_by_group.csv', index=False, encoding='utf-8-sig')
     # 제품 단위 부트스트랩 (같은 군 안에서만 쌍을 만든다)
     vals = []
     ids = bg.index.to_numpy()

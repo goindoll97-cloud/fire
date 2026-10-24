@@ -49,6 +49,15 @@ def crowl_louvar_pct(a):
     return 100 * 0.55 / (1 + 4.76 * n_o2)
 
 
+def source_grade(fp_src, est):
+    """A: 표준·공공 데이터(IEC, NFPA, DIPPR/Serat, ICSC, OSHA, GESTIS 인용 NITE). B: 공급사 SDS·위키 등 2차 출처. C: 추정."""
+    if est or fp_src.startswith('ESTIMATE'):
+        return 'C'
+    if fp_src.startswith(('IEC', 'NFPA', 'Serat', 'ICSC', 'OSHA', 'NITE')):
+        return 'A'
+    return 'B'
+
+
 def main():
     out = []
     with (V2 / 'data' / 'pure_properties.csv').open(encoding='utf-8-sig') as f:
@@ -80,7 +89,7 @@ def main():
         out.append({'CAS': cas, 'name': r['name'], 'FP_C': '' if fp is None else round(fp, 1),
                     'FP_source': fp_src or '', 'LFL_pct': '' if lfl is None else round(lfl, 3),
                     'UFL_pct': '' if ufl is None else round(ufl, 2), 'LFL_source': lfl_src or '',
-                    'estimated': est})
+                    'estimated': est, 'FP_grade': source_grade(fp_src or '', fp_src is not None and fp_src.startswith('ESTIMATE'))})
     cols = list(out[0])
     with (V2 / 'data' / 'pure_flammability.csv').open('w', encoding='utf-8-sig', newline='') as f:
         w = csv.DictWriter(f, cols)
