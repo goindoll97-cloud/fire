@@ -1,27 +1,29 @@
 {
   "documents_total": 270,
-  "documents_with_any_verified_CAS_rule": 227,
-  "cas_rule_rows_HANNA": 432,
+  "documents_with_any_verified_CAS_rule": 236,
+  "cas_rule_rows_HANNA": 495,
   "unique_CAS_reviewed": [
     "108-88-3",
+    "108-94-1",
     "1330-20-7",
     "141-78-6",
     "67-56-1",
-    "78-93-3"
+    "78-93-3",
+    "98-82-8"
   ],
   "source_CAS_total": 54,
-  "CAS_with_reviewed_rules": 5,
-  "cases_below_clause_and_single_TierA_index_ge_10_traceable": 281,
-  "documents_with_at_least_one_case_ge_10": 166,
+  "CAS_with_reviewed_rules": 7,
+  "cases_below_clause_and_single_TierA_index_ge_10_traceable": 285,
+  "documents_with_at_least_one_case_ge_10": 168,
   "cases_below_clause_and_single_TierA_index_ge_100_traceable": 122,
   "documents_with_at_least_one_case_ge_100": 111,
   "rule_status_distribution": {
-    "below_rule_threshold": 383,
-    "straddles_threshold": 32,
-    "at_or_above_rule_threshold": 17
+    "below_rule_threshold": 387,
+    "at_or_above_rule_threshold": 73,
+    "straddles_threshold": 35
   },
   "composition_unique_in_total": 249,
-  "documents_flagged_unique_composition": 155,
+  "documents_flagged_unique_composition": 157,
   "vapor_only_crossing_documents_unique_not_legal": 38,
   "vapor_only_crossing_compositions_unique_not_legal": 34,
   "vapor_only_mass_pct_hypothetical_crossing_count_not_legal": 38,
@@ -30,6 +32,11 @@
       "CAS_원문": "108-88-3",
       "규정범주": "accident_preparedness",
       "기상_가상질량분율경계교차_법적비해당": 7
+    },
+    {
+      "CAS_원문": "108-94-1",
+      "규정범주": "human_acute",
+      "기상_가상질량분율경계교차_법적비해당": 0
     },
     {
       "CAS_원문": "1330-20-7",
@@ -55,10 +62,15 @@
       "CAS_원문": "78-93-3",
       "규정범주": "accident_preparedness",
       "기상_가상질량분율경계교차_법적비해당": 15
+    },
+    {
+      "CAS_원문": "98-82-8",
+      "규정범주": "human_chronic",
+      "기상_가상질량분율경계교차_법적비해당": 0
     }
   ],
   "phase_mass_fraction_model_crosscheck_not_legal": {
-    "common_three_model_eligible_cases": 245,
+    "common_three_model_eligible_cases": 249,
     "HANNA_cross": 31,
     "Raoult_cross": 29,
     "UNIFAC_cross": 31,
@@ -67,11 +79,11 @@
     "legal_note": "All are solvent-vapor-only mass fractions, not legal mixture classification."
   },
   "model_crosscheck": {
-    "eligible_common_three_model_cases": 245,
-    "all_three_over_10x": 229,
-    "any_three_models_over_10x": 234
+    "eligible_common_three_model_cases": 249,
+    "all_three_over_10x": 233,
+    "any_three_models_over_10x": 238
   },
-  "with_UVCB_origin_overlap_cases": 87,
+  "with_UVCB_origin_overlap_cases": 136,
   "note_1": "Excluded below-threshold flag does not determine other-acts legal applicability.",
   "note_2": "The numerator is saturated equilibrium ppm/OEL, not workplace exposure or TWA exceedance.",
   "note_3": "This is a SCREENING of selected verified CAS rules, not a complete 2026 designation annex.",
