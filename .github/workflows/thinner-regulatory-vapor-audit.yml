@@ -6,6 +6,8 @@ on:
     paths:
       - 'research/korean_thinners_271/v2/src/analyze_regulatory_vapor_gap.py'
       - 'research/korean_thinners_271/v2/src/analyze_ventilated_scenarios.py'
+      - 'research/korean_thinners_271/v2/src/analyze_source_mass_budget.py'
+      - 'research/korean_thinners_271/v2/src/test_source_mass_budget.py'
       - 'research/korean_thinners_271/v2/src/audit_all_source_cas_scope.py'
       - 'research/korean_thinners_271/v2/src/test_ventilated_scenarios.py'
       - 'research/korean_thinners_271/v2/src/test_regulatory_vapor_gap.py'
@@ -33,6 +35,10 @@ jobs:
         run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/audit_all_source_cas_scope.py
       - name: Hypothetical 8h room-air dilution and 25C/35C sensitivity
         run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/analyze_ventilated_scenarios.py
+      - name: Check finite solvent inventory assumptions
+        run: PYTHONPATH=research/korean_thinners_271/v2/src python -m unittest discover -s research/korean_thinners_271/v2/src -p 'test_source_mass_budget.py' -v
+      - name: Constrain replenished source by illustrative finite 1kg and 5kg inventories
+        run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/analyze_source_mass_budget.py
       - name: Upload screened documents and cases
         uses: actions/upload-artifact@v4
         with:
