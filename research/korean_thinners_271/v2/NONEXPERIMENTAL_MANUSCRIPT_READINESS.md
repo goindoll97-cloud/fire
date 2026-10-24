@@ -24,6 +24,7 @@
 | S2 | `src/analyze_nonexperimental_validation.py`, `S2_models_oel_sensitivity.csv` | HANNA / Raoult / 수정 UNIFAC 3모델과 **공식 TWA만(Tier A)** / 출처 있는 보충 OEL 포함(Tier B)의 6조합 비교 |
 | S3 | `src/audit_revision_sensitivity.py`, `S3_document_version_audit.csv`, `S3_revision_sensitivity.csv` | 동일 제조사·동명 MSDS의 **최신 개정일 우선**과 기존 조성지문 대표선택의 민감도 대조; 배합 동등성 승인 아님 |
 | S4 | `src/audit_oel_assignment.py`, `S4_oel_cas_mapping_audit.csv` | 모델 화학종 63개 중 공식 CAS 직접 부여 36, 공식 이성체 범주 3, Tier B 외국값·유사물질 보충 15, 노출기준 공백 9. **내부 매핑 일치 검사**이며 별표 원본 재추출의 독립 검증이 아님 |
+| S5 | `src/analyze_coverage_surrogate_sensitivity.py`, `S5_coverage_uvcb_sensitivity.csv` | OEL 커버리지 90/95/99%와 UVCB 대리 성분 사용 여부를 제한해 교차 비교. UVCB를 제외하면 동일용도 쌍이 **4쌍에 불과해** 결과 일반화 불가, 대리 성분 의존성이 중요한 한계 |
 | 용도감사 | `USE_CLASSIFICATION_AUDIT.md`, `data/use_classification_audit_270.csv` | 270건 용도·용도충돌·제1항 누락 분리. 탐색적 비교 가능 문서 162건, 보류 108건. 실제 현장 대체 승인 0건 |
 
 P2의 기존 79.5%(117쌍)는 **관측된 기술통계**다. 이전 95% CI는 제품을 전체에서 복원추출한 결과여서,
