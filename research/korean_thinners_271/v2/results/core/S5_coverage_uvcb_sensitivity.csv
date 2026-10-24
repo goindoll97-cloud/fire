@@ -1,0 +1,6 @@
+﻿condition,OEL_coverage_min,surrogate_filter,pooled_n,pooled_spearman,same_use_products,same_use_groups,same_use_pairs,same_direction_share,interpretation
+baseline_TierB_90pct,0.9,all,195,-0.848,68,21,117,0.795,"restricted-set screening robustness only, not experimental validation"
+TierB_95pct,0.95,all,194,-0.848,67,21,114,0.789,"restricted-set screening robustness only, not experimental validation"
+TierB_99pct,0.99,all,188,-0.84,61,19,106,0.811,"restricted-set screening robustness only, not experimental validation"
+TierB_90pct_excluding_UVCB_surrogates,0.9,no UVCB surrogate,50,-0.773,8,4,4,1,"restricted-set screening robustness only, not experimental validation"
+TierB_90pct_UVCB_surrogate_subset,0.9,UVCB surrogate used,145,-0.848,53,16,87,0.828,"restricted-set screening robustness only, not experimental validation"
