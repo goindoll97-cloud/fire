@@ -1,0 +1,22 @@
+{
+  "NICS_annex_source_url": "https://nics.mcee.go.kr/common/userCmmnFileDown.do?fileId=9321&fileSeq=1",
+  "NICS_2026_5_issued": "2026-03-27",
+  "NICS_2026_5_effective": "2026-07-01",
+  "file_sha256": "a79fef57b5c935d5bd25b64d8b41d5eba0dcb4e44b473bd0892e9ba3e5cd7585",
+  "xlsx_size_bytes": 163742,
+  "sheets": 1,
+  "nonblank_excel_rows": 1455,
+  "source_CAS_total": 54,
+  "exact_CAS_matched": 6,
+  "matching_text_rows": 6,
+  "matched_CAS_list": [
+    "108-87-2",
+    "108-94-1",
+    "110-82-7",
+    "111-15-9",
+    "67-56-1",
+    "98-82-8"
+  ],
+  "must_not_infer_nonregulation_from_absence": true,
+  "legal_thresholds_independently_approved": 0
+}
