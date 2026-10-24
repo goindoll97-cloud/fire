@@ -28,6 +28,9 @@
 결과는 포화 상부공간의 **노출 잠재력**이지 실제 작업장 노출이 아닙니다. 예측 인화점은 아직 실측으로 검증하지 않았고, 현행 노출기준 고시로 재실행해야 하며, 위험물 구분 기준(21°C, 70°C)은 법제처 현행 조문으로 확인해야 합니다.
 
 ## 어디부터 읽을까
+
+- **[용도 분류 감사](research/korean_thinners_271/v2/USE_CLASSIFICATION_AUDIT.md)** — 270건 제1항 대조, 분류 보완·충돌·105건 비교 유보, 감사 기준 재실행 방법.
+- **[노벨티 및 검증 설계](research/korean_thinners_271/v2/MANUSCRIPT_NOVELTY_AND_VALIDATION.md)** — 선행연구 차별성, 가설, 심사 대응과 실측 검증 계획.
 | 문서 | 내용 |
 |---|---|
 | [CORE_PAPER.md](research/korean_thinners_271/v2/CORE_PAPER.md) | 본문 범위, 결과 표 C1~C4, 정직하게 써야 할 한계 |
