@@ -5,6 +5,9 @@ on:
       - main
     paths:
       - 'research/korean_thinners_271/v2/src/analyze_regulatory_vapor_gap.py'
+      - 'research/korean_thinners_271/v2/src/analyze_ventilated_scenarios.py'
+      - 'research/korean_thinners_271/v2/src/audit_all_source_cas_scope.py'
+      - 'research/korean_thinners_271/v2/src/test_ventilated_scenarios.py'
       - 'research/korean_thinners_271/v2/src/test_regulatory_vapor_gap.py'
       - 'research/korean_thinners_271/v2/data/verified_regulatory_thresholds_20261024.csv'
       - 'research/korean_thinners_271/v2/results/species_central_270.csv.gz'
@@ -24,6 +27,12 @@ jobs:
         run: PYTHONPATH=research/korean_thinners_271/v2/src python -m unittest discover -s research/korean_thinners_271/v2/src -p 'test_regulatory_vapor_gap.py' -v
       - name: Run selected-CAS mass-to-vapor crosswalk
         run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/analyze_regulatory_vapor_gap.py
+      - name: Verify room-air mass-balance equations
+        run: PYTHONPATH=research/korean_thinners_271/v2/src python -m unittest discover -s research/korean_thinners_271/v2/src -p 'test_ventilated_scenarios.py' -v
+      - name: Inventory all original MSDS CAS and incomplete law coverage
+        run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/audit_all_source_cas_scope.py
+      - name: Hypothetical 8h room-air dilution and 25C/35C sensitivity
+        run: PYTHONPATH=research/korean_thinners_271/v2/src python research/korean_thinners_271/v2/src/analyze_ventilated_scenarios.py
       - name: Upload screened documents and cases
         uses: actions/upload-artifact@v4
         with:
