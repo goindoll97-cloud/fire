@@ -22,6 +22,7 @@ python src/build_flammability.py    # 성분별 인화점·폭발하한 63종 (�
 python src/extract_msds_flash.py <MSDS PDF 폴더들>   # MSDS 제9항 인화점·폭발범위 -> data/msds_flash.csv (pdftotext 필요)
 python src/run_flammability.py --samples 100 --seed 20261024 --hanna-home <HANNA 경로>   # PYTHONPATH=src 필요
 python src/analyze_flammability.py  # RQ6–RQ8, results/rq/headline_flammability.json (결과 해석: PAPER_DIRECTION_fire_health.md)
+python src/analyze_pooled.py     # 본문 결과 P1(전체 방향성)·P2(같은 비교군 제품쌍)·P3(사업장용 목록), PYTHONPATH=src
 python src/analyze_core.py       # 본문(core) 표·그림: results/core/ (PYTHONPATH=src). 범위는 CORE_PAPER.md, 확장은 FOLLOW_UP_PAPERS.md
 python -m unittest discover -s src -p "test_v2.py"
 ```

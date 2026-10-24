@@ -1,0 +1,34 @@
+{
+  "pooled_n": 195,
+  "pooled_unique_products_total": 222,
+  "pooled_spearman_model_fp": -0.848,
+  "pooled_ci_model_fp": [
+    -0.882,
+    -0.804
+  ],
+  "pooled_spearman_msds_fp": -0.641,
+  "pooled_ci_msds_fp": [
+    -0.72,
+    -0.549
+  ],
+  "pairwise_products": 68,
+  "pairwise_groups": 21,
+  "pairwise_pairs": 117,
+  "pairwise_concordance_model_fp": 0.786,
+  "pairwise_concordance_model_fp_ci95": [
+    0.638,
+    0.917
+  ],
+  "pairwise_concordance_msds_fp": 0.663,
+  "pairwise_pairs_msds_evaluable": 83,
+  "pairwise_pairs_robust_n": 74,
+  "pairwise_concordance_robust": 0.905,
+  "pairwise_concordance_same_maker": 0.802,
+  "pairwise_concordance_diff_maker": 0.75,
+  "pairwise_pairs_same_maker_n": 81,
+  "field_list_labels": {
+    "두 지표 모두 더 나은 제품이 있음": 38,
+    "이 군에서 두 지표 모두 우위": 26,
+    "다른 제품과 일장일단 (상충)": 4
+  }
+}

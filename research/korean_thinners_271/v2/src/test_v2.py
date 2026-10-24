@@ -134,5 +134,20 @@ class TestCore(unittest.TestCase):
         self.assertEqual(af.petroleum_class(70.0), '제3석유류 이상')
 
 
+class TestPooled(unittest.TestCase):
+    def test_pairs_concordance(self):
+        import pandas as pd
+        import analyze_pooled as ap
+        d = pd.DataFrame({'비교군': ['g'] * 3, '제품명': list('abc'), '제조사': ['m'] * 3,
+                          'I_mix_TierB': [10., 20., 40.], 'I_mix_TierB_P5': [9., 19., 39.], 'I_mix_TierB_P95': [11., 21., 41.],
+                          'Tfp_Liaw_C': [30., 20., 10.], 'Tfp_P5': [29., 19., 9.], 'Tfp_P95': [31., 21., 11.],
+                          'FP_MSDS': [30., 20., 10.]})
+        t = ap.pairs_table(d)
+        self.assertEqual(len(t), 3)
+        self.assertTrue(t['일치(예측)'].all())
+        d.loc[2, 'Tfp_Liaw_C'] = 50.
+        self.assertFalse(ap.pairs_table(d)['일치(예측)'].all())
+
+
 if __name__ == '__main__':
     unittest.main()
