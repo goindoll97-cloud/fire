@@ -127,6 +127,16 @@ def main():
         'w',encoding='utf-8-sig',newline='') as f:
         w=csv.DictWriter(f,fieldnames=list(ledger[0]))
         w.writeheader();w.writerows(ledger)
+    print('OFFICIAL_2026_5_ANNEX_HEADER_ROWS '+
+          json.dumps([{
+              'row':str(x['row']),'content':' | '.join(x['cells'])[:500]
+          } for x in rows[:10]],ensure_ascii=False))
+    print('OFFICIAL_2026_5_CAS_EXACT_ROWS '+
+          json.dumps([{
+              'source_CAS':x['source_CAS'],
+              'excel_row':x['excel_row'],
+              'official_annex_row_raw':x['official_annex_row_raw'][:1000]
+          } for x in matched[:100]],ensure_ascii=False))
     meta={
         'NICS_annex_source_url':SOURCE_URL,
         'NICS_2026_5_issued':'2026-03-27',
